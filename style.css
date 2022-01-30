@@ -1,0 +1,42 @@
+html {
+}
+
+body {
+        background-color: #FFFFF2;
+        font-family: Arial;
+}
+
+::selection {
+        color: #41d3bd;
+        background-color: #4B24D6;
+}
+
+h1 {
+        font-size: 38px;
+        z-index: 50;
+        top: 0;
+        text-align: center;
+	color: #De6449;
+}
+
+p {
+        color: gray;
+}
+
+.external {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+}
+.middle {
+        display: table-cell;
+        vertical-align: middle;
+}
+.internal {
+        margin-left: auto;
+        margin-right: auto;
+        width: 70em;
+}
