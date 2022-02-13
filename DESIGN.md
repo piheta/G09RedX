@@ -30,6 +30,9 @@ In the concept phase, before writing code, you should decide the general rules a
    We will use some shadow on the products and their descriptions to make the products stand out abit. 
 
 
+
+Sketching
+
 1.Colors:
 *Generate color shades/tints(See video 2.2.3 Colors)
 
