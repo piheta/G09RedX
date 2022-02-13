@@ -25,3 +25,6 @@ In the concept phase, before writing code, you should decide the general rules a
    
 7. Border rounding:
    The corners should be sharp, but if we use rounding, it will be very minimal, just to put ease on the eyes. Sharp corners reflect professionalism.
+   
+8. Shadow:
+   We will use some shadow on the products and their descriptions to make the products stand out abit. 
