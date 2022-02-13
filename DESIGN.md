@@ -14,3 +14,14 @@ In the concept phase, before writing code, you should decide the general rules a
    There will be a header on with the name of the company which will be next in line of importance. The header includes a logo, and some important links,
    like "Products", "Companies", and "Testiomonials". After the header and header content, the products are displayed. Further down the page we have a                                section about the company and reviews. Towards the bottom of the page we have a footer, with a sitemap.
 4. Images: 
+   We will have text above/around some images that display products, and in the header. On the header image we will have a redish color overlay to play in 
+   to the theme of the company.
+
+5. Icons: 
+   We wont use icons, as far as we know right now. This might change.
+
+6. Typography:
+   We will use Sans-Serif font, as that is more modern. We will use sharp edges to play into the professionalism of our company.
+   
+7. Border rounding:
+   The corners should be sharp, but if we use rounding, it will be very minimal, just to put ease on the eyes. Sharp corners reflect professionalism.
