@@ -28,3 +28,27 @@ In the concept phase, before writing code, you should decide the general rules a
    
 8. Shadow:
    We will use some shadow on the products and their descriptions to make the products stand out abit. 
+
+
+1.Colors:
+*Generate color shades/tints(See video 2.2.3 Colors)
+
+2.Typography:
+a.Choose a font for titles(You will probably want to change it when you see the site, but start with something)
+b.If body text needs another font, choose it. Preferably,use the same font for all texts.
+c.Define font scale using https://type-scale.com/
+
+3.Hierarchy and layout:
+a.Which elements will need an accent because we want to increase their priority in the hierarchy?
+b.What components will we need to implement the necessary layouts?
+
+4.Icons:
+a.Choose icon pack ifyou need one. See http://codingheroes.io/resources/#icons
+
+5.Spacing:
+a.Define spacing scale, f.ex, multiples of 16px(multiples of 4px for smaller padding)
+
+6.Border rounding:
+a.Synchronize the chosen font with roundedness (very rounded font →more border rounding for elements)
+b.Border rounding amount for general elements: cards, forms, images, etc
+c.Border rounding for buttons
