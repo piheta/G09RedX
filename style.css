@@ -21,7 +21,7 @@ html {
     text-align: center;
 }
 
-#flex-reviews {
+#cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,7 +30,7 @@ html {
 }
 
 
-.review {     
+.card-item {     
     width: 40em;
     height: 30em;
     background-color: white;
