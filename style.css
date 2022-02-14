@@ -108,35 +108,67 @@ body {
     border-radius: 1rem;
 }
 
-#reviews {
-    font-family: Verdana;
-    background-color: lightgray;
+
+/* 
+ * Title above the flex managed boxes 
+*/
+#reviews > h1, #related-companies > h1 {
+    font-size: 3rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+/* 
+ * Positioning and styling of the Boxes
+*/
+#reviews, #related-companies {
     padding-top: 4rem;
     padding-bottom: 6rem;
 }
 
-#reviews > h1 {
-    font-size: 3rem;
-    padding-bottom: 2rem;
-    text-align: center;
+
+#reviews {
+    background-color: lightgray;
+}
+
+#company-cards, #review-cards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #review-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+#company-cards {
+    justify-content: center;
+    gap: 128px;
 }
 
 
-.review-card-item {     
-    width: 40em;
-    height: 30em;
+/* 
+ * The content inside of the cards  
+*/
+.company-card-item, .review-card-item {
     background-color: white;
     box-shadow: 5px 10px 8px #e0e0e0;
+}  
+
+.review-card-item {    
+    width: 40em;
+    height: 30em;
 } 
 
+.company-card-item {    
+    width: 20em;
+    height: 20em;
+} 
+
+
+/* 
+ * Mobile Support  
+*/
 @media (max-width: 500px) {
     .container-text {
         font-size: 2rem;
@@ -179,6 +211,20 @@ body {
     .menubar-links.close {
         display: none;
     }
+
+
+
+    #review-cards {
+        flex-direction: column;
+        justify-content: space-between;
+    }   
+
+
+    .review-card-item {     
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+    } 
 }
 
 
