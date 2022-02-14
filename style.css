@@ -14,6 +14,9 @@ body {
     flex-direction: column;
 }
 
+
+/* Header section */
+
 #header {
     display: flex;
     flex-direction: column;
@@ -107,7 +110,9 @@ body {
     background-color: white;
     border-radius: 1rem;
 }
+/* -------------------------------------------------------- */
 
+/* Reviews Section */
 
 /* 
  * Title above the flex managed boxes 
@@ -146,6 +151,9 @@ body {
     gap: 128px;
 }
 
+/* -------------------------------------------------------- */
+
+/* Company Section */
 
 /* 
  * The content inside of the cards  
@@ -164,7 +172,7 @@ body {
     width: 20em;
     height: 20em;
 } 
-
+/* -------------------------------------------------------- */
 
 /* 
  * Mobile Support  
@@ -212,8 +220,6 @@ body {
         display: none;
     }
 
-
-
     #review-cards {
         flex-direction: column;
         justify-content: space-between;
@@ -226,7 +232,10 @@ body {
         margin-top: 5%;
     } 
 }
+/* -------------------------------------------------------- */
 
+
+/* About us Section */
 
 #about-us{
     display: flex;
@@ -321,6 +330,7 @@ body {
         left: -200%;
     }
 }
+/* -------------------------------------------------------- */
 
 
 
