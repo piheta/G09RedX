@@ -226,3 +226,103 @@ body {
         margin-top: 5%;
     } 
 }
+
+
+#about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text{
+    text-align: center;
+    justify-content: center;
+    margin-top: 5rem;
+    font-size: large;
+}
+
+.image-slider{
+    text-align: center;
+    position: relative;
+}
+
+.slider{
+    display: none;
+}
+
+.text {
+    color: #000000;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+.image-slider h1{
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.image-slider img{
+    width: 100%;
+}
+
+.about-text p {
+    margin: 3rem;
+}
+
+.text-under{
+    text-align: center;
+    justify-content: center;
+    margin: 5rem;
+    font-size: large;
+    width: 100;
+    height: auto;
+    
+}
+
+.image-slider{
+    overflow: hidden;
+    height: 50rem;
+}
+
+.image-slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s image-slider infinite;
+}
+
+.image-slider figure img{
+    float: left;
+    width: 20%;
+}
+
+@keyframes image-slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+}
+
+
+
+
+
