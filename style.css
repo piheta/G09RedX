@@ -1,4 +1,3 @@
-
         * {
             margin: 0;
             padding: 0;
@@ -143,5 +142,35 @@
             .menubar-links.close {
                 display: none;
             }
-        }
+
+#reviews {
+    font-family: Verdana;
+    background-color: lightgray;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+#reviews > h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+
+.card-item {     
+    width: 40em;
+    height: 30em;
+    background-color: white;
+    box-shadow: 5px 10px 8px #e0e0e0;
+} 
+
+}
 
