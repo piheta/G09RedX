@@ -77,7 +77,7 @@ body {
     border: none;
     border-color: #ffffff;
     border-style: solid;
-    border-radius: 1rem;
+    border-radius: 2px;
     color: white;
     padding: 1.5rem 3.2rem;
     text-align: center;
@@ -110,9 +110,10 @@ body {
     background-color: white;
     border-radius: 1rem;
 }
+
 /* -------------------------------------------------------- */
 
-/* Reviews Section */
+/* Company and Reviews Section */
 
 /* 
  * Title above the flex managed boxes 
@@ -151,10 +152,6 @@ body {
     gap: 128px;
 }
 
-/* -------------------------------------------------------- */
-
-/* Company Section */
-
 /* 
  * The content inside of the cards  
 */
@@ -172,6 +169,7 @@ body {
     width: 20em;
     height: 20em;
 } 
+
 /* -------------------------------------------------------- */
 
 /* 
