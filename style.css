@@ -1,147 +1,115 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            font-size: 10px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        #header {
-            display: flex;
-            flex-direction: column;
-            background-image: linear-gradient( rgba(226, 107, 107, 0.45), rgb(168, 98, 96)), url(images/longdoctor.jpeg);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            height: 50rem;
-        }
-        
-        .header-container {
-            display: flex;
-            padding: 3.2rem 3.2rem;
-            justify-content: space-between;
-            font-size: 2rem;
-        }
-        
-        .menubar-links ul {
-            margin: 0;
-            padding: 1.6rem 1.6rem;
-            display: flex;
-        }
-        
-        .menubar-links li {
-            list-style-type: none;
-        }
-        
-        .menubar-links li a {
-            text-decoration: none;
-            color: white;
-            padding: 1rem;
-            display: block;
-        }
-        
-        .menubar-links li a:hover {
-            text-decoration: underline;
-        }
-        
-        .brand-image img {
-            height: 50px;
-            width: auto;
-        }
-        
-        .container-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-            gap: 1.6rem;
-            font-size: 2.5rem;
-            color: white;
-        }
-        
-        .signup-btn button {
-            background-color: #ec361e;
-            border: none;
-            border-color: #ffffff;
-            border-style: solid;
-            border-radius: 1rem;
-            color: white;
-            padding: 1.5rem 3.2rem;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1.6rem;
-            margin-top: 4rem;
-        }
-        
-        .signup-btn button:hover {
-            background-color: #8a2315;
-        }
-        
-        .toggle-button {
-            position: absolute;
-            top: 0.75rem;
-            right: 1.5rem;
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            gap: 3px;
-            width: 3rem;
-            height: 3rem;
-        }
-        
-        .toggle-button .bar {
-            height: 1rem;
-            width: 100%;
-            background-color: white;
-            border-radius: 1rem;
-        }
-        
-        @media (max-width: 500px) {
-            .container-text {
-                font-size: 2rem;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .toggle-button {
-                display: flex;
-                margin: 4rem 2.5rem;
-            }
-            .menubar-links {
-                display: none;
-                width: 100%;
-            }
-            .menubar {
-                flex-direction: column;
-            }
-            .menubar-links ul {
-                width: 100%;
-                flex-direction: column;
-            }
-            .menubar-links li {
-                text-align: center;
-            }
-            .menubar-links li a {
-                padding: 1rem;
-            }
-            .menubar-links.active {
-                display: flex;
-            }
-            .menubar-links.close {
-                display: none;
-            }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( rgba(226, 107, 107, 0.45), rgb(168, 98, 96)), url(images/longdoctor.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+}
+
+.header-container {
+    display: flex;
+    padding: 3.2rem 3.2rem;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+.menubar-links ul {
+    margin: 0;
+    padding: 1.6rem 1.6rem;
+    display: flex;
+}
+
+.menubar-links li {
+    list-style-type: none;
+}
+
+.menubar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.menubar-links li a:hover {
+    text-decoration: underline;
+}
+
+.brand-image img {
+    height: 50px;
+    width: auto;
+}
+
+.container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 1.6rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.signup-btn button {
+    background-color: #ec361e;
+    border: none;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    color: white;
+    padding: 1.5rem 3.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+}
+
+.signup-btn button:hover {
+    background-color: #8a2315;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3px;
+    width: 3rem;
+    height: 3rem;
+}
+
+.toggle-button .bar {
+    height: 1rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+
+
 
 #reviews {
     font-family: Verdana;
@@ -172,5 +140,46 @@
     box-shadow: 5px 10px 8px #e0e0e0;
 } 
 
+@media (max-width: 500px) {
+    .container-text {
+        font-size: 2rem;
+    }
 }
 
+@media (max-width: 600px) {
+    
+    .toggle-button {
+        display: flex;
+        margin: 4rem 2.5rem;
+    }
+
+    .menubar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .menubar {
+        flex-direction: column;
+    }   
+
+    .menubar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }   
+
+    .menubar-links li {
+        text-align: center;
+    }   
+
+    .menubar-links li a {
+        padding: 1rem;
+    }   
+
+    .menubar-links.active {
+         display: flex;
+    }   
+
+    .menubar-links.close {
+        display: none;
+    }
+}
