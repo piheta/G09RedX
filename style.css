@@ -4,10 +4,28 @@
         box-sizing: border-box;
 }
 
-body {
-        font-style: italic;
+html {
         font-size: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#product-content {
+}
 
+.cards {
+        display: flex;
 
+}
+
+.card-item {
+        display: flex;
+}
+
+.card-item-description {
+        width: 35rem;
+}
+
+.card-item img {
+        width: 20rem;
+        height: auto;
+}
