@@ -4,39 +4,35 @@
     box-sizing: border-box;
 }
 
-body {
-    font-style: italic;
+html {
     font-size: 10px;
 }
 
 #reviews {
+    font-family: Verdana;
     background-color: lightgray;
-    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
 }
+
 #reviews > h1 {
-    position: relative;
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
-
-
 
 #flex-reviews {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-#flex-reviews > div {
-    width: 20em;
-    height: 20em;
-    border-radius: 2px;
+
+.review {     
+    width: 40em;
+    height: 30em;
     background-color: white;
     box-shadow: 5px 10px 8px #e0e0e0;
 }
-
-.review {
-     
-}
-
