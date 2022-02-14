@@ -124,7 +124,7 @@ body {
     text-align: center;
 }
 
-#cards {
+#review-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -133,7 +133,7 @@ body {
 }
 
 
-.card-item {     
+.review-card-item {     
     width: 40em;
     height: 30em;
     background-color: white;
