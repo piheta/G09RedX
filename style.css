@@ -120,20 +120,19 @@ body {
 
 #reviews > h1 {
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
     text-align: center;
 }
 
 #review-cards {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 15%;
-    margin-right: 15%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 32px;
 }
 
 
-.review-card-item {     
+.review-card-item {    
     width: 40em;
     height: 30em;
     background-color: white;
@@ -182,4 +181,22 @@ body {
     .menubar-links.close {
         display: none;
     }
+
+
+
+    #review-cards {
+        flex-direction: column;
+        justify-content: space-between;
+    }   
+
+
+    .review-card-item {     
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        width: 40em;
+        height: 30em;
+        background-color: white;
+        box-shadow: 5px 10px 8px #e0e0e0;
+    } 
 }
