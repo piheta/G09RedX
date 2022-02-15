@@ -115,6 +115,24 @@ body {
 
 /* Company and Reviews Section */
 
+
+
+/* 
+ * Image Fade effect 
+*/
+#related-companies > img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.company-card-item:hover #related-companies > img {
+    opacity: 0.7;
+}
+
 /* 
  * Title above the flex managed boxes 
 */
@@ -251,6 +269,10 @@ body {
 .image-slider{
     text-align: center;
     position: relative;
+}
+
+.image-slider > h1 {
+    font-size: 3rem;
 }
 
 .slider{
