@@ -120,16 +120,14 @@ body {
 /* 
  * Image Fade effect 
 */
-#related-companies > img {
+
+.company-image {
     opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
 }
 
-.company-card-item:hover #related-companies > img {
+.company-card-item:hover .company-image {
     opacity: 0.7;
 }
 
@@ -271,10 +269,6 @@ body {
     position: relative;
 }
 
-.image-slider > h1 {
-    font-size: 3rem;
-}
-
 .slider{
     display: none;
 }
@@ -291,7 +285,7 @@ body {
 
 .image-slider h1{
     margin: 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .image-slider img{
