@@ -150,7 +150,7 @@ body {
 
 
 #reviews {
-    background-color: lightgray;
+    background-color: rgb(240, 236, 236);
 }
 
 #company-cards, #review-cards {
@@ -349,6 +349,47 @@ body {
     }
 }
 /* -------------------------------------------------------- */
+
+
+/* Foooter section */
+
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 40rem;
+    width: auto;
+}
+
+.footer-container h1{
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.footer-container ul{
+    font-size: 2rem;
+}
+
+.footer-container li{
+    list-style-type: none;
+    margin: 1rem;
+}
+
+.footer-container li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-images{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 
 
