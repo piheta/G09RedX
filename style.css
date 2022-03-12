@@ -17,14 +17,15 @@ body {
 
 /* Header section */
 
-#header {
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient( rgba(226, 107, 107, 0.45), rgb(168, 98, 96)), url(images/longdoctor.jpeg);
+
+.menubar{
+    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url(images/longdoctor.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 50rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-container {
@@ -64,12 +65,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 3rem;
-    gap: 1.6rem;
-    font-size: 2.5rem;
-    color: white;
+    gap: 16px;
+    font-size: 3.5rem;
+    color: rgb(255, 255, 255);
 }
 
 .signup-btn button {
@@ -192,9 +194,10 @@ body {
 /* 
  * Mobile Support  
 */
-@media (max-width: 500px) {
-    .container-text {
-        font-size: 2rem;
+
+@media(max-width: 700px){
+    .container-text{
+        font-size: 2.5rem;
     }
 }
 
@@ -269,15 +272,6 @@ body {
     font-size: 3rem;
 }
 
-.image-slider{
-    text-align: center;
-    position: relative;
-}
-
-.slider{
-    display: none;
-}
-
 .text {
     color: #000000;
     font-size: 15px;
@@ -287,15 +281,6 @@ body {
     width: 100%;
     text-align: center;
   }
-
-.image-slider h1{
-    margin: 2rem;
-    font-size: 3rem;
-}
-
-.image-slider img{
-    width: 100%;
-}
 
 .about-text p {
     margin: 3rem;
@@ -311,44 +296,9 @@ body {
     
 }
 
-.image-slider{
-    overflow: hidden;
-    height: 50rem;
-}
 
-.image-slider figure{
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: 20s image-slider infinite;
-}
 
-.image-slider figure img{
-    float: left;
-    width: 20%;
-}
 
-@keyframes image-slider{
-    0%{
-        left: 0;
-    }
-    20%{
-        left: 0;
-    }
-    25%{
-        left: -100%;
-    }
-    45%{
-        left: -100%;
-    }
-    50%{
-        left: -200%;
-    }
-    70%{
-        left: -200%;
-    }
-}
 /* -------------------------------------------------------- */
 
 
@@ -361,8 +311,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    height: 40rem;
-    width: auto;
 }
 
 .footer-container h1{
