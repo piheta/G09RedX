@@ -11,15 +11,11 @@ function closeForm(){
 }
 
 
-
-
 const submitButton = document.getElementById("formButton");
 const list = document.getElementsByClassName("review-list")[0];
 
 
-
-
-subm|itButton.addEventListener('click',()=>{
+submitButton.addEventListener('click',()=>{
     let newLi = document.createElement('li');
     let newDiv = document.createElement('div');
     newDiv.className = "li-div";
@@ -28,6 +24,5 @@ subm|itButton.addEventListener('click',()=>{
     newLabel.innerText = document.getElementById('username').value;
     list.appendChild(newLi);
     newLi.appendChild(newDiv);
-    newDiv.appendChild(newLabel)
-    
+    newDiv.appendChild(newLabel)  
 });
