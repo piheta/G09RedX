@@ -76,15 +76,11 @@ body {
 
 .signup-btn button {
     background-color: #ec361e;
-    border: none;
     border-color: #ffffff;
     border-style: solid;
-    border-radius: 2px;
+    border-radius: 0.5rem;
     color: white;
     padding: 1.5rem 3.2rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 1.6rem;
     margin-top: 4rem;
 }
