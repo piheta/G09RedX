@@ -5,30 +5,37 @@
 }
 
 html {
-        font-size: 10px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #product-content {
+    text-align: center;
 
 }
 
-.cards {
-        display: flex;
-
+.product-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40rem;
 }
 
-.card-item {
-        display: flex;
+.product-card-item {
+    width: 25rem;
+    height: 40rem;
+    overflow: hidden;
 }
 
 .card-item-description {
-        width: 35rem;
+    padding: 1.5rem;
+
 }
 
-.card-item img {
-        width: 20rem;
-        height: auto;
+.product-card-item img {
+    width: 40rem;
+    height: auto;
 }
 
 body {
