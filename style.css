@@ -206,17 +206,23 @@ body {
 
 
 #reviews {
+    width: 100%;
     background-color: rgb(240, 236, 236);
 }
 
-#company-cards, #review-cards {
+#company-cards {
     display: flex;
     flex-wrap: wrap;
 }
 
 #review-cards {
-    justify-content: space-around;
-    gap: 32px;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+
 }
 
 #company-cards {
@@ -235,6 +241,8 @@ body {
 .review-card-item {    
     width: 40em;
     height: 30em;
+      display: inline-block;
+    margin-left: 100px;
 } 
 
 .company-card-item {    
