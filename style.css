@@ -9,55 +9,6 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#product-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    margin: 10rem 0;
-}
-
-#product-content h2 {
-    font-size: 3rem;
-}
-
-#product-content .title h3 {
-    font-size: 1.5rem;
-}
-
-#product-content .title {
-    margin: 0 10rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.product-cards {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10rem;
-}
-
-.product-card-item {
-    width: 25rem;
-    height: 40rem;
-    border: 2px grey solid;
-    overflow: hidden;
-    box-shadow: black 0rem 0rem 3rem;
-}
-
-.card-item-description {
-    padding: 1.5rem;
-    text-align: left;
-}
-
-.product-card-item img {
-    width: 40rem;
-    height: auto;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -163,6 +114,59 @@ body {
 }
 
 /* -------------------------------------------------------- */
+
+
+/* Product info */
+
+#product-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 10rem 0;
+}
+
+#product-content h2 {
+    font-size: 3rem;
+}
+
+#product-content .title h3 {
+    font-size: 1.5rem;
+}
+
+#product-content .title {
+    margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20rem;
+}
+
+.product-card-item {
+    width: 25rem;
+    height: 40rem;
+    border: 2px grey solid;
+    overflow: hidden;
+    box-shadow: black 0rem 0rem 3rem;
+}
+
+.card-item-description {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.product-card-item img {
+    width: 40rem;
+    height: auto;
+}
+
 
 /* Company and Reviews Section */
 
