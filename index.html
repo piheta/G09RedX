@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G9RedX</title>
-    <link rel="icon" href="images/favicon.png" type="image/gif">
+    <link rel="icon" href="images/aids.png" type="image/gif">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <section id="header">
-
+        <div class="menubar">
         <div class="header-container">
 
             <div class="brand-image">
-                <img src="images/favicon.png" alt="">
+                <img src="images/aids.png" alt="">
             </div>
 
             <a href="#" class="toggle-button">
@@ -27,12 +29,12 @@
             <div class="menubar-links">
                 <ul>
                     <li><a href="#">Products</a></li>
-                    <li><a href="#">Companies</a></li>
-                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#related-companies">Companies</a></li>
+                    <li><a href="#reviews">Testimonials</a></li>
                 </ul>
             </div>
         </div>
-
+        
         <div class="container-text">
             <h1>RED CROSS ÅLESUND</h1>
             <H6>We value every life</H6>
@@ -40,8 +42,10 @@
                 <button type="button">Sign up for course</button>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
+    
 
     <section id="product-content">
         <div class="title">
@@ -74,42 +78,100 @@
                 </div>
             </div>
         </div>
-    </section>
+  </section>
+
 
     <section id="about-us">
+        <div class="about-text">
+            <h1>About us</h1>
+            <p>We provide courses both during work time and evening courses. <br> Since 2020, we don't provide weekend
+                courses anymore.</p>
+        </div>
 
+
+
+        <div class="text-under">
+            <p>Our team consists of medical professionals with more than 30 years of experience. <br>We are certified
+                according to ISO 8072 and DNV 23:786.</p>
+        </div>
     </section>
+
 
     <section id="related-companies">
+        <h1>Related Companies</h1>
+        
+        <div id="company-cards">
+            <div class="company-card-item">
+                <a href="https://radioaalesund.no/" target="_blank"><img src="images/radio.png" alt="radio Alesund" class="company-image"></a>
+            </div>
 
+
+            <div class="company-card-item">
+                <a href="https://smp.no/" target="_blank"><img src="images/smp.png" alt="smp" class="company-image"></a>
+            </div>
+
+            <div class="company-card-item">
+                <a href="https://tv.nrk.no/" target="_blank"><img src="images/nrktv.png" alt="nrk tv" class="company-image"></a>
+            </div>
+        </div>
     </section>
+    
 
     <section id="reviews">
-        <h1>Our happy customers</h1>
-        
+        <h1>Testimonials</h1>
         <div id="review-cards">
             <div class="review-card-item">
-                <img src="">
+                <img src="images/user1.png" alt="user image">
                 <h2>Great Product!</h2>
                 <p>this works well</p>
             </div>
 
             <div class="review-card-item">
-                <img src="">
+                <img src="images/user2.png" alt="user image">
                 <h2>Great Product!</h2>
                 <p>this works well</p>
             </div>
 
             <div class="review-card-item">
-                <img src="">
+                <img src="images/user3.png" alt="user image">
                 <h2>Great Product!</h2>
                 <p>this works well</p>
             </div>
         </div>
     </section>
 
-    <section id="footer">
 
+    <section id="footer">
+        <div class="footer-container">
+            <div class="shortcut">
+                <H1>Shortcut</H1>
+                <ul>
+                    <li><a href="#">Certification</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="#">Orders</a></li>
+                </ul>
+            </div>
+            <div class="information">
+                <h1>Information</h1>
+                <ul>
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Code and Medical Ethics</a></li>
+                    <li><a href="#">Terms of sale</a></li>
+                </ul>
+            </div>
+            <div class="support">
+                <h1>Support</h1>
+                <ul>
+                <li><a href="#">Contacts us</a></li>
+                <li><a href="#">Questions and Answers</a></li>
+                <li><a href="#">Refunds</a></li>
+                </ul>
+            </div>
+            <div class="footer-images">
+                <img src="images/aids.png" alt="">
+                <img src="images/SecurePayments.png" alt="">
+            </div>
+        </div>
     </section>
 
 </body>

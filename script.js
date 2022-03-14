@@ -8,3 +8,4 @@ const menubar = document.getElementsByClassName('menubar-links')[0]
 togglebutton.addEventListener('click', () => {
     menubar.classList.toggle('active')
 })
+
