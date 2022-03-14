@@ -19,7 +19,7 @@ const list = document.getElementsByClassName("review-list")[0];
 
 
 
-submitButton.addEventListener('click',()=>{
+subm|itButton.addEventListener('click',()=>{
     let newLi = document.createElement('li');
     let newDiv = document.createElement('div');
     newDiv.className = "li-div";
