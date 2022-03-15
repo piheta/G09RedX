@@ -19,7 +19,7 @@ body {
 
 
 .menubar{
-    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url(images/longdoctor.jpeg);
+    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url(/images/longdoctor.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
