@@ -458,7 +458,7 @@ body {
 
     .dropbar-container nav{
         width : 30rem; 
-        background: #d9d9d9;
+        background: #ecbfbf;
         margin : 4rem auto; 
     }
 
@@ -476,6 +476,10 @@ body {
         float: right;
         right: 10%;
         content: "+";
+    }
+
+    .slide li:hover{
+
     }
 
     .slide{
@@ -500,6 +504,11 @@ body {
     } 
 
 
+}
+@media (max-width: 1300px) {
+    .footer-container ul li{
+        font-size: 1.3rem;
+    }
 }
 
 
