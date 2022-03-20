@@ -502,9 +502,8 @@ body {
     #touch:checked + .slide, #touch1:checked + .slide, #touch2:checked + .slide {
         height: 25rem;
     } 
-
-
 }
+<<<<<<< HEAD
 @media (max-width: 1300px) {
     .footer-container ul li{
         font-size: 1.3rem;
@@ -515,3 +514,5 @@ body {
 
 
 
+=======
+>>>>>>> master
