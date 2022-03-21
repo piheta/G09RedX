@@ -21,7 +21,7 @@ body {
 
 
 .menubar{
-    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url(/images/longdoctor.jpeg);
+    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url(../images/longdoctor.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -151,9 +151,8 @@ body {
 .product-card-item {
     width: 25rem;
     height: 40rem;
-    border: 2px grey solid;
     overflow: hidden;
-    box-shadow: black 0rem 0rem 3rem;
+    box-shadow: 5px 10px 8px #e0e0e0;
 }
 
 .card-item-description {
