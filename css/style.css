@@ -61,6 +61,7 @@ body {
 .brand-image img {
     height: 50px;
     width: auto;
+    margin-top: 1rem;
 }
 
 .container-text {
@@ -80,7 +81,7 @@ body {
     background-color: #ec361e;
     border-color: #ffffff;
     border-style: solid;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     color: white;
     padding: 1.5rem 3.2rem;
     font-size: 1.6rem;
