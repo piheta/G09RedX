@@ -113,7 +113,60 @@ body {
 }
 
 
-/* -------------------------------------------------------- */
+@media (max-width: 600px) {
+    
+    .toggle-button {
+        display: flex;
+        margin: 4rem 2.5rem;
+    }
+
+    .menubar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }   
+
+    .menubar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }   
+
+    .menubar-links li {
+        text-align: center;
+    }   
+
+    .menubar-links li a {
+        padding: 1rem;
+    }   
+
+    .menubar-links.active {
+         display: flex;
+    }   
+
+    .menubar-links.close {
+        display: none;
+    }
+
+    .menubar{
+        height: 80vh;
+    }
+
+
+}
+
+@media(max-width: 700px){
+    .container-text{
+        font-size: 2.5rem;
+    }
+
+    .menubar-links li{
+        font-size: medium;
+    }
+}
+
 
 
 /* Product info */
@@ -167,7 +220,7 @@ body {
 }
 
 
-/* Company and Reviews Section */
+/* Company section */
 
 
 
@@ -183,13 +236,13 @@ body {
 }
 
 .company-card-item:hover .company-image {
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 /* 
  * Title above the flex managed boxes 
 */
-#reviews > h1, #related-companies > h1 {
+#related-companies > h1 {
     font-size: 3rem;
     padding-bottom: 6rem;
     text-align: center;
@@ -198,30 +251,16 @@ body {
 /* 
  * Positioning and styling of the Boxes
 */
-#reviews, #related-companies {
+#related-companies {
     padding-top: 4rem;
     padding-bottom: 6rem;
 }
 
 
-#reviews {
-    width: 100%;
-    background-color: rgb(240, 236, 236);
-}
 
 #company-cards {
     display: flex;
     flex-wrap: wrap;
-}
-
-#review-cards {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    white-space: nowrap;
-
 }
 
 #company-cards {
@@ -232,17 +271,10 @@ body {
 /* 
  * The content inside of the cards  
 */
-.company-card-item, .review-card-item {
+.company-card-item {
     background-color: white;
     box-shadow: 5px 10px 8px #e0e0e0;
 }  
-
-.review-card-item {    
-    width: 40em;
-    height: 30em;
-      display: inline-block;
-    margin-left: 100px;
-} 
 
 .company-card-item {    
     width: 20em;
@@ -251,75 +283,6 @@ body {
 
 /* -------------------------------------------------------- */
 
-/* 
- * Mobile Support  
-*/
-
-@media(max-width: 700px){
-    .container-text{
-        font-size: 2.5rem;
-    }
-
-    .menubar-links li{
-        font-size: medium;
-    }
-}
-
-
-@media (max-width: 600px) {
-    
-    .toggle-button {
-        display: flex;
-        margin: 4rem 2.5rem;
-    }
-
-    .menubar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .header-container {
-        flex-direction: column;
-    }   
-
-    .menubar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }   
-
-    .menubar-links li {
-        text-align: center;
-    }   
-
-    .menubar-links li a {
-        padding: 1rem;
-    }   
-
-    .menubar-links.active {
-         display: flex;
-    }   
-
-    .menubar-links.close {
-        display: none;
-    }
-
-    #review-cards {
-        flex-direction: column;
-        justify-content: space-between;
-    }   
-
-
-    .review-card-item {     
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 5%;
-    } 
-    .menubar{
-        height: 80vh;
-    }
-
-}
-/* -------------------------------------------------------- */
 
 
 /* About us Section */
@@ -434,6 +397,13 @@ body {
     text-decoration: underline rgb(212, 120, 120);
 }
 
+#footer{
+    background: linear-gradient(#e2a1a1, #f59d9d);
+}
+
+.line{
+
+}
 
 
 @media (max-width: 979px){
@@ -459,17 +429,19 @@ body {
     .dropbar-container nav{
         width : 30rem; 
         background: #ecbfbf;
-        margin : 4rem auto; 
+        margin : 4rem auto;
+        border-radius: 2rem; 
     }
 
     .dropbar-container span{
         padding : 3rem;
-        background : #d19d9d; 
-        color : white;
+        background : #ffffff; 
+        color : rgb(0, 0, 0);
         font-size : 1.2em;
         font-variant : small-caps;
         cursor : pointer;
         display: block;
+        border-radius: 1rem;
     }
 
     .dropbar-container span::after{
@@ -514,31 +486,64 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(#ffffff, #e2a1a1);
 }
 
 .testimonial-header{
-    margin: 3%;
-    font-size: 2rem;
+    margin: 5%;
+    font-size: 3rem;
     text-align: center;
 
 }
 
 .testimonial-header h2{
-    margin: 3%;
-    font-size: 2rem;
+    margin: 5%;
+    font-size: 2rem;    
 }
 
 .testimonial-wrapper{
     display: flex;
+    flex-wrap: wrap;
     gap: 80px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .testimonial{
     font-size: 2rem;
-    height: 20rem;
-    width: 50rem;
+    height: 40rem;
+    width: 40rem;
     text-align: center;
+    background-color: #fdcece;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 2.5rem 2.5rem 7rem 0.3rem black;
 }
+
+.testimonial-wrapper img{
+    border-radius: 3rem;
+    margin: 2%;
+}
+
+.line{
+    background-color: #000000;
+    height: 2px;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.testimonial p{
+    margin: 3%;
+}
+@media (max-width: 600px){
+
+    .testimonial{
+        font-size: 1.5rem;
+        width: 25vh;
+    }
+}
+
 
 
 
