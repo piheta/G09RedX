@@ -477,11 +477,7 @@ body {
         right: 10%;
         content: "+";
     }
-
-    .slide li:hover{
-
-    }
-
+    
     .slide{
         clear:both;
         width:100%;
