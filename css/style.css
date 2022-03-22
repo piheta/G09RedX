@@ -504,3 +504,41 @@ body {
         font-size: 1.3rem;
     }
 }
+
+
+
+/* testimonials */
+
+#testimonial-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-header{
+    margin: 3%;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.testimonial-header h2{
+    margin: 3%;
+    font-size: 2rem;
+}
+
+.testimonial-wrapper{
+    display: flex;
+    gap: 80px;
+}
+
+.testimonial{
+    font-size: 2rem;
+    height: 20rem;
+    width: 50rem;
+    text-align: center;
+}
+
+
+
