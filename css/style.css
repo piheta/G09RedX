@@ -515,10 +515,10 @@ body {
     height: 40rem;
     width: 40rem;
     text-align: center;
-    background-color: #fdcece;
+    background-color: #ffffff;
     border-radius: 1rem;
     padding: 3rem;
-    box-shadow: 2.5rem 2.5rem 7rem 0.3rem black;
+    box-shadow: 0.5rem 0.5rem 2rem #574b4b;
 }
 
 .testimonial-wrapper img{
