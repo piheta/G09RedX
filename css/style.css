@@ -112,63 +112,6 @@ body {
     border-radius: 1rem;
 }
 
-
-@media (max-width: 600px) {
-    
-    .toggle-button {
-        display: flex;
-        margin: 4rem 2.5rem;
-    }
-
-    .menubar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .header-container {
-        flex-direction: column;
-    }   
-
-    .menubar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }   
-
-    .menubar-links li {
-        text-align: center;
-    }   
-
-    .menubar-links li a {
-        padding: 1rem;
-    }   
-
-    .menubar-links.active {
-         display: flex;
-    }   
-
-    .menubar-links.close {
-        display: none;
-    }
-
-    .menubar{
-        height: 80vh;
-    }
-
-
-}
-
-@media(max-width: 700px){
-    .container-text{
-        font-size: 2.5rem;
-    }
-
-    .menubar-links li{
-        font-size: medium;
-    }
-}
-
-
-
 /* Product info */
 
 #product-content {
@@ -336,13 +279,6 @@ body {
 
 /* Foooter section */
 
-@media (max-width: 1300px) {
-    .footer-container ul li{
-        font-size: 1.3rem;
-    }
-}
-
-
 .shortcut{
     width: 15rem;
     height: 10rem;
@@ -397,14 +333,13 @@ body {
     text-decoration: underline rgb(212, 120, 120);
 }
 
+.footer-container li:hover{
+    transform: scale(1.1);
+}
+
 #footer{
     background: linear-gradient(#e2a1a1, #f59d9d);
 }
-
-.line{
-
-}
-
 
 @media (max-width: 979px){
     .footer-container{
@@ -515,10 +450,10 @@ body {
     height: 40rem;
     width: 40rem;
     text-align: center;
-    background-color: #fdcece;
-    border-radius: 1rem;
+    background-color: #ebe3e3;
+    border-radius: 0.5rem;
     padding: 3rem;
-    box-shadow: 2.5rem 2.5rem 7rem 0.3rem black;
+    box-shadow: 2.5rem 2.5rem 7rem 0.3rem #977373;
 }
 
 .testimonial-wrapper img{
@@ -536,11 +471,62 @@ body {
 .testimonial p{
     margin: 3%;
 }
-@media (max-width: 600px){
+
+.testimonial:hover{
+    transform: scale(1.01);
+}
+
+
+@media (max-width: 600px) {
+    
+    .toggle-button {
+        display: flex;
+        margin: 4rem 2.5rem;
+    }
+
+    .menubar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }   
+
+    .menubar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }   
+
+    .menubar-links li {
+        text-align: center;
+    }   
+
+    .menubar-links li a {
+        padding: 1rem;
+    }   
+
+    .menubar-links.active {
+        display: flex;
+    }   
+
+    .menubar-links.close {
+        display: none;
+    }
 
     .testimonial{
         font-size: 1.5rem;
         width: 25vh;
+    }
+}
+
+@media(max-width: 700px){
+    .container-text{
+        font-size: 2.5rem;
+    }
+
+    .menubar-links li{
+        font-size: medium;
     }
 }
 
