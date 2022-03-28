@@ -1,4 +1,4 @@
-* {
+     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -112,6 +112,46 @@ body {
     border-radius: 1rem;
 }
 
+@media (max-width: 600px) {
+
+    .toggle-button {
+        display: flex;
+        margin: 4rem 2.5rem;
+    }
+
+    .menubar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .menubar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menubar-links li {
+        text-align: center;
+    }
+
+    .menubar-links li a {
+        padding: 1rem;
+    }
+
+    .menubar-links.active {
+        display: flex;
+    }
+
+    .menubar-links.close {
+        display: none;
+    }
+
+}
+
+
 /* Product info */
 
 #product-content {
@@ -167,23 +207,13 @@ body {
 
 
 
-/* 
- * Image Fade effect 
+/*
+ * Image Fade effect
 */
 
-.company-image {
-    width: 100%;
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
 
-.company-card-item:hover .company-image {
-    opacity: 0.5;
-}
-
-/* 
- * Title above the flex managed boxes 
+/*
+ * Title above the flex managed boxes
 */
 #related-companies > h1 {
     font-size: 3rem;
@@ -191,7 +221,7 @@ body {
     text-align: center;
 }
 
-/* 
+/*
  * Positioning and styling of the Boxes
 */
 #related-companies {
@@ -199,11 +229,25 @@ body {
     padding-bottom: 6rem;
 }
 
+.company-image img {
+    height: 20rem;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    box-shadow: 2rem 2rem 3rem #e0e0e0;
+}
 
+.company-image:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
 
 #company-cards {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #company-cards {
@@ -211,18 +255,39 @@ body {
     gap: 128px;
 }
 
-/* 
- * The content inside of the cards  
+.company-parah p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.company-parah{
+    margin: 5rem;
+}
+
+
+
+
+
+/*
+ * The content inside of the cards
 */
 .company-card-item {
     background-color: white;
-    box-shadow: 5px 10px 8px #e0e0e0;
-}  
+    width: 70%;
+    height: auto;
+    display: flex;
+    text-align: center;
+}
 
-.company-card-item {    
-    width: 20em;
-    height: 20em;
-} 
+
+@media (max-width: 601px) {
+    .company-parah p{
+        font-size: 1.5rem;
+        width: 30rem;
+    }
+}
 
 /* -------------------------------------------------------- */
 
@@ -268,7 +333,7 @@ body {
     font-size: large;
     width: 100;
     height: auto;
-    
+
 }
 
 
@@ -342,6 +407,15 @@ body {
 }
 
 @media (max-width: 979px){
+
+    
+
+    .company-card-item{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
     .footer-container{
         flex-direction: column;
         flex-wrap: nowrap;
@@ -354,7 +428,7 @@ body {
     .shortcut, .information, .support{
         display: none;
     }
-    
+
     .dropbar-container{
         display: contents;
         display: flex;
@@ -362,15 +436,15 @@ body {
     }
 
     .dropbar-container nav{
-        width : 30rem; 
+        width : 30rem;
         background: #ecbfbf;
         margin : 4rem auto;
-        border-radius: 2rem; 
+        border-radius: 2rem;
     }
 
     .dropbar-container span{
         padding : 3rem;
-        background : #ffffff; 
+        background : #ffffff;
         color : rgb(0, 0, 0);
         font-size : 1.2em;
         font-variant : small-caps;
@@ -384,7 +458,7 @@ body {
         right: 10%;
         content: "+";
     }
-    
+
     .slide{
         clear:both;
         width:100%;
@@ -400,11 +474,11 @@ body {
 
     #touch, #touch1, #touch2{
         position: absolute; opacity: 0; height: 0px;
-    }    
+    }
 
     #touch:checked + .slide, #touch1:checked + .slide, #touch2:checked + .slide {
         height: 25rem;
-    } 
+    }
 }
 @media (max-width: 1300px) {
     .footer-container ul li{
@@ -433,7 +507,7 @@ body {
 
 .testimonial-header h2{
     margin: 5%;
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
 .testimonial-wrapper{
@@ -442,7 +516,7 @@ body {
     gap: 80px;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .testimonial{
@@ -477,42 +551,7 @@ body {
 }
 
 
-@media (max-width: 600px) {
-    
-    .toggle-button {
-        display: flex;
-        margin: 4rem 2.5rem;
-    }
-
-    .menubar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .header-container {
-        flex-direction: column;
-    }   
-
-    .menubar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }   
-
-    .menubar-links li {
-        text-align: center;
-    }   
-
-    .menubar-links li a {
-        padding: 1rem;
-    }   
-
-    .menubar-links.active {
-        display: flex;
-    }   
-
-    .menubar-links.close {
-        display: none;
-    }
+@media (max-width: 602px) {
 
     .testimonial{
         font-size: 1.5rem;
