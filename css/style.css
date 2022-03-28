@@ -524,10 +524,17 @@ body {
     height: 40rem;
     width: 40rem;
     text-align: center;
+<<<<<<< HEAD
     background-color: #ebe3e3;
     border-radius: 0.5rem;
     padding: 3rem;
     box-shadow: 2.5rem 2.5rem 7rem 0.3rem #977373;
+=======
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0.5rem 0.5rem 2rem #574b4b;
+>>>>>>> master
 }
 
 .testimonial-wrapper img{
