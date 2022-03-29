@@ -171,42 +171,61 @@ body {
 
 /* Product info */
 
+#product-content img {
+    width: 40rem;
+    height: auto;
+}
+
 #product-content {
     display: flex;
     flex-direction: column;
-    padding: 10rem;
+    gap: 5rem;
+    align-items: center;
+    padding: 5rem;
     text-align: center;
-    background-color: #e7e7e7;
-}
-
-#product-content .title {
-    margin-bottom: 10rem;
 }
 
 .product-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20rem;
+    flex-wrap: wrap;
+    gap: 30rem;
 }
 
-.product-cards img {
-
-}
 
 .product-card-item {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 40rem;
-    padding: 1rem;
+    gap: 1rem;
+    width: 35rem;
+    height: 50rem;
     background-color: white;
-    text-align: center;
+    overflow: hidden;
+    border: 1rem white solid;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 5rem 2.5rem #eaeaea;
 }
 
-.card-item-description {
-    max-width: 20rem;
+.product-card-item h3 {
+    font-size: 2.5rem;
+}
+
+.card-item-description p {
+    font-size: 2rem;
+}
+
+.product-card-item button {
+    width: 10rem;
     align-self: center;
+    margin-top: auto;
+    padding: 1.5rem;
+    background-color: #ec361e;
+    color: white;
+    border-color: white;
+}
+
+.title h2 {
+    font-size: 3rem;
 }
 
 /* Company section */
