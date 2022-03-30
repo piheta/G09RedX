@@ -303,7 +303,6 @@ body {
 
 .about-text{
     text-align: center;
-    justify-content: center;
     margin-top: 5rem;
     font-size: large;
 }
@@ -312,26 +311,14 @@ body {
     font-size: 3rem;
 }
 
-.text {
-    color: #000000;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
-
 .about-text p {
     margin: 3rem;
 }
 
 .text-under{
     text-align: center;
-    justify-content: center;
     margin: 5rem;
     font-size: large;
-    width: 100;
     height: auto;
 
 }
@@ -408,8 +395,6 @@ body {
 
 @media (max-width: 979px){
 
-    
-
     .company-card-item{
         flex-wrap: wrap;
         align-items: center;
@@ -430,7 +415,6 @@ body {
     }
 
     .dropbar-container{
-        display: contents;
         display: flex;
         flex-direction: column;
     }
@@ -439,7 +423,7 @@ body {
         width : 30rem;
         background: #ecbfbf;
         margin : 4rem auto;
-        border-radius: 2rem;
+        border-radius: 0.4rem;
     }
 
     .dropbar-container span{
@@ -450,7 +434,7 @@ body {
         font-variant : small-caps;
         cursor : pointer;
         display: block;
-        border-radius: 1rem;
+        border-radius: 0.4rem;
     }
 
     .dropbar-container span::after{
@@ -462,8 +446,8 @@ body {
     .slide{
         clear:both;
         width:100%;
-        height:0px;
         overflow: hidden;
+        height: 0;
         text-align: center;
         transition: height .4s ease;
     }
@@ -473,7 +457,7 @@ body {
     }
 
     #touch, #touch1, #touch2{
-        position: absolute; opacity: 0; height: 0px;
+        position: absolute; opacity: 0; height: 0;
     }
 
     #touch:checked + .slide, #touch1:checked + .slide, #touch2:checked + .slide {
@@ -525,7 +509,7 @@ body {
     width: 40rem;
     text-align: center;
     background-color: #ebe3e3;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     padding: 3rem;
     box-shadow: 2.5rem 2.5rem 7rem 0.3rem #977373;
     margin: 2rem;
