@@ -37,6 +37,7 @@ body {
     font-size: 2rem;
 }
 
+
 .menubar-links ul {
     margin: 0;
     padding: 1.6rem 1.6rem;
@@ -226,6 +227,17 @@ body {
 
 .title h2 {
     font-size: 3rem;
+}
+
+.product-card-item a {
+    text-decoration: none;
+    background-color: #ec361e;
+    color: white;
+    width: 10rem;
+    align-self: center;
+    margin-top: auto;
+    padding: 1.5rem;
+    font-size: 1.5rem;
 }
 
 /* Company section */
