@@ -1,0 +1,83 @@
+/* Company section */
+
+/*
+ * Title above the flex managed boxes
+*/
+#related-companies > h1 {
+    font-size: 3rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+/*
+ * Positioning and styling of the Boxes
+*/
+#related-companies {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+
+.company-image img {
+    height: 20rem;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    box-shadow: 2rem 2rem 3rem #e0e0e0;
+}
+
+.company-image:hover {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+#company-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#company-cards {
+    justify-content: center;
+    gap: 128px;
+}
+
+.company-parah p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.company-parah{
+    margin: 5rem;
+}
+
+/*
+ * The content inside of the cards
+*/
+.company-card-item {
+    background-color: white;
+    width: 70%;
+    height: auto;
+    display: flex;
+    text-align: center;
+}
+
+
+@media (max-width: 601px) {
+    .company-parah p{
+        font-size: 1.5rem;
+        width: 30rem;
+    }
+}
+
+@media (max-width: 979px) {
+
+    .company-card-item {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
