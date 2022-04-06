@@ -1,14 +1,22 @@
 import './styles/global.css';
 
 import {Routes, Route} from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
+import CheckoutPage from "./pages/CheckoutPage";
+import Footer from "./components/footer/Footer";
+import Nav from "./components/nav/Nav";
 
 
 function App() {
     return (
-        <Routes>
-            <Route exact path="/" element={<Homepage />}/>
-        </Routes>
+        <div>
+            <Nav/>
+            <Routes>
+                <Route exact path="/" element={<HomePage />}/>
+                <Route path="/checkout" element={<CheckoutPage />}/>
+            </Routes>
+            <Footer/>
+        </div>
     );
 }
 
