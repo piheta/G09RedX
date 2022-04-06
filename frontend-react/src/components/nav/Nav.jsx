@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './Nav.css'
-import '../../styles/global.css'
+import './Nav.css';
 import headerlogo from '../../images/cross.png';
 
 function Nav() {

@@ -1,17 +1,14 @@
 import './styles/global.css';
 
-import { Routes, Route } from "react-router-dom";
-import Nav from "./components/nav/Nav.jsx";
-
+import {Routes, Route} from "react-router-dom";
+import Homepage from "./pages/Homepage";
 
 
 function App() {
     return (
-        <div>
-            <Routes>
-                <Route path="/" element={<Nav/>}/>
-            </Routes>
-        </div>
+        <Routes>
+            <Route exact path="/" element={<Homepage />}/>
+        </Routes>
     );
 }
 
