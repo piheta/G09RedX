@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product</title>
+    <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+    <section id="product-header">
+        <div class="menubar">
+            <nav class="header-container">
+
+                <div class="brand-image">
+                    <img src="../images/cross.png" alt="">
+                </div>
+
+                <a href="../index.html">Back to the main page</a>
+
+                <div class="menubar-links">
+                    <ul>
+                        <li><a href="html/login.html">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section id="content">
+        <div id="selected-product">
+            <div class="product-card-item">
+                <img src="../images/first-aid.jpg">
+                <div class="card-item-description">
+                    <h3>One day course</h3>
+                    <p>A 6 hour refreshment course for those who have taken a course during the last 3 years.</p>
+                </div>
+            </div>
+            <div id="checkout">
+                <div id="product-options">
+                    <div class="choice">
+                        <label for="group-size">Choose group size:</label>
+                        <select name="group-size" id="group-size">
+                            <option value="1">1 Person: 5000.- NOK</option>
+                            <option value="2">5 People: 30 000.- NOK</option>
+                        </select>
+                    </div>
+                    <div class="choice">
+                        <label for="time">Choose time:</label>
+                        <select name="time" id="time">
+                            <option value="1">10:00 - 14:00</option>
+                            <option value="2">17:00 - 21:00</option>
+                        </select>
+                    </div>
+                    <div class="choice">
+                        <label for="language">Preferred language:</label>
+                        <select name="language" id="language">
+                            <option value="NOR">Norwegian</option>
+                            <option value="EN">English</option>
+                        </select>
+                    </div>
+                </div>
+                <input id="date-picker" type="date">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
