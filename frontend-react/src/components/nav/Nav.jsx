@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './Nav.css';
 import headerlogo from '../../images/cross.png';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 function Nav() {
 
@@ -18,6 +19,12 @@ function Nav() {
         if (icon === "nav-toggler") {
             setIcon("nav-toggler toggle");
         } else setIcon("nav-toggler");
+
+        if(active === "menubar-links nav-active"){
+            enableBodyScroll(document);
+        } else {
+            disableBodyScroll(document);
+        }
     };
 
     return (
