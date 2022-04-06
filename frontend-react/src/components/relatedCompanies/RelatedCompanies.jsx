@@ -17,7 +17,7 @@ function RelatedCompanies() {
                 <div className="company-card-item">
 
                     <div className="company-image">
-                        <a href="https://radioaalesund.no/" target="_blank">
+                        <a href="https://radioaalesund.no/" target="_blank" rel="noreferrer">
                             <img src={radio} alt="radio Alesund"/>
                         </a>
                     </div>
@@ -36,7 +36,7 @@ function RelatedCompanies() {
 
                 <div className="company-card-item">
                     <div className="company-image">
-                        <a href="https://smp.no/" target="_blank">
+                        <a href="https://smp.no/" target="_blank" rel="noreferrer">
                             <img src={smp} alt="smp"/>
                         </a>
                     </div>
@@ -53,7 +53,7 @@ function RelatedCompanies() {
 
                 <div className="company-card-item">
                     <div className="company-image">
-                        <a href="https://tv.nrk.no/" target="_blank">
+                        <a href="https://tv.nrk.no/" target="_blank" rel="noreferrer">
                             <img src={nrk} alt="nrk tv"/>
                         </a>
                     </div>
