@@ -1,0 +1,7 @@
+#productCardSection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30rem;
+    margin: 10rem 0;
+}
