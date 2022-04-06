@@ -1,0 +1,26 @@
+#about-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text{
+    text-align: center;
+    margin-top: 5rem;
+    font-size: large;
+}
+
+.about-text > h1 {
+    font-size: 3rem;
+}
+
+.about-text p {
+    margin: 3rem;
+}
+
+.text-under{
+    text-align: center;
+    margin: 5rem;
+    font-size: large;
+    height: auto;
+}
