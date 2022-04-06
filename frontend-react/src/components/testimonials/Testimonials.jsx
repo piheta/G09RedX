@@ -1,9 +1,6 @@
 import React from 'react';
 import './Testimonials.css';
 import '../../styles/global.css';
-import user1 from '../../images/user1.png';
-import user2 from '../../images/user2.png';
-import user3 from '../../images/user3.png';
 
 
 function Testimonials() {
@@ -17,7 +14,7 @@ function Testimonials() {
 
             <div className="testimonial-wrapper">
                 <div className="testimonial">
-                    <img src={user1} alt=""/>
+                    <img src={ "/images/user1.png" } alt=""/>
                     <h2>EXCELLENT EXPERIENCE</h2>
                     <p>
                         "Red Cross are very competent experts in first help.
@@ -26,7 +23,7 @@ function Testimonials() {
                 </div>
 
                 <div className="testimonial">
-                    <img src={user2} alt=""/>
+                    <img src={ "/images/user2.png" } alt=""/>
                     <h2>GREAT SERVICE</h2>
                     <p>
                         "I have been HR responsible at my company for 12 years, and every year I update my certification with Red Cross Ålesund.
@@ -34,7 +31,7 @@ function Testimonials() {
                     </p>
                 </div>
                 <div className="testimonial">
-                    <img src={user3} alt=""/>
+                    <img src={ "/images/user3.png" } alt=""/>
                         <h2>EXCELLENT EXPERIENCE</h2>
                             <p>
                                 "These folks may not be Linux kernel gurus, but they do one thing well –

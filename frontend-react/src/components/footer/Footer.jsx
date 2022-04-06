@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import '../../styles/global.css';
-import headerlogo from '../../images/cross.png';
 
 function Footer() {
     return (
@@ -73,7 +72,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-images">
-                    <img src={headerlogo} alt=""/>
+                    <img src={"/images/cross.png"} alt=""/>
                     <p>Copyright © 2022 NTNU, IDATA2301 Web Technologies - group 9</p>
                 </div>
             </div>

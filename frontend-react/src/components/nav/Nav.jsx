@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './Nav.css';
-import headerlogo from '../../images/cross.png';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 function Nav() {
@@ -34,7 +33,7 @@ function Nav() {
                 <nav className="header-container">
 
                     <div className="brand-image">
-                        <img src={headerlogo} alt=""/>
+                        <img src={ "/images/cross.png" } alt=""/>
                     </div>
 
                     <div onClick={navToggle} className={icon}>

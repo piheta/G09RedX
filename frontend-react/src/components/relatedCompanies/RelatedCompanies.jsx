@@ -1,9 +1,6 @@
 import React from 'react';
 import './RelatedCompanies.css';
 import '../../styles/global.css';
-import radio from '../../images/radio.png';
-import smp from '../../images/smp.png';
-import nrk from '../../images/nrktv.png'
 
 function RelatedCompanies() {
 
@@ -18,7 +15,7 @@ function RelatedCompanies() {
 
                     <div className="company-image">
                         <a href="https://radioaalesund.no/" target="_blank" rel="noreferrer">
-                            <img src={radio} alt="radio Alesund"/>
+                            <img src={ "/images/radio.png" } alt="radio Alesund"/>
                         </a>
                     </div>
                     <div className="company-parah">
@@ -37,7 +34,7 @@ function RelatedCompanies() {
                 <div className="company-card-item">
                     <div className="company-image">
                         <a href="https://smp.no/" target="_blank" rel="noreferrer">
-                            <img src={smp} alt="smp"/>
+                            <img src={ "/images/smp.png" } alt="smp"/>
                         </a>
                     </div>
                     <div className="company-parah">
@@ -54,7 +51,7 @@ function RelatedCompanies() {
                 <div className="company-card-item">
                     <div className="company-image">
                         <a href="https://tv.nrk.no/" target="_blank" rel="noreferrer">
-                            <img src={nrk} alt="nrk tv"/>
+                            <img src={ "/images/nrktv.png" } alt="nrk tv"/>
                         </a>
                     </div>
 
