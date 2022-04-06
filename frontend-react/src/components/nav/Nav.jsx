@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Nav.css';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
+
 
 function Nav() {
 
@@ -19,7 +20,7 @@ function Nav() {
             setIcon("nav-toggler toggle");
         } else setIcon("nav-toggler");
 
-        if(active === "menubar-links nav-active"){
+        if (active === "menubar-links nav-active") {
             enableBodyScroll(document);
         } else {
             disableBodyScroll(document);
@@ -33,7 +34,7 @@ function Nav() {
                 <nav className="header-container">
 
                     <div className="brand-image">
-                        <img src={ "/images/cross.png" } alt=""/>
+                        <img src={"/images/cross.png"} alt=""/>
                     </div>
 
                     <div onClick={navToggle} className={icon}>
@@ -73,6 +74,8 @@ function Nav() {
                         <button type="button">Sign up for course</button>
                     </div>
                 </div>
+
+
             </div>
         </section>
     );
