@@ -3,8 +3,8 @@ import "./ProductCard.css";
 function ProductCard({ imageUrl, imageAlt, title, description}) {
     return (
         <div className="product-card-item">
-            <img src={ imageUrl } alt={ imageAlt }/>
-            <div className="card-item-description">
+            <img id={"productImage"} src={ imageUrl } alt={ imageAlt }/>
+            <div className="product-text-container">
                 <h3 className="product-card-title">{ title }</h3>
                 <p className="product-card-description">{ description }</p>
             </div>
