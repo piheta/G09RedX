@@ -1,6 +1,9 @@
 import React from 'react';
+import {useNavigate} from 'react-router';
 import "./ProductCard.css";
+
 function ProductCard({ imageUrl, imageAlt, title, description}) {
+    const navigate = useNavigate();
     return (
         <div className="product-card-item">
             <img id={"productImage"} src={ imageUrl } alt={ imageAlt }/>
@@ -8,7 +11,7 @@ function ProductCard({ imageUrl, imageAlt, title, description}) {
                 <h3 className="product-card-title">{ title }</h3>
                 <p className="product-card-description">{ description }</p>
             </div>
-            <a href="/#">Buy now</a>
+            <a onClick={() => navigate("/checkout")}>Buy now</a>
         </div>
     );
 }
