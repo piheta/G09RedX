@@ -12,7 +12,7 @@
     min-height: 100vh;
 }
 
-.form-wrapper{
+.form-login-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@
 
 
 
-.form-container{
+.form-login-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,33 +34,33 @@
 }
 
 
-.form-signin{
+.login-form{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     width: 100%;
 }
 
-.form-signin input:focus{
+.login-form input:focus{
     outline: none;
 }
 
-.form-signin input{
+.login-form input{
     padding: 1rem;
 }
 
-.form-container label{
+.form-login-container label{
     font-size: 2rem;
 }
 
-.form-container input{
+.form-login-container input{
     height: 3rem;
     width: auto;
     border-style: none;
 
 }
 
-.header-label{
+.header-login-label{
     margin-bottom: 20%;
     font-size: 4rem;
     color: rgb(32, 28, 28);
