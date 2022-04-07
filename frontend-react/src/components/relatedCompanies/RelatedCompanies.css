@@ -35,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 128px;
+    gap: 10vh;
 }
 
 
@@ -55,25 +55,25 @@
 */
 .company-card-item {
     background-color: white;
-    width: 70%;
+    width: 60%;
     height: auto;
     display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 
-@media (max-width: 601px) {
-    .company-parah p{
-        font-size: 1.5rem;
-        width: 30rem;
-    }
-}
 
-@media (max-width: 979px) {
+
+@media (max-width: 1350px) {
 
     .company-card-item {
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
     }
+
+    .company-parah p{
+        width: 30rem;
+    }
+
 }
