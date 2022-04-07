@@ -10,13 +10,13 @@ function Login() {
 
     return (
         <section className={"login-section"}>
-            <div className="form-container">
-                <div className="form-wrapper">
+            <div className="form-login-container">
+                <div className="form-login-wrapper">
                     <div>
-                        <h1 className="header-label">Login</h1>
+                        <h1 className="header-login-label">Login</h1>
                     </div>
-                    <div className="form">
-                        <form className="form-signin">
+                    <div>
+                        <form className="login-form">
                             <label htmlFor="username">Username:</label>
                             <input id="username" type="text" name="username" autoFocus/>
                             <label id="password" htmlFor="password">Password:</label>
