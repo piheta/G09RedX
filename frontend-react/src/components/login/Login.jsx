@@ -1,5 +1,6 @@
 import React from 'react';
 import './Login.css';
+import '../../styles/global.css'
 import {useNavigate} from 'react-router';
 
 
@@ -11,25 +12,23 @@ function Login() {
         <section className={"login-section"}>
             <div className="form-container">
                 <div className="form-wrapper">
-                    <h1 className="header-label">Login</h1>
+                    <div>
+                        <h1 className="header-label">Login</h1>
+                    </div>
                     <div className="form">
                         <form className="form-signin">
                             <label htmlFor="username">Username:</label>
-                            <input id="username" type="text" name="username"/>
+                            <input id="username" type="text" name="username" autoFocus/>
                             <label id="password" htmlFor="password">Password:</label>
                             <input type="password" name="password"/>
                             <input type="button" id="submit-button" value="Login"/>
                         </form>
                     </div>
-
-                    <a href="/#">Not registered? Sign up</a>
-
-                    <div className="logo">
-                        <img src={"/images/cross.png"} alt=""/>
+                    <div className={"login-footer"}>
+                        <a className={"register-anchor"} href="/#">Not registered? Sign up</a>
+                        <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
+                        <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                     </div>
-
-                    <a onClick={() => navigate("/")}>Back to main page</a>
-
                 </div>
             </div>
         </section>

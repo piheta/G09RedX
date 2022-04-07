@@ -13,7 +13,7 @@ function Nav() {
     const [icon, setIcon] = useState("nav-toggler");
 
     const navToggle = () => {
-
+        //Menu
         if (active === "menubar-links") {
             setActive("menubar-links nav-active");
         } else setActive("menubar-links");
@@ -36,9 +36,7 @@ function Nav() {
             <div className="menubar">
                 <nav className="header-container">
 
-                    <div className="brand-image">
-                        <img src={"/images/cross.png"} alt=""/>
-                    </div>
+                    <img className={"brand-image"} src={"/images/cross.png"} alt=""/>
 
                     <div onClick={navToggle} className={icon}>
                         <div className="line1"></div>
@@ -46,7 +44,7 @@ function Nav() {
                         <div className="line3"></div>
                     </div>
 
-                    <ul className={active}>
+                    <ul className={active} >
                         <li className="nav-item">
                             <a onClick={() => navigate("/login")} className="nav-link">
                                 Login
