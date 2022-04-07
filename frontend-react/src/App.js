@@ -10,7 +10,7 @@ import Nav from "./components/nav/Nav";
 function App() {
     return (
         <div>
-            <Nav/>
+            <Nav />
             <Routes>
                 <Route exact path="/" element={<HomePage />}/>
                 <Route path="/checkout" element={<CheckoutPage />}/>
