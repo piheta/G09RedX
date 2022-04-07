@@ -41,7 +41,7 @@
     background-color: #ebe3e3;
     border-radius: 0.4rem;
     padding: 3rem;
-    box-shadow: 2.5rem 2.5rem 7rem 0.3rem #977373;
+    box-shadow: 2.5rem 2.5rem 7rem 0.3rem rgba(151, 115, 115, 0.2);
     margin: 2rem;
 }
 
