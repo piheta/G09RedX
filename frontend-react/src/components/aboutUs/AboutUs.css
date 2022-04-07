@@ -4,6 +4,13 @@
     justify-content: center;
 }
 
+.simple-image-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .about-text{
     text-align: center;
     margin-top: 5rem;
@@ -24,3 +31,11 @@
     font-size: large;
     height: auto;
 }
+
+
+@media (max-width: 1000px) {
+    .simple-image-slider{
+        display: none;
+    }
+}
+

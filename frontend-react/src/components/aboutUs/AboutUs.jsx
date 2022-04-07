@@ -8,9 +8,9 @@ function AboutUs() {
 
 
     const images = [
-        { url: "" },
-        { url: "" },
-        { url: "" },
+        { url: "/images/medic1.jpg" },
+        { url: "/images/medic2.jpg" },
+        { url: "/images/medic3.jpg" },
     ];
 
 
@@ -21,6 +21,9 @@ function AboutUs() {
                 <p>We provide courses both during work time and evening courses. <br/> Since 2020, we don't provide
                     weekend
                     courses anymore.</p>
+                <p>Our team consists of medical professionals with more than 30 years of experience. <br/>We are
+                    certified
+                    according to ISO 8072 and DNV 23:786.</p>
             </div>
             <div className={"simple-image-slider"}>
                 <SimpleImageSlider
@@ -29,12 +32,9 @@ function AboutUs() {
                     images={images}
                     showBullets={true}
                     showNavs={true}
+                    autoPlay={true}
+                    autoPlayDelay={3.0}
                 />
-            </div>
-            <div className="text-under">
-                <p>Our team consists of medical professionals with more than 30 years of experience. <br/>We are
-                    certified
-                    according to ISO 8072 and DNV 23:786.</p>
             </div>
         </section>
     );
