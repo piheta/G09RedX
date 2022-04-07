@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './Nav.css';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
+import {useNavigate} from "react-router";
 
 
 function Nav() {
+
+    const navigate = useNavigate();
 
     const [active, setActive] = useState("menubar-links");
 
@@ -45,7 +48,7 @@ function Nav() {
 
                     <ul className={active}>
                         <li className="nav-item">
-                            <a href="/#" className="nav-link">
+                            <a onClick={() => navigate("/login")} className="nav-link">
                                 Login
                             </a>
                         </li>
