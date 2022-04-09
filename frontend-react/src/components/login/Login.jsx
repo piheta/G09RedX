@@ -21,7 +21,7 @@ function Login() {
         }
         axios({
             method: "post",
-            url: "http://localhost:8080/authenticate",
+            url: "https://gr09.appdev.cloudns.ph:8443/authenticate",
             headers: {
                 "Accept": "*/*",
                 "Access-Control-Allow-Origin": "*",
