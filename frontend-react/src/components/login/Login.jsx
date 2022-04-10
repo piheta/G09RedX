@@ -16,12 +16,12 @@ function Login() {
 
     function sendLoginRequest() {
         let loginInfo = {
-            "username": username,
+            "userName": username,
             "password": password
         }
         axios({
             method: "post",
-            url: "https://gr09.appdev.cloudns.ph:8443/authenticate",
+            url: "http://localhost:8080/authenticate",
             headers: {
                 "Accept": "*/*",
                 "Access-Control-Allow-Origin": "*",
