@@ -17,7 +17,7 @@ function Login() {
 
     function sendLoginRequest() {
         let loginInfo = {
-            "username": username,
+            "userName": username,
             "password": password
         }
         axios({

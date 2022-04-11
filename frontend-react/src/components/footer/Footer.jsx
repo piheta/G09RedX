@@ -20,24 +20,24 @@ function Footer() {
 
                     </nav>
                     <nav>
-                        <label htmlFor="touch1"><span>Shortcut</span></label>
+                        <label htmlFor="touch1"><span>Information</span></label>
                         <input type="checkbox" id="touch1"/>
 
                         <ul className="slide">
-                            <li><a href="/#">Certification</a></li>
-                            <li><a href="/#">Payments</a></li>
-                            <li><a href="/#">Orders</a></li>
+                            <li><a href="/#">Terms and conditions</a></li>
+                            <li><a href="/#">Code and Medical Ethics</a></li>
+                            <li><a href="/#">Terms of sale</a></li>
                         </ul>
 
                     </nav>
                     <nav>
-                        <label htmlFor="touch2"><span>Shortcut</span></label>
+                        <label htmlFor="touch2"><span>Support</span></label>
                         <input type="checkbox" id="touch2"/>
 
                         <ul className="slide">
-                            <li><a href="/#">Certification</a></li>
-                            <li><a href="/#">Payments</a></li>
-                            <li><a href="/#">Orders</a></li>
+                            <li><a href="/#">Contacts us</a></li>
+                            <li><a href="/#">Questions and Answers</a></li>
+                            <li><a href="/#">Refunds</a></li>
                         </ul>
                     </nav>
                 </div>
