@@ -34,7 +34,6 @@ function Login() {
             },
             data: loginInfo
         }).then((response) => {
-            console.log(response.data);
             if (response.status === 200) {
                 setWarning(false);
                 dispatch(setLoginStatus({
@@ -64,7 +63,7 @@ function Login() {
                         (warning === true)
                             ?
                             <div className={"sign-up-warning"}>
-                                <p>Warning: {warningText}</p>
+                                <p>{warningText}</p>
                             </div>
                             :
                             <div></div>
