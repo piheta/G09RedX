@@ -82,3 +82,11 @@
     cursor: pointer;
 }
 
+.sign-up-warning {
+    align-self: center;
+    width: 25rem;
+    height: 3rem;
+    background-color: red;
+    color: white;
+}
+
