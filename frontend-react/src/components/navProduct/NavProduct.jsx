@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import './Nav.css';
 import '../../styles/global.css'
-import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
+import './NavProduct.css'
 import {useNavigate} from "react-router";
+import {disableBodyScroll, enableBodyScroll} from "body-scroll-lock";
 
-
-function Nav() {
+function NavProduct() {
 
     const navigate = useNavigate();
 
@@ -31,6 +30,7 @@ function Nav() {
         }
     };
 
+
     return (
         <section id="header">
 
@@ -47,7 +47,7 @@ function Nav() {
 
                     <ul className={active} >
                         <li className="nav-item">
-                            <a onClick={() => (navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a onClick={() => navigate("/login")} className="nav-link">
                                 Login
                             </a>
                         </li>
@@ -69,18 +69,10 @@ function Nav() {
                     </ul>
                 </nav>
 
-                <div className="container-text">
-                    <h1>RED CROSS ÅLESUND</h1>
-                    <h6>We value every life</h6>
-                    <div className="signup-btn">
-                        <button type="button">Sign up for course</button>
-                    </div>
-                </div>
-
 
             </div>
         </section>
     );
 }
 
-export default Nav;
+export default NavProduct;
