@@ -14,6 +14,8 @@ function Login() {
     const [username, setUsername] = useState("");
     const dispatch = useDispatch();
     const isLogged = useSelector(state => state.isLogged);
+    const [warning, setWarning] = React.useState(false);
+    const [warningText, setWarningText] = React.useState("");
 
     function sendLoginRequest() {
         let loginInfo = {
@@ -32,15 +34,18 @@ function Login() {
             },
             data: loginInfo
         }).then((response) => {
-            console.log(response.data);
             if (response.status === 200) {
+                setWarning(false);
                 dispatch(setLoginStatus({
                     isLogged: true,
                     jwToken: response.data.jwt
                 }));
                 navigate("/");
             }
-        }).catch((response) => console.log(response.status));
+        }).catch((error) => {
+            setWarning(true);
+            setWarningText(error.response.data);
+        })
     };
 
     return (
@@ -52,7 +57,19 @@ function Login() {
                 <div className="form-container">
                     <TextField onChange={(elem) => setUsername(elem.target.value)}
                                label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField onChange={(elem) => setPassword(elem.target.value)} label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+
+                    <TextField onChange={(elem) => setPassword(elem.target.value)} label="Password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+
+                    {
+                        (warning === true)
+                            ?
+                            <div className={"sign-up-warning"}>
+                                <p>{warningText}</p>
+                            </div>
+                            :
+                            <div></div>
+                    }
+
                     <Button onClick={sendLoginRequest} variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 

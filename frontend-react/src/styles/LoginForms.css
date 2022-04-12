@@ -82,3 +82,13 @@
     cursor: pointer;
 }
 
+.sign-up-warning {
+    font-size: 1.25rem;
+    align-self: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border-radius: 0.25rem;
+}
