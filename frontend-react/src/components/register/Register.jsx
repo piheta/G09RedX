@@ -18,13 +18,13 @@ function Register() {
                 <div className={"form-container"}>
                     <TextField label="Email" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField label="Password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField label="Confirm password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField label="Confirm password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <Button variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 
                 <div className="form-footer">
-                    <img className={"brand-logo"} src="../images/cross.png" alt=""/>
+                    <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
             </div>
