@@ -46,7 +46,7 @@ function Nav() {
 
                     <ul className={active} >
                         <li className="nav-item">
-                            <a onClick={() => navigate("/login")} className="nav-link">
+                            <a onClick={() => (navigate("/login"), enableBodyScroll(document))} className="nav-link">
                                 Login
                             </a>
                         </li>

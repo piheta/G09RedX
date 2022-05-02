@@ -32,10 +32,21 @@
     height: auto;
 }
 
+.about-text img{
+    display: none;
+}
+
 
 @media (max-width: 1000px) {
     .simple-image-slider{
         display: none;
     }
+
+    .about-text img{
+        display: inline-block;
+        height: 20rem;
+        width: auto;
+    }
+
 }
 

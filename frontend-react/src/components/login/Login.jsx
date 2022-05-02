@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import './Login.css';
+import '../../styles/LoginForms.css';
 import '../../styles/global.css'
 import {useNavigate} from 'react-router';
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setLoginStatus} from "../../store/action/IsLoggedAction";
+import {Button, TextField} from "@mui/material";
 
 function Login() {
 
@@ -13,6 +14,8 @@ function Login() {
     const [username, setUsername] = useState("");
     const dispatch = useDispatch();
     const isLogged = useSelector(state => state.isLogged);
+    const [warning, setWarning] = React.useState(false);
+    const [warningText, setWarningText] = React.useState("");
 
     function sendLoginRequest() {
         let loginInfo = {
@@ -31,40 +34,52 @@ function Login() {
             },
             data: loginInfo
         }).then((response) => {
-            console.log(response.data);
             if (response.status === 200) {
+                setWarning(false);
                 dispatch(setLoginStatus({
                     isLogged: true,
                     jwToken: response.data.jwt
                 }));
                 navigate("/");
             }
-        }).catch((response) => console.log(response.status));
+        }).catch((error) => {
+            setWarning(true);
+            setWarningText(error.response.data);
+        })
     };
 
     return (
-        <section className={"login-section"}>
-            <div className="form-login-container">
-                <div className="form-login-wrapper">
-                    <div>
-                        <h1 className="header-login-label">Login</h1>
-                    </div>
-                    <div>
-                        <div className="login-form">
-                            <label htmlFor="username">Username:</label>
-                            <input onChange={(elem) => setUsername(elem.target.value)} id="username" type="text" name="username" autoFocus/>
-                            <label id="password" htmlFor="password">Password:</label>
-                            <input onChange={(elem) => setPassword(elem.target.value)} type="password" name="password"/>
-                            <input onClick={sendLoginRequest} type="button" id="submit-button" value="Login"/>
-                        </div>
-                    </div>
-                    <div className={"login-footer"}>
-                        <a className={"register-anchor"} href="/#">Not registered? Sign up</a>
-                        <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
-                        <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
-                    </div>
+        <section className={"form-section"}>
+
+            <div className="form-wrapper">
+                <h1 className="header-forms-label">Sign In</h1>
+
+                <div className="form-container">
+                    <TextField onChange={(elem) => setUsername(elem.target.value)}
+                               label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField onChange={(elem) => setPassword(elem.target.value)} label="Password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+
+                    {
+                        (warning === true)
+                            ?
+                            <div className={"sign-up-warning"}>
+                                <p>{warningText}</p>
+                            </div>
+                            :
+                            <div></div>
+                    }
+
+                    <Button onClick={sendLoginRequest} variant="outlined" color={"error"}>Confirm</Button>
+                </div>
+
+                <div className={"form-footer"}>
+                    <a className={"register-anchor"} onClick={() => navigate("/register")}>Not registered? Sign
+                        up</a>
+                    <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
+                    <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
             </div>
+
         </section>
     );
 }
