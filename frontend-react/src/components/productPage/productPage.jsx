@@ -1,18 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../styles/global.css'
 import './productPage.css'
 import {Button, Rating, Tooltip} from "@mui/material";
+import {useNavigate} from "react-router";
 
 function ProductPage({imageUrl, imageAlt, productTitle, ratingValue, price,
-                      productImgUrl1, productImgUrl2, productImgDesc1 , productImgDesc2}) {
+                      productImgUrl1, productImgUrl2, productImgDesc1 , productImgDesc2, navigatePathImg1, navigatePathImg2}) {
 
 
-
+const navigate = useNavigate();
 
     return (
         <div className={"checkout-container"}>
             <div className={"checkout-img-wrapper"}>
-                <img src={imageUrl} alt={imageAlt} height={500} width={300}/>
+                <img src={imageUrl} alt={imageAlt} height={450} width={300}/>
             </div>
 
             <div className={"checkout-summary"}>
@@ -44,14 +45,14 @@ function ProductPage({imageUrl, imageAlt, productTitle, ratingValue, price,
                     <div className={"checkout-product-wrapper"}>
                         <div className={"checkout-product"}>
                             <Tooltip title={<h1 style={{ fontSize: "1rem"}}>{productImgDesc1}</h1>} placement="top">
-                                <button className={"product-anchor-1"} href={"/#"}>
+                                <button className={"product-anchor-1"} onClick={() => navigate(navigatePathImg1)}>
                                     <img alt={"product1"} src={productImgUrl1}/>
                                 </button>
                             </Tooltip>
                         </div>
                         <div className={"checkout-product"}>
                             <Tooltip title={<h1 style={{ fontSize: "1rem"}}>{productImgDesc2}</h1>} placement="top">
-                                <button className={"product-anchor-2"} href={"/#"}>
+                                <button className={"product-anchor-2"} onClick={() => navigate(navigatePathImg2)}>
                                     <img alt={"product2"} src={productImgUrl2}/>
                                 </button>
                             </Tooltip>

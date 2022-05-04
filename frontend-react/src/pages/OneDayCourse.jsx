@@ -1,22 +1,24 @@
 import React from 'react';
 import Footer from "../components/footer/Footer";
 import NavProduct from "../components/navProduct/NavProduct";
-import ProductPage from "../components/checkOut/productPage";
+import ProductPage from "../components/productPage/productPage";
 
 function OneDayCourse() {
     return (
         <div>
             <NavProduct/>
             <ProductPage
-                imageUrl={"/images/oneDayCourseCard.jpeg"}
+                imageUrl={"/images/cropped-onedaycourse.jpg"}
                 imageAlt={"Course One day"}
                 price={"20$"}
                 productTitle={"One day course! Learn everything in one day"}
                 ratingValue={4}
-                productImgUrl1={"/images/twoDayCourseCard.jpeg"}
-                productImgUrl2={"/images/consultation.jpeg"}
+                productImgUrl1={"/images/squoosed-twodaycourse.jpg"}
+                productImgUrl2={"/images/squoosed-consultation.jpg"}
                 productImgDesc1={"Two day course"}
-                productImgDesc2={"Short consultation"}/>
+                productImgDesc2={"Short consultation"}
+                navigatePathImg1={"/checkout/twoDayCourse"}
+                navigatePathImg2={"/checkout/shortconsultation"}/>
             <Footer/>
         </div>
     );

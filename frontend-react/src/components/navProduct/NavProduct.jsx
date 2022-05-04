@@ -37,7 +37,9 @@ function NavProduct() {
             <div className="menubar">
                 <nav className="header-container">
 
-                    <img className={"brand-image"} src={"/images/cross.png"} alt=""/>
+                    <a className={"brand-image-anchor"} onClick={() => navigate("/")}>
+                        <img className={"brand-image"} src={"/images/cross.png"} alt=""/>
+                    </a>
 
                     <div onClick={navToggle} className={icon}>
                         <div className="line1"></div>

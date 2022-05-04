@@ -8,6 +8,10 @@
     flex-direction: column;
 }
 
+.brand-image-anchor:hover{
+    cursor: pointer;
+}
+
 .nav-toggler {
     display: none;
 }
