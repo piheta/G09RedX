@@ -1,6 +1,6 @@
 /* testimonials */
 
-#testimonial-section{
+ #testimonial-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,32 +8,32 @@
     background: linear-gradient(#ffffff, #f3e5e5);
 }
 
-.testimonial-header{
+.testimonial-header {
     margin: 5%;
     font-size: 3rem;
     text-align: center;
 
 }
 
-.testimonial-header h2{
+.testimonial-header h2 {
     margin: 5%;
     font-size: 2rem;
 }
 
-.testimonial-wrapper{
+.testimonial-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 80px;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 10%;
 }
 
-.testimonial p{
+.testimonial p {
     margin-top: 2rem;
 }
 
-.testimonial{
+.testimonial {
     font-size: 2rem;
     height: 40rem;
     width: 40rem;
@@ -45,26 +45,19 @@
     margin: 2rem;
 }
 
-.testimonial-wrapper img{
+.testimonial-wrapper img {
     border-radius: 3rem;
     margin: 2%;
 }
 
-.line{
-    background-color: #000000;
-    height: 2px;
-    width: 100%;
-    margin-top: 10%;
-}
-
-.testimonial:hover{
+.testimonial:hover {
     transform: scale(1.01);
 }
 
 
 @media (max-width: 602px) {
 
-    .testimonial{
+    .testimonial {
         font-size: 1.5rem;
         width: 30vh;
     }

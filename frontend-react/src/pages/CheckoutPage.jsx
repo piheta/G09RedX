@@ -1,10 +1,9 @@
 import React from 'react';
+import Nav from "../components/nav/Nav";
 
 function CheckoutPage() {
     return (
-        <div>
-
-        </div>
+        <Nav />
     );
 }
 

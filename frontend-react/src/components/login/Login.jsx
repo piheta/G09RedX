@@ -60,13 +60,7 @@ function Login() {
                     <TextField onChange={(elem) => setPassword(elem.target.value)} label="Password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
 
                     {
-                        (warning === true)
-                            ?
-                            <div className={"sign-up-warning"}>
-                                <p>{warningText}</p>
-                            </div>
-                            :
-                            <div></div>
+                        (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : <div></div>
                     }
 
                     <Button onClick={sendLoginRequest} variant="outlined" color={"error"}>Confirm</Button>
