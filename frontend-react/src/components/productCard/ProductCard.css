@@ -48,4 +48,5 @@
 .product-card-item a:hover {
     background-color: #e86555;
     transform: scale(1.025);
+    cursor: pointer;
 }
