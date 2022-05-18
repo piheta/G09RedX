@@ -51,8 +51,8 @@ function Register() {
                 <div className={"form-container"}>
                     <TextField onChange={(elem) => setEmail(elem.target.value)} label="Email" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField onChange={(elem) => setUsername(elem.target.value)} label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField onChange={(elem) => setPassword(elem.target.value)}  label="Password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField onChange={(elem) => setConfirmPassword(elem.target.value)}  label="Confirm password" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField onChange={(elem) => setPassword(elem.target.value)}  label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField onChange={(elem) => setConfirmPassword(elem.target.value)}  label="Confirm password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <Button onClick={sendCreateUserRequest} variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 
