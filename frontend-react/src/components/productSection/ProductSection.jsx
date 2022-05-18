@@ -4,7 +4,7 @@ import "./ProductSection.css";
 
 function ProductSection() {
     return (
-        <section id={"productCardSection"}>
+        <section id={"product-card-section"}>
             <ProductCard
                 imageUrl={"/images/oneDayCourseCard.jpeg"}
                 imageAlt={"First-aid kit"}

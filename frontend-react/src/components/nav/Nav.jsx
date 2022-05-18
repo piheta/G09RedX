@@ -46,7 +46,7 @@ function Nav() {
 
                     <ul className={active}>
                         <li className="nav-item">
-                            <a onClick={() => (navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a href='' onClick={() => (navigate("/login"), enableBodyScroll(document))} className="nav-link">
                                 Login
                             </a>
                         </li>
@@ -56,17 +56,17 @@ function Nav() {
                                 :
                                 <div>
                                     <li className="nav-item">
-                                        <a href="/#" className="nav-link">
+                                        <a href='#product-card-section' className="nav-link">
                                             Products
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/#" className="nav-link">
+                                        <a href="#related-companies" className="nav-link">
                                             Companies
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="/#" className="nav-link">
+                                        <a href="#testimonial-section" className="nav-link">
                                             Testimonials
                                         </a>
                                     </li>
