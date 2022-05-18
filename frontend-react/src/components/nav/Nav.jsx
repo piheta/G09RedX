@@ -54,7 +54,7 @@ function Nav() {
                             location.pathname === '/checkout' ?
                                 null
                                 :
-                                <div>
+                                <>
                                     <li className="nav-item">
                                         <a href='#product-card-section' className="nav-link">
                                             Products
@@ -70,7 +70,7 @@ function Nav() {
                                             Testimonials
                                         </a>
                                     </li>
-                                </div>
+                                </>
                         }
                     </ul>
                 </nav>
