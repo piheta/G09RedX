@@ -57,8 +57,8 @@ function Login() {
                 <div className="form-container">
                     <TextField onChange={(elem) => setUsername(elem.target.value)}
                                label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField onChange={(elem) => setPassword(elem.target.value)} label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
-
+                    <TextField onChange={(elem) => setPassword(elem.target.value)}
+                               label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
                         (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : <div></div>
                     }
@@ -67,8 +67,7 @@ function Login() {
                 </div>
 
                 <div className={"form-footer"}>
-                    <a className={"register-anchor"} onClick={() => navigate("/register")}>Not registered? Sign
-                        up</a>
+                    <a className={"register-anchor"} onClick={() => navigate("/register")}>Not registered? Sign up</a>
                     <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
