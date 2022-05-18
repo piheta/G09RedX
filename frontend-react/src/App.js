@@ -7,7 +7,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import TwoDayCourse from "./pages/TwoDayCourse";
 import ShortConsultation from "./pages/ShortConsultation";
-import Review from "./components/review/Review";
+import ReviewSection from "./reviewSection/ReviewSection";
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
                 <Route path="/checkout/shortconsultation" element={<ShortConsultation />}/>
                 <Route path ="/login" element = {<Login />}/>
                 <Route path ="/register" element = {<Register />}/>
-                <Route path ="/review" element = {<Review />}/>
+                <Route path ="/review" element = {<ReviewSection />}/>
             </Routes>
         </div>
     );

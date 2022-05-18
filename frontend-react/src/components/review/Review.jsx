@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Review.css"
 import { styled } from '@mui/material/styles';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -6,34 +7,28 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 function Review({userName, comment} ) {
 
+
     const current = new Date();
 
     function getCurrentDate(){
         return `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     }
 
-    const StyledRating = styled(Rating)({
-        '& .MuiRating-iconFilled': {
-            color: '#ff6d75',
-        },
-        '& .MuiRating-iconHover': {
-            color: '#ff3d47',
-        },
-    });
+
 
 
     return (
         <div className={"review-component"}>
             <div className={"review-header"}>
                 <h1>{userName}</h1>
-                <h2>{getCurrentDate()}</h2>
-                <StyledRating
+                <h4>{getCurrentDate()}</h4>
+                <Rating
                     name="customized-color"
-                    defaultValue={2}
+                    defaultValue={3}
                     getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                     precision={0.5}
-                    icon={<FavoriteIcon fontSize="inherit" />}
-                    emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+                    icon={<FavoriteIcon sx={{color: "#ec361e"}} fontSize="inherit" />}
+                    emptyIcon={<FavoriteBorderIcon sx={{color: "#ec361e"}} fontSize="inherit" />}
                 />
             </div>
             <div className={"review-comment"}>
