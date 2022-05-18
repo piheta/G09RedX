@@ -1,0 +1,18 @@
+.review-component{
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header{
+    display: flex;
+
+}
+
+.review-hearts{
+
+}
+
+.review-comment{
+
+}
+
