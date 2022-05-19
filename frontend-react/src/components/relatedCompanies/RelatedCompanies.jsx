@@ -39,11 +39,9 @@ function RelatedCompanies() {
                     </div>
                     <div className="company-parah">
                         <p>
-                            Radio Ålesund sender live fra bystudioet i Ålesund sentrum hver eneste dag,
-                            og gir deg alt du trenger av lokale nyheter, sport, vær,
-                            trafikk og reportasjer i tillegg til favorittmusikken din på løpende bånd.
-                            Hos oss får du en unik miks av de nyeste hitlåtene,
-                            blandet sammen med gode gamle klassikere.
+                            Sunnmørsposten er ei dagsavis som kjem ut i Ålesund.
+                            Avisa blei grunnlagt i 1882 og er den dominerende avisa på Sunnmøre og Nordvestlandet.
+                            Avisa er eigd av Polaris Media ASA.
                         </p>
                     </div>
                 </div>
@@ -57,11 +55,9 @@ function RelatedCompanies() {
 
                     <div className="company-parah">
                         <p>
-                            Radio Ålesund sender live fra bystudioet i Ålesund sentrum hver eneste dag,
-                            og gir deg alt du trenger av lokale nyheter, sport, vær,
-                            trafikk og reportasjer i tillegg til favorittmusikken din på løpende bånd.
-                            Hos oss får du en unik miks av de nyeste hitlåtene,
-                            blandet sammen med gode gamle klassikere.
+                            Norsk rikskringkasting AS (NRK) fyller viktige sosiale,
+                            kulturelle og demokratiske behov i det norske samfunnet gjennom innhold på nett,
+                            TV og radio.
                         </p>
                     </div>
                 </div>

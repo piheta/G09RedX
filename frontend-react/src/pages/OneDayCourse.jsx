@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from "../components/footer/Footer";
 import NavProduct from "../components/navProduct/NavProduct";
 import ProductPage from "../components/productPage/productPage";
+import ReviewSection from "../reviewSection/ReviewSection";
 
 function OneDayCourse() {
     return (
@@ -19,6 +20,7 @@ function OneDayCourse() {
                 productImgDesc2={"Short consultation"}
                 navigatePathImg1={"/checkout/twoDayCourse"}
                 navigatePathImg2={"/checkout/shortconsultation"}/>
+            <ReviewSection />
             <Footer/>
         </div>
     );

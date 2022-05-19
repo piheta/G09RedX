@@ -39,8 +39,6 @@ function Testimonials() {
                             </p>
                 </div>
             </div>
-
-            <div className="line"></div>
         </section>
 );
 }

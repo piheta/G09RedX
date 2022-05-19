@@ -1,3 +1,19 @@
 #review-section{
-    margin: 20rem;
+    margin: 5%;
+}
+
+.review-section-header{
+    display: flex;
+    font-size: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.review-section-review-list{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    flex-wrap: wrap;
 }

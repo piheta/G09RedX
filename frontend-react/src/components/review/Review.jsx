@@ -1,20 +1,19 @@
 import React from 'react';
 import "./Review.css"
-import { styled } from '@mui/material/styles';
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
-function Review({userName, comment} ) {
+function Review({userName, comment, rating} ) {
+
 
 
     const current = new Date();
 
+
     function getCurrentDate(){
         return `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     }
-
-
 
 
     return (
@@ -23,8 +22,9 @@ function Review({userName, comment} ) {
                 <h1>{userName}</h1>
                 <h4>{getCurrentDate()}</h4>
                 <Rating
+                    readOnly
                     name="customized-color"
-                    defaultValue={3}
+                    value={rating}
                     getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                     precision={0.5}
                     icon={<FavoriteIcon sx={{color: "#ec361e"}} fontSize="inherit" />}
