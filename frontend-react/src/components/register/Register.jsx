@@ -23,7 +23,7 @@ function Register() {
             }
             axios({
                method: "post",
-               url: "https://gr09.appdev.cloudns.ph:8443/user/register",
+               url: process.env.REACT_APP_URL + "/user/register",
                header: {
                    "Accept": "*/*",
                    "Access-Control-Allow-Origin": "*",
