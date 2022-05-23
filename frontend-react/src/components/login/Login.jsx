@@ -24,7 +24,7 @@ function Login() {
         }
         axios({
             method: "post",
-            url: "https://gr09.appdev.cloudns.ph:8443/authenticate",
+            url: process.env.REACT_APP_URL + "/authenticate",
             headers: {
                 "Accept": "*/*",
                 "Access-Control-Allow-Origin": "*",
@@ -60,7 +60,7 @@ function Login() {
                     <TextField onChange={(elem) => setPassword(elem.target.value)}
                                label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
-                        (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : <div></div>
+                        (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : null
                     }
 
                     <Button onClick={sendLoginRequest} variant="outlined" color={"error"}>Confirm</Button>
