@@ -6,12 +6,14 @@ function ProductSection() {
     return (
         <section id={"product-card-section"}>
             <ProductCard
+                productId={1}
                 imageUrl={"/images/squoosed-onedaycourse.jpg"}
                 imageAlt={"First-aid kit"}
                 title={"One day course"}
                 description={"A 6 hour refreshment course for those who have taken a course during the last 3 years."}
                 navigation={"/checkout/oneDayCourse"}/>
             <ProductCard
+                productId={2}
                 imageUrl={"/images/squoosed-twodaycourse.jpg"}
                 imageAlt={"Woman performing first-aid"}
                 title={"Two day course"}
@@ -19,6 +21,7 @@ function ProductSection() {
                 navigation={"/checkout/twoDayCourse"}
             />
             <ProductCard
+                productId={3}
                 imageUrl={"/images/squoosed-consultation.jpg"}
                 imageAlt={"4 people chatting"}
                 title={"Short consultation"}

@@ -67,4 +67,7 @@
     margin-bottom: 1.5rem;
 }
 
+.modal-button:hover{
+    border-color: #ec361e;
+}
 

@@ -1,8 +1,21 @@
 import ProductCard from "../productCard/ProductCard";
 import './CheckoutSection.css';
+import {getProductById} from "../../services/ProductService";
+import {useEffect, useState} from "react";
 
 
-function CheckoutSection({product}) {
+function CheckoutSection({productId}) {
+
+    const [product, setProduct] = useState({});
+
+    useEffect(() => {
+        getProductById(productId).then(foundProduct => setProduct(foundProduct));
+    }, [])
+
+    console.log(product);
+
+
+
     return (
         <section className={'checkout-section'}>
             <div className={'product-choices'}>

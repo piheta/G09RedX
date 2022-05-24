@@ -52,7 +52,7 @@ function Nav() {
                             </a>
                         </li>
                         {
-                            location.pathname === '/checkout' ?
+                            location.pathname === '/checkout/{id}' ?
                                 null
                                 :
                                 <>
