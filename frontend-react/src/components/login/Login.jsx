@@ -29,9 +29,6 @@ function Login() {
             url: process.env.REACT_APP_URL + "/authenticate",
             headers: {
                 "Accept": "*/*",
-                "Access-Control-Allow-Origin": "*",
-                'Access-Control-Allow-Credentials': true,
-                "Access-Control-Allow-headers": "*",
                 "Content-Type": "application/json"
             },
             data: loginInfo
