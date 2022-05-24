@@ -5,6 +5,8 @@ import {Button} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
+import UserReducer from "../../store/reducer/UserReducer";
+import {useSelector} from "react-redux";
 
 
 
@@ -23,7 +25,7 @@ function ReviewSection() {
 
 
     const [state, setState] = useState(false);
-
+    const user = useSelector(state => state.userReducer);
 
 
     let ref = useRef();
@@ -57,7 +59,7 @@ function ReviewSection() {
                     <div className ="modal-content" ref={ref}>
                         <div className={"modal-wrapper"}>
                             <label className={"modal-title"}>Add Review</label>
-                            <label className={"modal-username"}>Username</label>
+                            <label className={"modal-username"}>{ user.user.userName }</label>
                             <Rating
                                 name="customized-color"
                                 defaultValue={3}
