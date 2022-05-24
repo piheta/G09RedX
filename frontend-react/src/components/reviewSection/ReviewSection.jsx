@@ -5,11 +5,13 @@ import {Button} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
+import UserReducer from "../../store/reducer/UserReducer";
+import {useSelector} from "react-redux";
 
 
 
 
-function ReviewSection({parentRef}) {
+function ReviewSection() {
 
     let reviews = []
     for (let i = 0; i < 6; i++){
@@ -23,14 +25,14 @@ function ReviewSection({parentRef}) {
 
 
     const [state, setState] = useState(false);
-
+    const user = useSelector(state => state.userReducer);
 
 
     let ref = useRef();
 
 
     const handleClickOutside = (event) => {
-        if (parentRef.current && parentRef.current.contains(event.target) && !ref.current.contains(event.target)) {
+        if (event.target.className === 'modal') {
             setState(false);
         }
     };
@@ -40,7 +42,7 @@ function ReviewSection({parentRef}) {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [parentRef]);
+    }, []);
 
 
     return (
@@ -57,7 +59,7 @@ function ReviewSection({parentRef}) {
                     <div className ="modal-content" ref={ref}>
                         <div className={"modal-wrapper"}>
                             <label className={"modal-title"}>Add Review</label>
-                            <label className={"modal-username"}>Username</label>
+                            <label className={"modal-username"}>{ user.user.userName }</label>
                             <Rating
                                 name="customized-color"
                                 defaultValue={3}

@@ -6,6 +6,8 @@ import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setLoginStatus} from "../../store/action/IsLoggedAction";
 import {Button, TextField} from "@mui/material";
+import {GetUserInfo} from "../../services/UserService";
+import {setUser} from "../../store/action/UserAction";
 
 function Login() {
 
@@ -36,11 +38,13 @@ function Login() {
                 dispatch(setLoginStatus({
                     isLogged: true,
                     jwToken: response.data.jwt
-                }));
+                }))
+                GetUserInfo(response.data.jwt, dispatch);
                 navigate("/");
             }
         }).catch((error) => {
             setWarning(true);
+            console.log(error);
             setWarningText(error.response.data);
         })
     };
