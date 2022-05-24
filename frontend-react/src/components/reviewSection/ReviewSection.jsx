@@ -9,7 +9,7 @@ import Rating from "@mui/material/Rating";
 
 
 
-function ReviewSection({parentRef}) {
+function ReviewSection() {
 
     let reviews = []
     for (let i = 0; i < 6; i++){
@@ -30,7 +30,7 @@ function ReviewSection({parentRef}) {
 
 
     const handleClickOutside = (event) => {
-        if (parentRef.current && parentRef.current.contains(event.target) && !ref.current.contains(event.target)) {
+        if (event.target.className === 'modal') {
             setState(false);
         }
     };
@@ -40,7 +40,7 @@ function ReviewSection({parentRef}) {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [parentRef]);
+    }, []);
 
 
     return (
