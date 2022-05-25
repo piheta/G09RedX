@@ -1,6 +1,4 @@
 import './CheckoutSection.css';
-import {Autocomplete, DatePicker} from "@mui/lab";
-import {TextField} from "@mui/material";
 
 function CheckoutSection({product}) {
 

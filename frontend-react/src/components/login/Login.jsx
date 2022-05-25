@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../../styles/LoginForms.css';
 import '../../styles/global.css'
 import {useNavigate} from 'react-router';
@@ -12,17 +12,16 @@ import {setCookie} from "../../services/CookieService";
 function Login() {
 
     const navigate = useNavigate();
-    const [password, setPassword] = useState("");
-    const [username, setUsername] = useState("");
     const dispatch = useDispatch();
     const isLogged = useSelector(state => state.isLogged);
     const [warning, setWarning] = React.useState(false);
     const [warningText, setWarningText] = React.useState("");
 
-    function sendLoginRequest() {
+    function sendLoginRequest(event) {
+        event.preventDefault();
         let loginInfo = {
-            "userName": username,
-            "password": password
+            "userName": event.target[0].value,
+            "password": event.target[1].value
         }
         axios({
             method: "post",
@@ -51,19 +50,17 @@ function Login() {
     return (
         <section className={"form-section"}>
 
-            <div className="form-wrapper">
+            <form className="form-wrapper" onSubmit={event => {sendLoginRequest(event);}}>
                 <h1 className="header-forms-label">Sign In</h1>
 
                 <div className="form-container">
-                    <TextField onChange={(elem) => setUsername(elem.target.value)}
-                               label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField onChange={(elem) => setPassword(elem.target.value)}
-                               label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
                         (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : null
                     }
 
-                    <Button onClick={sendLoginRequest} variant="outlined" color={"error"}>Confirm</Button>
+                    <Button type={"submit"} variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 
                 <div className={"form-footer"}>
@@ -71,7 +68,7 @@ function Login() {
                     <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
-            </div>
+            </form>
 
         </section>
     );

@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import ProductCard from "../productCard/ProductCard";
 import "./ProductSection.css";
-import axios from "axios";
 import {getAllProducts} from "../../services/ProductService";
 
 function ProductSection() {
