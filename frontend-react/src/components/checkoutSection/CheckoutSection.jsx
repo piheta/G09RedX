@@ -15,14 +15,14 @@ function CheckoutSection({product}) {
     return (
         <section className={'checkout-section'}>
             <div className={'product'}>
-                <img className={'product-image'} src={'/images/squoosed-onedaycourse.jpg'}/>
+                <img className={'product-image'} src={'/images/squoosed-product1.jpg'}/>
                 <div className={'related-products'}>
                     <div className={'related-product'}>
-                        <img className={'related-product-images'} src={'/images/squoosed-twodaycourse.jpg'}/>
+                        <img className={'related-product-images'} src={'/images/squoosed-product2.jpg'}/>
                         <p className={'related-product-tag'}>Two Day Course</p>
                     </div>
                     <div className={'related-product'}>
-                        <img className={'related-product-images'} src={'/images/squoosed-consultation.jpg'}/>
+                        <img className={'related-product-images'} src={'/images/squoosed-product3.jpg'}/>
                         <p className={'related-product-tag'}>Short consultation</p>
                     </div>
                 </div>
