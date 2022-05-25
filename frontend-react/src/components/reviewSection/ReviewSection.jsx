@@ -1,24 +1,24 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Review from "../review/Review";
 import "./ReviewSection.css"
-import {Button} from "@mui/material";
+import {Button, FormControlLabel} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
-import UserReducer from "../../store/reducer/UserReducer";
 import {useSelector} from "react-redux";
+import {addReview} from "../../services/ReviewService";
 
 
 
 
-function ReviewSection() {
+function ReviewSection({productId}) {
 
     let reviews = []
     for (let i = 0; i < 6; i++){
         reviews.push({
+            reviewId: i,
             author: "arne per",
-            reviewTitle: "",
-            description: "I like this betiful website it is honestly the best ever",
+            description: "I like this beatiful website it is honestly the best ever",
             star: 4
         })
     }
@@ -27,9 +27,24 @@ function ReviewSection() {
     const [state, setState] = useState(false);
     const user = useSelector(state => state.userReducer);
 
+    function submitNewReview(event){
+        console.log(event)
+        event.preventDefault();
+        const inputList = [...event.target]
+        const newReview = {
+            "rating": checkHeartRate(inputList.slice(0, 5)),
+            "description": inputList[6].value
+        }
+        addReview(newReview, productId);
+    }
 
-    let ref = useRef();
-
+    function checkHeartRate(hearts){
+        for (let i = 0; i < hearts.length; i++){
+            if (hearts[i].checked === true){
+                return i + 1;
+            }
+        }
+    }
 
     const handleClickOutside = (event) => {
         if (event.target.className === 'modal') {
@@ -50,14 +65,14 @@ function ReviewSection() {
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
                 { state === false ?
-                    <Button onClick={() => setState(!state)} variant="outlined" color={"error"}>Add review</Button>
+                    <Button onClick={() => setState(!state)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
                 }
             </div>
             { state === true ?
                 <div className="modal">
-                    <div className ="modal-content" ref={ref}>
-                        <div className={"modal-wrapper"}>
+                    <div className ="modal-content">
+                        <form className={"modal-wrapper"} onSubmit={event => submitNewReview(event)}>
                             <label className={"modal-title"}>Add Review</label>
                             <label className={"modal-username"}>{ user.user.userName }</label>
                             <Rating
@@ -70,8 +85,8 @@ function ReviewSection() {
                                 size={"large"}
                             />
                             <textarea className={"modal-text"} />
-                            <Button className={"modal-button"} variant="outlined" color={"error"}>Add review</Button>
-                        </div>
+                            <Button type={"submit"} className={"modal-button"} variant="outlined" sx={{color: "#ec361e", borderColor: "#ec361e",}}>Add review</Button>
+                        </form>
                     </div>
                 </div>
                 : null
@@ -79,7 +94,7 @@ function ReviewSection() {
             <hr />
             <div className={"review-section-review-list"}>
                 {
-                    reviews.map((review) => <Review userName={review.author} comment={review.description} rating={review.star} />)
+                    reviews.map((review) => <Review review={review} key={review.reviewId}/>)
                 }
             </div>
         </section>

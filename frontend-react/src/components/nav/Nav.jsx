@@ -4,7 +4,7 @@ import '../../styles/global.css'
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
 
-function Nav() {
+function Nav({productId}) {
 
     const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ function Nav() {
 
     return (
         <section id="header">
-            <div className={location.pathname === '/checkout' ? 'menubar-tiny' : 'menubar'}>
+            <div className={location.pathname === '/checkout/' + productId ? 'menubar-tiny' : 'menubar'}>
                 <nav className="header-container">
 
                     <a href={'/'}><img className={"brand-image"} src={"/images/cross.png"} alt=""/></a>
@@ -52,7 +52,7 @@ function Nav() {
                             </a>
                         </li>
                         {
-                            location.pathname === '/checkout' ?
+                            location.pathname === '/checkout/' + productId ?
                                 null
                                 :
                                 <>
@@ -76,7 +76,7 @@ function Nav() {
                     </ul>
                 </nav>
                 {
-                    location.pathname === '/checkout' ?
+                    location.pathname === '/checkout/'+ productId ?
                         null
                         :
                         <div className="container-text">

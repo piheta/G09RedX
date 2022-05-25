@@ -8,9 +8,10 @@ import Footer from "../components/footer/Footer";
 import Nav from "../components/nav/Nav";
 
 function HomePage() {
+
     return (
         <div>
-            <Nav/>
+            <Nav />
             <ProductSection />
             <About />
             <Related />
