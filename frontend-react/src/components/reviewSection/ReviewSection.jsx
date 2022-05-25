@@ -65,7 +65,7 @@ function ReviewSection({productId}) {
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
                 { state === false ?
-                    <Button onClick={() => setState(!state)} variant="outlined" color={"error"}>Add review</Button>
+                    <Button onClick={() => setState(!state)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
                 }
             </div>

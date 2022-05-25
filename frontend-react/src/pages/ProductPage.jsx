@@ -5,14 +5,14 @@ import ReviewSection from "../components/reviewSection/ReviewSection";
 import Footer from "../components/footer/Footer";
 import {useParams} from "react-router";
 
-function CheckoutPage() {
+function ProductPage() {
 
     let {productId} = useParams();
 
 
     return (
         <div>
-            <Nav />
+            <Nav productId={productId}/>
             <CheckoutSection productId={productId}/>
             <ReviewSection productId={productId}/>
             <Footer />
@@ -20,4 +20,4 @@ function CheckoutPage() {
     );
 }
 
-export default CheckoutPage;
+export default ProductPage;
