@@ -4,7 +4,7 @@ import '../../styles/global.css'
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {logout} from "../../services/UserService";
+import {isLoggedIn, logout} from "../../services/UserService";
 
 function Nav() {
 
@@ -53,9 +53,9 @@ function Nav() {
 
                     <ul className={active}>
                         <li className="nav-item">
-                            <a href='' onClick={() => (isLogged.isLogged ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a href='' onClick={() => (isLoggedIn(isLogged) ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
                                 {
-                                    isLogged.isLogged ? 'Logout' : 'Login'
+                                    isLoggedIn(isLogged) ? 'Logout' : 'Login'
                                 }
                             </a>
                         </li>

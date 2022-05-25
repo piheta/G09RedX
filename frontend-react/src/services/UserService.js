@@ -30,3 +30,7 @@ export function logout(dispatch, navigate) {
     setCookie('jwt', '');
     navigate('/login')
 }
+
+export function isLoggedIn(isLogged) {
+    return isLogged.isLogged;
+}
