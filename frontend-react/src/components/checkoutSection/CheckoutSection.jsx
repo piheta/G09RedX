@@ -1,29 +1,76 @@
-import ProductCard from "../productCard/ProductCard";
 import './CheckoutSection.css';
-import {getProductById} from "../../services/ProductService";
-import {useEffect, useState} from "react";
 
+function CheckoutSection({product}) {
 
-function CheckoutSection({productId}) {
+    function getTomorrowsDate() {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
 
-    const [product, setProduct] = useState({});
-
-    useEffect(() => {
-        getProductById(productId).then(foundProduct => setProduct(foundProduct));
-    }, [])
-
-    console.log(product);
-
-
+        return tomorrow.toISOString().split('T')[0];
+    }
 
     return (
         <section className={'checkout-section'}>
-            <div className={'product-choices'}>
-                <h1>qwerqwer</h1>
+            <div className={'product'}>
+                <img className={'product-image'} src={'/images/squoosed-product1.jpg'}/>
+                <div className={'related-products'}>
+                    <div className={'related-product'}>
+                        <img className={'related-product-images'} src={'/images/squoosed-product2.jpg'}/>
+                        <p className={'related-product-tag'}>Two Day Course</p>
+                    </div>
+                    <div className={'related-product'}>
+                        <img className={'related-product-images'} src={'/images/squoosed-product3.jpg'}/>
+                        <p className={'related-product-tag'}>Short consultation</p>
+                    </div>
+                </div>
             </div>
-            <div className={'checkout'}>
-                <ProductCard imageUrl={'/images/oneDayCourseCard.jpeg'} title={'qwerqwer'} imageAlt={'asdfasdf'} description={'Lorem Ipsum cha cha xx'}/>
-            </div>
+            <form className={'choices'}>
+                <div className={'choice'}>
+                    <h3>Morning/Evening course</h3>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>Morning Course
+                        </label>
+                    </div>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>Evening course
+                        </label>
+                    </div>
+                </div>
+                <div className={'choice'}>
+                    <h3>Language</h3>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>Norwegian
+                        </label>
+                    </div>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>English
+                        </label>
+                    </div>
+                </div>
+                <div className={'choice'}>
+                    <h3>Group size</h3>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>1 person
+                        </label>
+                    </div>
+                    <div className={'option'}>
+                        <label>
+                            <input type={'checkbox'}/>5 people
+                        </label>
+                    </div>
+                </div>
+                <div className={'choice'}>
+                    <h3>Choose a date</h3>
+                    <input type={"date"} defaultValue={getTomorrowsDate()} min={getTomorrowsDate()}/>
+                </div>
+                <button>BUY NOW</button>
+            </form>
         </section>
     )
 };

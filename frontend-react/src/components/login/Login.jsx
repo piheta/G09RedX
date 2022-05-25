@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setLoginStatus} from "../../store/action/IsLoggedAction";
 import {Button, TextField} from "@mui/material";
 import {GetUserInfo} from "../../services/UserService";
+import {setCookie} from "../../services/CookieService";
 
 function Login() {
 
@@ -33,16 +34,15 @@ function Login() {
         }).then((response) => {
             if (response.status === 200) {
                 setWarning(false);
+                setCookie('jwt', response.data.jwt);
                 dispatch(setLoginStatus({
-                    isLogged: true,
-                    jwToken: response.data.jwt
+                    isLogged: true
                 }))
                 GetUserInfo(response.data.jwt, dispatch);
                 navigate("/");
             }
         }).catch((error) => {
             setWarning(true);
-            console.log(error);
             setWarningText(error.response.data);
         })
     };

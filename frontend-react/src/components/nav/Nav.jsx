@@ -3,6 +3,8 @@ import './Nav.css';
 import '../../styles/global.css'
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
+import {useDispatch, useSelector} from "react-redux";
+import {isLoggedIn, logout} from "../../services/UserService";
 
 function Nav({productId}) {
 
@@ -13,6 +15,10 @@ function Nav({productId}) {
     const [active, setActive] = useState("menubar-links");
 
     const [icon, setIcon] = useState("nav-toggler");
+
+    const isLogged = useSelector(state => state.isLogged);
+
+    const dispatch = useDispatch();
 
     const navToggle = () => {
         //Menu
@@ -47,8 +53,10 @@ function Nav({productId}) {
 
                     <ul className={active}>
                         <li className="nav-item">
-                            <a href='' onClick={() => (navigate("/login"), enableBodyScroll(document))} className="nav-link">
-                                Login
+                            <a href='' onClick={() => (isLoggedIn(isLogged) ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                                {
+                                    isLoggedIn(isLogged) ? 'Logout' : 'Login'
+                                }
                             </a>
                         </li>
                         {

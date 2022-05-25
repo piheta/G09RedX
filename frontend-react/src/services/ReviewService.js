@@ -2,7 +2,6 @@ import axios from "axios";
 
 const API_BASE_URL = process.env.REACT_APP_URL;
 
-
 export function addReview(review, productId) {
     axios({
         method: 'post',
