@@ -2,7 +2,7 @@ import './CheckoutSection.css';
 import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import {useEffect, useState} from "react";
 
-function CheckoutSection({product}) {
+function CheckoutSection({products, productId}) {
 
     function getTomorrowsDate() {
         const today = new Date();
@@ -13,46 +13,48 @@ function CheckoutSection({product}) {
     }
 
     function handleGroupChange(groupSize) {
+        console.log(groupSize === 1);
+        console.log(parseInt(groupSize) === 1);
         if (groupSize === 1) {
-            setPrice(product.basePrice);
+            setPrice(currentProduct.basePrice);
         } else {
-            setPrice(product.groupPrice);
+            setPrice(currentProduct.groupPrice);
         }
     }
 
     const [price, setPrice] = useState('');
-    const PRODUCT_IDS = [1, 2, 3];
-    let relatedProductIds;
+    const [currentProduct, setCurrentProduct] = useState({});
+    const [relatedProducts, setRelatedProducts] = useState([]);
 
     useEffect(() => {
-        setPrice(product.basePrice);
-        relatedProductIds = PRODUCT_IDS.filter(id => id !== product.productId);
-    }, [product]);
+        if (products.length > 0) {
+            setCurrentProduct(products.find(product => parseInt(product.productId) === parseInt(productId)));
+            setRelatedProducts(products.filter(product => parseInt(product.productId) !== parseInt(productId)));
+        }
+    }, [products, productId]);
+
+    useEffect(() => {
+        if (currentProduct && currentProduct.basePrice) {
+            setPrice(currentProduct.basePrice);
+        }
+    }, [currentProduct, productId]);
 
 
     return (
         <section className={'checkout-section'}>
             <div className={'product'}>
-                <img className={'product-image'} src={'/images/squoosed-product' + product.productId + '.jpg'}/>
+                <img className={'product-image'} src={'/images/squoosed-product' + productId + '.jpg'}/>
                 <div className={'related-products'}>
                     {
-                        relatedProductIds.map((id) => {
-                            <div className={'related-product'}>
-                                <img className={'related-product-images'} src={'/images/squoosed-product.jpg'}/>
-                                <p className={'related-product-tag'}>Two Day Course</p>
-                            </div>
-                        })
+                        relatedProducts.length > 0 ? relatedProducts.map((product) => {
+                            return (
+                                <div className={'related-product'}>
+                                    <img alt={''} className={'related-product-images'} src={'/images/squoosed-product' + product.productId + '.jpg'}/>
+                                    <p className={'related-product-tag'}>{product.productName}</p>
+                                </div>
+                            )
+                        }) : 'Loading'
                     }
-                </div>
-                <div className={'related-products'}>
-                    <div className={'related-product'}>
-                        <img className={'related-product-images'} src={'/images/squoosed-product2.jpg'}/>
-                        <p className={'related-product-tag'}>Two Day Course</p>
-                    </div>
-                    <div className={'related-product'}>
-                        <img className={'related-product-images'} src={'/images/squoosed-product3.jpg'}/>
-                        <p className={'related-product-tag'}>Short consultation</p>
-                    </div>
                 </div>
             </div>
             <FormControl>
@@ -60,7 +62,7 @@ function CheckoutSection({product}) {
                     <h3>Morning/Evening course</h3>
                     <FormControlLabel
                         className={'label'}
-                        control={<Radio />}
+                        control={<Radio/>}
                         label={'Morning course'}
                         value={'Morning'}
                     />
@@ -86,7 +88,7 @@ function CheckoutSection({product}) {
                         value={'English'}
                     />
                 </RadioGroup>
-                <RadioGroup defaultValue={1} onChange={(event) => handleGroupChange(event.target.value)}>
+                <RadioGroup defaultValue={1} onChange={(event) => handleGroupChange(parseInt(event.target.value))}>
                     <h3>Group size</h3>
                     <FormControlLabel
                         className={'label'}
