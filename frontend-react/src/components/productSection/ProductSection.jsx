@@ -19,11 +19,8 @@ function ProductSection({productId}) {
                     products.map((product) => {
                         return (
                             <ProductCard
-                                imageUrl={"/images/squoosed-product" + product.productId + ".jpg"}
+                                product={product}
                                 imageAlt={"First-aid kit"}
-                                title={product.productName}
-                                description={product.description}
-                                navigation={"/checkout/product/" + product.productId}
                             />
                         )
                     })

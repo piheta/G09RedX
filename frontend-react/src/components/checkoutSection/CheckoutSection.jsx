@@ -1,4 +1,6 @@
 import './CheckoutSection.css';
+import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
+import {useEffect, useState} from "react";
 
 function CheckoutSection({product}) {
 
@@ -10,10 +12,38 @@ function CheckoutSection({product}) {
         return tomorrow.toISOString().split('T')[0];
     }
 
+    function handleGroupChange(groupSize) {
+        if (groupSize === 1) {
+            setPrice(product.basePrice);
+        } else {
+            setPrice(product.groupPrice);
+        }
+    }
+
+    const [price, setPrice] = useState('');
+    const PRODUCT_IDS = [1, 2, 3];
+    let relatedProductIds;
+
+    useEffect(() => {
+        setPrice(product.basePrice);
+        relatedProductIds = PRODUCT_IDS.filter(id => id !== product.productId);
+    }, [product]);
+
+
     return (
         <section className={'checkout-section'}>
             <div className={'product'}>
-                <img className={'product-image'} src={'/images/squoosed-product1.jpg'}/>
+                <img className={'product-image'} src={'/images/squoosed-product' + product.productId + '.jpg'}/>
+                <div className={'related-products'}>
+                    {
+                        relatedProductIds.map((id) => {
+                            <div className={'related-product'}>
+                                <img className={'related-product-images'} src={'/images/squoosed-product.jpg'}/>
+                                <p className={'related-product-tag'}>Two Day Course</p>
+                            </div>
+                        })
+                    }
+                </div>
                 <div className={'related-products'}>
                     <div className={'related-product'}>
                         <img className={'related-product-images'} src={'/images/squoosed-product2.jpg'}/>
@@ -25,52 +55,55 @@ function CheckoutSection({product}) {
                     </div>
                 </div>
             </div>
-            <form className={'choices'}>
-                <div className={'choice'}>
+            <FormControl>
+                <RadioGroup defaultValue={'Morning'}>
                     <h3>Morning/Evening course</h3>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>Morning Course
-                        </label>
-                    </div>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>Evening course
-                        </label>
-                    </div>
-                </div>
-                <div className={'choice'}>
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio />}
+                        label={'Morning course'}
+                        value={'Morning'}
+                    />
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio/>}
+                        label={'Evening course'}
+                        value={'Evening'}
+                    />
+                </RadioGroup>
+                <RadioGroup defaultValue={'Norwegian'}>
                     <h3>Language</h3>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>Norwegian
-                        </label>
-                    </div>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>English
-                        </label>
-                    </div>
-                </div>
-                <div className={'choice'}>
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio/>}
+                        label={'Norwegian'}
+                        value={'Norwegian'}
+                    />
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio/>}
+                        label={'English'}
+                        value={'English'}
+                    />
+                </RadioGroup>
+                <RadioGroup defaultValue={1} onChange={(event) => handleGroupChange(event.target.value)}>
                     <h3>Group size</h3>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>1 person
-                        </label>
-                    </div>
-                    <div className={'option'}>
-                        <label>
-                            <input type={'checkbox'}/>5 people
-                        </label>
-                    </div>
-                </div>
-                <div className={'choice'}>
-                    <h3>Choose a date</h3>
-                    <input type={"date"} defaultValue={getTomorrowsDate()} min={getTomorrowsDate()}/>
-                </div>
-                <button>BUY NOW</button>
-            </form>
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio/>}
+                        label={'One person'}
+                        value={1}
+                    />
+                    <FormControlLabel
+                        className={'label'}
+                        control={<Radio/>}
+                        label={'Five people'}
+                        value={5}
+                    />
+                </RadioGroup>
+                <input type={'date'} min={getTomorrowsDate()}/>
+                <h2>{price}</h2>
+            </FormControl>
         </section>
     )
 };

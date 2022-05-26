@@ -10,7 +10,6 @@ function Review({review}) {
 
     const current = new Date();
 
-    console.log(review)
     function getCurrentDate(){
         return `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     }
