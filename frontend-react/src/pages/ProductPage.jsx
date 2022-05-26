@@ -8,20 +8,20 @@ import {getAllProducts, getProductById} from "../services/ProductService";
 
 function ProductPage() {
 
-    let {productId} = useParams();
+    const {productId} = useParams();
 
-    const [product, setProduct] = useState({});
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        getProductById(productId).then((productData) => {
-            setProduct(productData);
+        getAllProducts().then((productData) => {
+            setProducts(productData);
         })
     }, [])
 
     return (
         <div>
             <Nav productId={productId}/>
-            <CheckoutSection product={product} productId={productId}/>
+            <CheckoutSection products={products} productId={productId}/>
             <ReviewSection productId={productId}/>
             <Footer />
         </div>
