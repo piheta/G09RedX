@@ -5,6 +5,7 @@ import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {isLoggedIn, logout} from "../../services/UserService";
+import { MdLogout } from 'react-icons/md';
 
 function Nav({productId}) {
 
@@ -52,13 +53,7 @@ function Nav({productId}) {
                     </div>
 
                     <ul className={active}>
-                        <li className="nav-item">
-                            <a href='' onClick={() => (isLoggedIn(isLogged) ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
-                                {
-                                    isLoggedIn(isLogged) ? 'Logout' : 'Login'
-                                }
-                            </a>
-                        </li>
+
                         {
                             location.pathname === '/checkout/' + productId ?
                                 null
@@ -81,6 +76,13 @@ function Nav({productId}) {
                                     </li>
                                 </>
                         }
+                        <li className="nav-item">
+                            <a href='' onClick={() => (isLoggedIn(isLogged) ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                                {
+                                    isLoggedIn(isLogged) ? <MdLogout className={"logout-icon"} color="white"/> : 'Login'
+                                }
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 {

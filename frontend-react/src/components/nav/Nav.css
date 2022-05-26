@@ -18,6 +18,11 @@
     flex-direction: column;
 }
 
+.logout-icon{
+    height: auto;
+    width: 3rem;
+}
+
 .nav-toggler {
     display: none;
 }

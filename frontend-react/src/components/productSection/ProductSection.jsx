@@ -3,7 +3,7 @@ import ProductCard from "../productCard/ProductCard";
 import "./ProductSection.css";
 import {getAllProducts} from "../../services/ProductService";
 
-function ProductSection() {
+function ProductSection({productId}) {
 
         const [products, setProducts] = useState([]);
 

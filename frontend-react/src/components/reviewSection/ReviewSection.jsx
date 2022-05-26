@@ -27,6 +27,7 @@ function ReviewSection({productId}) {
     const [state, setState] = useState(false);
     const user = useSelector(state => state.userReducer);
 
+
     function submitNewReview(event){
         console.log(event)
         event.preventDefault();

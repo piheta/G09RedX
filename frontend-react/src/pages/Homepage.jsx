@@ -16,7 +16,7 @@ function HomePage() {
             <About />
             <Related />
             <Testimonials />
-            <Footer/>
+            <Footer />
         </div>
     );
 }
