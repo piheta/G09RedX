@@ -108,6 +108,7 @@
         background: linear-gradient(rgb(105, 103, 103), rgb(140, 57, 54));
         flex-direction: column;
         transform: translateX(100%);
+        z-index: 99;
     }
 }
 
