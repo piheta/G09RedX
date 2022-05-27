@@ -70,9 +70,6 @@
     margin: 0;
 }
 
-
-
-
 .product-title {
     font-size: 3rem;
     padding-bottom: 2rem;
@@ -122,8 +119,17 @@
     margin-top: 0.5rem;
 }
 
-#one {
+#checkout-and-related-products {
     margin: 5%;
+}
+
+#related-products-header {
+    display: flex;
+    font-size: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-weight: lighter;
 }
 
 @media(max-width: 1300px) {
