@@ -16,7 +16,7 @@ function ReviewSection({productId}) {
 
 
     const [reviews, setReviews] = useState([]);
-    const [state, setState] = useState(false);
+    const [displayModal, setDisplayModal] = useState(false);
     const user = useSelector(state => state.userReducer);
 
     useEffect(() => {
@@ -35,6 +35,10 @@ function ReviewSection({productId}) {
             "description": inputList[6].value
         }
         addReview(newReview, productId);
+        getAllProductReviewById(productId).then((reviewData) => {
+            setReviews(reviewData);
+            setDisplayModal(false);
+        })
     }
 
     function checkHeartRate(hearts){
@@ -47,7 +51,7 @@ function ReviewSection({productId}) {
 
     const handleClickOutside = (event) => {
         if (event.target.className === 'modal') {
-            setState(false);
+            setDisplayModal(false);
         }
     };
 
@@ -63,12 +67,12 @@ function ReviewSection({productId}) {
         <section id={"review-section"}>
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
-                { state === false ?
-                    <Button onClick={() => setState(!state)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
+                { displayModal === false ?
+                    <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
                 }
             </div>
-            { state === true ?
+            { displayModal === true ?
                 <div className="modal">
                     <div className ="modal-content">
                         <form className={"modal-wrapper"} onSubmit={event => submitNewReview(event)}>
@@ -84,7 +88,7 @@ function ReviewSection({productId}) {
                                 size={"large"}
                             />
                             <textarea className={"modal-text"} />
-                            <Button type={"submit"} className={"modal-button"} variant="outlined" sx={{color: "#ec361e", borderColor: "#ec361e",}}>Add review</Button>
+                            <Button type={"submit"} className={"modal-button"} variant="outlined" sx={{color: "#ec361e", borderColor: "#ec361e"}}>Add review</Button>
                         </form>
                     </div>
                 </div>

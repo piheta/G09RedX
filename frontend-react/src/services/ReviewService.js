@@ -31,4 +31,18 @@ export async function getAllProductReviewById(productId){
             return response.data;
         }
     })
-}
+};
+
+export function deleteReview(reviewId) {
+    axios({
+        method: 'delete',
+        url: API_BASE_URL + '/review/products/' + reviewId,
+        headers: {
+            'Accept': '*/*',
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + getCookie("jwt")
+        }
+    }).catch(error => {
+        console.log(error.response.statusCode);
+    })
+};
