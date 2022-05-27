@@ -19,5 +19,20 @@
 
 .review-comment{
     font-size: large;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
 }
+
+.review-username {
+    display: flex;
+    justify-content: space-between;
+}
+.review-icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 
