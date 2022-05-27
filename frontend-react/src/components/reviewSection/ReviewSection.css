@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    font-weight: lighter;
 }
 
 .review-section-review-list{
@@ -70,4 +71,3 @@
 .modal-button:hover{
     border-color: #ec361e;
 }
-
