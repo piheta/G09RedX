@@ -21,6 +21,7 @@ function ProductSection({productId}) {
                             <ProductCard
                                 product={product}
                                 imageAlt={"First-aid kit"}
+                                key={productId}
                             />
                         )
                     })

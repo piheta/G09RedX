@@ -19,7 +19,7 @@ function ReviewSection({productId}) {
             reviewId: i,
             author: "arne per",
             description: "I like this beatiful website it is honestly the best ever",
-            star: 4
+            rating: 4
         })
     }
 

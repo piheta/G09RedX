@@ -14,7 +14,6 @@ function Review({review}) {
         return `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     }
 
-
     return (
         <div className={"review-component"}>
             <div className={"review-header"}>
@@ -23,7 +22,7 @@ function Review({review}) {
                 <Rating
                     readOnly
                     name="customized-color"
-                    value={review.star}
+                    value={review.rating}
                     getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                     precision={0.5}
                     icon={<FavoriteIcon sx={{color: "#ec361e"}} fontSize="inherit" />}
