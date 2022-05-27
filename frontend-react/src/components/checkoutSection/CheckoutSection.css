@@ -118,16 +118,15 @@
     margin-top: 0.5rem;
 }
 
-#one {
+#checkout-and-related-products {
     margin: 5%;
 }
 
-@media(max-width: 1330px) {
-    .product-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60rem;
-        height: auto;
-    }
+#related-products-header {
+    display: flex;
+    font-size: 4rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-weight: lighter;
 }

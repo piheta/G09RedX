@@ -63,7 +63,7 @@ function CheckoutSection({products, productId}) {
     }, [currentProduct, productId]);
 
     return (
-        <section id={'one'}>
+        <section id={'checkout-and-related-products'}>
             <div className={'product-section'}>
                 <div className={'product'}>
                     <img className={'product-image'} src={'/images/squoosed-product' + productId + '.jpg'}/>
@@ -115,9 +115,9 @@ function CheckoutSection({products, productId}) {
                     <button className={'buynow-button'}>SIGN UP NOW</button>
                 </form>
             </div>
-            <h2 className={'review-section-header'}>Related products</h2>
+            <h2 id={'related-products-header'} className={'related-products-header'}>Related products</h2>
             <hr />
-            <div className={'related-products'}>
+            <div id={'related-products'} className={'related-products'}>
                 {
                     relatedProducts.length > 0 ? relatedProducts.map((product) => {
                         return (

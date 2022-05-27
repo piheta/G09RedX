@@ -56,7 +56,18 @@ function Nav({productId}) {
 
                         {
                             location.pathname === '/checkout/' + productId ?
-                                null
+                                <>
+                                    <li className={"nav-item"}>
+                                        <a href='#related-products-header' className={'nav-link'}>
+                                            Related products
+                                        </a>
+                                    </li>
+                                    <li href='' className={"nav-item"}>
+                                        <a href='#review-section' className={'nav-link'}>
+                                            Reviews
+                                        </a>
+                                    </li>
+                                </>
                                 :
                                 <>
                                     <li className="nav-item">
