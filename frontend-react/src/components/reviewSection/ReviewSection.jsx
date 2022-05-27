@@ -1,31 +1,29 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Review from "../review/Review";
 import "./ReviewSection.css"
-import {Button, FormControlLabel} from "@mui/material";
+import {Button} from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
 import {useSelector} from "react-redux";
-import {addReview} from "../../services/ReviewService";
+import {addReview, getAllProductReviewById} from "../../services/ReviewService";
+
 
 
 
 
 function ReviewSection({productId}) {
 
-    let reviews = []
-    for (let i = 0; i < 6; i++){
-        reviews.push({
-            reviewId: i,
-            author: "arne per",
-            description: "I like this beatiful website it is honestly the best ever",
-            rating: 4
-        })
-    }
 
-
+    const [reviews, setReviews] = useState([]);
     const [state, setState] = useState(false);
     const user = useSelector(state => state.userReducer);
+
+    useEffect(() => {
+        getAllProductReviewById(productId).then((reviewData) => {
+            setReviews(reviewData);
+        })
+    }, [productId])
 
 
     function submitNewReview(event){

@@ -17,7 +17,7 @@ function Review({review}) {
     return (
         <div className={"review-component"}>
             <div className={"review-header"}>
-                <h1>{review.author}</h1>
+                <h1>{review.customer.userName}</h1>
                 <h4>{getCurrentDate()}</h4>
                 <Rating
                     readOnly
