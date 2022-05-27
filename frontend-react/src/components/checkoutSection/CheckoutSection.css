@@ -1,4 +1,4 @@
-.checkout-section {
+.product-section {
     display: flex;
     justify-content: center;
     margin: 10rem 0rem;
@@ -8,22 +8,25 @@
 
 .product {
     height: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 .product-image {
-    width: 50rem;
-    height: auto;
+    height: 65rem;
+    width: auto;
 }
 
 .related-product-images {
-    width: 24.5rem;
+    width: 40rem;
     height: auto;
 }
 
 .related-products {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 5rem;
 }
 
 .related-product {
@@ -58,7 +61,8 @@
 .choices {
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 60rem;
+    height: 65rem;
     padding: 5rem;
     border-radius: 0.25rem;
     border: 2px solid black;
@@ -73,14 +77,18 @@
 
 .buynow-button {
     margin-top: auto;
-    padding: 1rem;
+    padding: 1.5rem 0;
     border-radius: 0.25rem;
     background-color: #ec361e;
     color: white;
+    width: 50%;
+    font-size: 1.5rem;
 }
 
 .buynow-button:hover {
     cursor: pointer;
+    transform: scale(1.025);
+    background-color: #e86555;
 }
 
 .radio-label {
@@ -89,4 +97,37 @@
 
 .choice-title {
     font-size: 1.8rem;
+}
+
+.price {
+    padding: 2rem 0;
+    font-size: 3rem;
+}
+
+.date-chooser {
+    font-family: inherit;
+    height: 3rem;
+    width: 50%;
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.date-choice-title {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+}
+
+#one {
+    margin: 5%;
+}
+
+@media(max-width: 1330px) {
+    .product-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60rem;
+        height: auto;
+    }
 }
