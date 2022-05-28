@@ -1,7 +1,7 @@
 import axios from "axios";
 import {removeUser, setUser} from "../store/action/UserAction";
 import {setLoginStatus} from "../store/action/IsLoggedAction";
-import {setCookie} from "./CookieService";
+import {deleteCookie, setCookie} from "./CookieService";
 
 export function GetUserInfo(token, dispatch) {
     axios({
@@ -27,7 +27,7 @@ export function logout(dispatch, navigate) {
         isLogged: false
     }));
     dispatch(removeUser());
-    setCookie('jwt', '');
+    deleteCookie('jwt');
     navigate('/login')
 }
 
