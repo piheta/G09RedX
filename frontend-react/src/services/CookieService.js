@@ -2,18 +2,20 @@
  * Gets a document cookie by the cookie name
  * entered in the parameter.
  */
-export function getCookie(cookieName) {
-    const name = cookieName +'=';
-    const cookieDecoded = decodeURIComponent(document.cookie);
-    const cookieArray = cookieDecoded.split(';');
-
-    let res;
-    cookieArray.forEach((cookie) => {
-       if (cookie.indexOf(name) === 0) {
-           res = cookie.substring(name.length);
-       }
-    });
-    return res;
+export function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 /*
