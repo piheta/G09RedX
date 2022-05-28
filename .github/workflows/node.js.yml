@@ -3,9 +3,6 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
 jobs:
   build:
     runs-on: self-hosted
@@ -20,5 +17,5 @@ jobs:
         sudo docker stop redx-front-react-production
         sudo docker rm redx-front-react-production
         sudo docker build -t group09/frontend-react-production /redx/frontend/frontend-react
-        sudo docker run -d -p 3000:3000 --name redx-front-react-production group09/frontend-react-production
+        sudo docker run --env-file /redx/frontend/frontend-react/prod.env -d -p 3000:3000 --name redx-front-react-production group09/frontend-react-production
 
