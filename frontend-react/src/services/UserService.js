@@ -26,8 +26,8 @@ export function logout(dispatch, navigate) {
     dispatch(setLoginStatus({
         isLogged: false
     }));
-    dispatch(removeUser());
     deleteCookie('jwt');
+    dispatch(removeUser());
     navigate('/login')
 }
 
