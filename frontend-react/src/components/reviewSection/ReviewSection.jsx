@@ -29,17 +29,17 @@ function ReviewSection({productId}) {
 
 
     function submitNewReview(event){
-        console.log(event)
         event.preventDefault();
         const inputList = [...event.target]
         const newReview = {
             "rating": checkHeartRate(inputList.slice(0, 5)),
             "description": inputList[6].value
         }
-        addReview(newReview, productId);
-        getAllProductReviewById(productId).then((reviewData) => {
-            setReviews(reviewData);
-            setDisplayModal(false);
+        addReview(newReview, productId).then(() => {
+            getAllProductReviewById(productId).then((reviewData) => {
+                setReviews(reviewData);
+                setDisplayModal(false);
+            })
         })
     }
 

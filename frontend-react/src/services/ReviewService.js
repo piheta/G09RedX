@@ -3,8 +3,8 @@ import {getCookie} from "./CookieService";
 
 const API_BASE_URL = process.env.REACT_APP_URL;
 
-export function addReview(review, productId) {
-    axios({
+export async function addReview(review, productId) {
+    return await axios({
         method: 'post',
         url: API_BASE_URL + '/review/products/' + productId,
         headers: {
@@ -13,6 +13,10 @@ export function addReview(review, productId) {
             "Authorization": "Bearer " + getCookie("jwt")
         },
         data: review
+    }).then((response) => {
+        if (response.status === 201) {
+            return response.data;
+        }
     }).catch(error => {
         console.log(error.response.statusCode);
     })
