@@ -8,9 +8,9 @@ function AboutUs() {
 
 
     const images = [
-        { url: "/images/medic1.jpg" },
-        { url: "/images/medic2.jpg" },
-        { url: "/images/medic3.jpg" },
+        { url: "/images/squoosed-medic1.jpg" },
+        { url: "/images/squoosed-medic2.jpg" },
+        { url: "/images/squoosed-medic3.jpg" },
     ];
 
 
@@ -21,7 +21,7 @@ function AboutUs() {
                 <p>We provide courses both during work time and evening courses. <br/> Since 2020, we don't provide
                     weekend
                     courses anymore.</p>
-                <img src={"/images/medic2.jpg"}/>
+                <img src={"/images/squoosed-medic2.jpg"}/>
                 <p>Our team consists of medical professionals with more than 30 years of experience. <br/>We are
                     certified
                     according to ISO 8072 and DNV 23:786.</p>

@@ -1,6 +1,5 @@
 const initialState = {
-    isLogged: false,
-    jwToken: ""
+    isLogged: false
 };
 
 const isLogged = (state = initialState, action) => {
@@ -8,8 +7,7 @@ const isLogged = (state = initialState, action) => {
         case "SET_LOGGED":
             let newState = {
                 ...state,
-                isLogged: action.payload.isLogged,
-                jwToken: action.payload.jwToken
+                isLogged: action.payload.isLogged
             }
             return newState;
         default: return state;

@@ -1,30 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ProductCard from "../productCard/ProductCard";
 import "./ProductSection.css";
+import {getAllProducts} from "../../services/ProductService";
 
-function ProductSection() {
-    return (
-        <section id={"productCardSection"}>
-            <ProductCard
-                imageUrl={"/images/oneDayCourseCard.jpeg"}
-                imageAlt={"First-aid kit"}
-                title={"One day course"}
-                description={"A 6 hour refreshment course for those who have taken a course during the last 3 years."}
-            />
-            <ProductCard
-                imageUrl={"/images/twoDayCourseCard.jpeg"}
-                imageAlt={"Woman performing first-aid"}
-                title={"Two day course"}
-                description={"A full course for those who haven't had a course before."}
-            />
-            <ProductCard
-                imageUrl={"/images/consultation.jpeg"}
-                imageAlt={"4 people chatting"}
-                title={"Short consultation"}
-                description={"We provide a short consultation up to an hour on a specific topic, chosen by the client."}
-            />
-        </section>
-    );
+function ProductSection({productId}) {
+
+        const [products, setProducts] = useState([]);
+
+        useEffect(() => {
+            getAllProducts().then((productData) => {
+                setProducts(productData);
+            })
+        }, [])
+
+        return (
+            <section id={"product-card-section"}>
+               {
+                    products.map((product) => {
+                        return (
+                            <ProductCard
+                                product={product}
+                                imageAlt={"First-aid kit"}
+                                key={productId}
+                            />
+                        )
+                    })
+                }
+            </section>
+        );
 }
 
 export default ProductSection;

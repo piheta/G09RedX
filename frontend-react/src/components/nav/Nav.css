@@ -1,11 +1,26 @@
-.menubar{
-    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url("/public/images/longdoctor.jpeg");
+.menubar {
+    background-image: linear-gradient(rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 60rem;
     display: flex;
     flex-direction: column;
+}
+
+.menubar-tiny {
+    background-image: linear-gradient(rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url("/public/images/longdoctor.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-icon{
+    height: auto;
+    width: 3rem;
 }
 
 .nav-toggler {
@@ -19,14 +34,15 @@
     font-size: 2rem;
 }
 
-.menubar-links{
+.menubar-links,
+.menubar-links div {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 3rem;
 }
 
-.brand-image{
+.brand-image {
     height: 50px;
     width: auto;
     z-index: 1000;
@@ -82,15 +98,17 @@
         cursor: pointer;
         z-index: 100;
     }
+
     .menubar-links {
         position: fixed;
         margin-top: -3rem;
         right: 0;
         height: 100vh;
         width: 100%;
-        background: linear-gradient( rgb(105, 103, 103), rgb(140, 57, 54));
+        background: linear-gradient(rgb(105, 103, 103), rgb(140, 57, 54));
         flex-direction: column;
         transform: translateX(100%);
+        z-index: 99;
     }
 }
 
@@ -106,9 +124,11 @@
 .toggle .line1 {
     transform: rotate(-45deg) translate(-8.5px, 5px);
 }
+
 .toggle .line2 {
     opacity: 0;
 }
+
 .toggle .line3 {
     transform: rotate(45deg) translate(-10px, -5px);
 }

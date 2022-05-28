@@ -73,7 +73,7 @@ function Footer() {
 
                 <div className="footer-images">
                     <img src={"/images/cross.png"} alt=""/>
-                    <p>Copyright © 2022 NTNU, IDATA2301 Web Technologies - group 9</p>
+                    <p className={"copy-footer"}>Copyright © 2022 NTNU, IDATA2301 Web Technologies - group 9</p>
                 </div>
             </div>
         </section>
