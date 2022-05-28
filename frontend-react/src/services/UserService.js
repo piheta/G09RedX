@@ -23,10 +23,10 @@ export function GetUserInfo(token, dispatch) {
 }
 
 export function logout(dispatch, navigate) {
+    deleteCookie('jwt');
     dispatch(setLoginStatus({
         isLogged: false
     }));
-    deleteCookie('jwt');
     dispatch(removeUser());
     navigate('/login')
 }
