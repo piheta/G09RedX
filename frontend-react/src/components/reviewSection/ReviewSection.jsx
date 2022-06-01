@@ -13,11 +13,13 @@ import {useParams} from "react-router";
 
 
 
+
 function ReviewSection({productId}) {
 
     const [reviews, setReviews] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
     const user = useSelector(state => state.userReducer);
+    const isLogged = useSelector(state => state.isLogged.isLogged)
 
     useEffect(() => {
         getAllProductReviewById(productId).then((reviewData) => {
@@ -70,7 +72,7 @@ function ReviewSection({productId}) {
         <section id={"review-section"}>
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
-                { displayModal === false ?
+                { displayModal === false && isLogged ?
                     <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
                 }

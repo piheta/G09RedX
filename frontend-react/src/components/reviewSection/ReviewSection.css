@@ -9,6 +9,7 @@
     justify-content: space-between;
     padding: 2rem;
     font-weight: lighter;
+    flex-wrap: wrap;
 }
 
 .review-section-review-list{
