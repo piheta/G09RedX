@@ -7,13 +7,13 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
 import {useSelector} from "react-redux";
 import {addReview, getAllProductReviewById} from "../../services/ReviewService";
+import {useParams} from "react-router";
 
 
 
 
 
 function ReviewSection({productId}) {
-
 
     const [reviews, setReviews] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
