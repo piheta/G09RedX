@@ -6,7 +6,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Rating from "@mui/material/Rating";
 import {useSelector} from "react-redux";
-import {addReview, getAllProductReviewById} from "../../services/ReviewService";
+import {addReview, deleteReview, getAllProductReviewById} from "../../services/ReviewService";
 import {useParams} from "react-router";
 
 
@@ -29,16 +29,19 @@ function ReviewSection({productId}) {
     function submitNewReview(event){
         event.preventDefault();
         const inputList = [...event.target]
-        const newReview = {
+        const reviewData = {
             "rating": checkHeartRate(inputList.slice(0, 5)),
             "description": inputList[6].value
         }
-        addReview(newReview, productId).then(() => {
-            getAllProductReviewById(productId).then((reviewData) => {
-                setReviews(reviewData);
-                setDisplayModal(false);
-            })
+        addReview(reviewData, productId).then((newReview) => {
+            setReviews((prevReviews) => [...prevReviews, newReview]);
+            setDisplayModal(false);
         })
+    }
+
+    function handleDeleteReview(reviewId) {
+        setReviews((prevReviews) => [...prevReviews.filter((review) => review.reviewId !== reviewId)]);
+        deleteReview(reviewId);
     }
 
     function checkHeartRate(hearts){
@@ -97,7 +100,7 @@ function ReviewSection({productId}) {
             <hr />
             <div className={"review-section-review-list"}>
                 {
-                    reviews.map((review) => <Review review={review} key={review.reviewId}/>)
+                    reviews.map((review) => <Review review={review} key={review.reviewId} onDelete={handleDeleteReview}/>)
                 }
             </div>
         </section>

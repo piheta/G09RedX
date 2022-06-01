@@ -37,18 +37,14 @@ export async function getAllProductReviewById(productId){
     })
 };
 
-export async function deleteReview(reviewId) {
-    return await axios({
+export function deleteReview(reviewId) {
+     axios({
         method: 'delete',
         url: API_BASE_URL + '/review/products/' + reviewId,
         headers: {
             'Accept': '*/*',
             "Content-Type": "application/json",
             "Authorization": "Bearer " + getCookie("jwt")
-        }
-    }).then((response) => {
-        if (response.status === 200) {
-            return response.data;
         }
     }).catch(error => {
         console.log(error.response.statusCode);

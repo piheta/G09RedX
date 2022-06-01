@@ -1,14 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./Review.css"
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {useSelector} from "react-redux";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import {deleteReview, getAllProductReviewById} from "../../services/ReviewService";
-import {useParams} from "react-router";
 
-function Review({review}) {
+function Review({review, onDelete}) {
 
 
     const user = useSelector(state => state.userReducer);
@@ -25,7 +23,7 @@ function Review({review}) {
                     <h1>{review.customer.userName}</h1>
                     {
                         user.user.roles && user.user.roles.includes("ROLE_ADMIN") ?
-                        <DeleteForeverIcon onClick={() => deleteReview(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
+                        <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
                         :null
                     }
                 </div>
