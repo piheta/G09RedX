@@ -15,10 +15,11 @@ function CheckoutSection({products, productId}) {
     }
 
     function handleGroupChange(newGroupSize) {
-        if (newGroupSize === 1) {
+        if (parseInt(newGroupSize) === 1) {
             setPrice(currentProduct.basePrice);
             choices.groupSize = 1;
         } else {
+            console.log('here');
             setPrice(currentProduct.groupPrice);
             choices.groupSize = 5;
         }
