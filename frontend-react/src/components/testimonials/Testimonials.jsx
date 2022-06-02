@@ -20,6 +20,7 @@ function Testimonials() {
                         "Red Cross are very competent experts in first help.
                         They are so effective; you never need the second help."
                     </p>
+                    <p className="signature">- Mateusz Picheta</p>
                 </div>
 
                 <div className="testimonial">
@@ -29,14 +30,16 @@ function Testimonials() {
                         "I have been HR responsible at my company for 12 years, and every year I update my certification with Red Cross Ålesund.
                         I can proudly say that no one has died under my watch."
                     </p>
+                    <p className="signature">- Håkon Sætre</p>
                 </div>
                 <div className="testimonial">
                     <img src={ "/images/user3.png" } alt=""/>
                     <h3>Superb Experience</h3>
                     <p>
-                        "These folks may not be Linux kernel gurus, but they do one thing well –
+                        "These folks may not be Linux kernel gurus, but they do one thing well -
                         they teach you the essentials of first help in an easy and interesting way."
                     </p>
+                    <p className="signature">- Petter Molnes</p>
                 </div>
             </div>
         </section>
