@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../styles/LoginForms.css';
 import '../../styles/global.css'
 import {useNavigate} from 'react-router';
@@ -14,8 +14,8 @@ function Login() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const isLogged = useSelector(state => state.isLogged);
-    const [warning, setWarning] = React.useState(false);
-    const [warningText, setWarningText] = React.useState("");
+    const [warning, setWarning] = useState(false);
+    const [warningText, setWarningText] = useState("");
 
     function sendLoginRequest(event) {
         event.preventDefault();
@@ -60,7 +60,6 @@ function Login() {
                     {
                         (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : null
                     }
-
                     <Button type={"submit"} variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 
