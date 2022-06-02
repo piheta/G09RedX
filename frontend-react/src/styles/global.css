@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+::selection {
+    color: #fff;
+    background: #ec361e;
+}
+
 button {
     border: none;
     background: transparent;
