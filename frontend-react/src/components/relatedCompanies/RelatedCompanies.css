@@ -61,7 +61,7 @@
     height: auto;
     display: flex;
     text-align: center;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 

@@ -15,7 +15,7 @@
 .review-section-review-list{
     margin-top: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10rem;
     flex-wrap: wrap;
 }
