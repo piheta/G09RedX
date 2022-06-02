@@ -1,6 +1,5 @@
 import React from 'react';
 import './RelatedCompanies.css';
-import '../../styles/global.css';
 
 function RelatedCompanies() {
 

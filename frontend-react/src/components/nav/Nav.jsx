@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './Nav.css';
-import '../../styles/global.css'
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
 import {useDispatch, useSelector} from "react-redux";

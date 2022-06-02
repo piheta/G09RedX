@@ -31,3 +31,7 @@
 .closebtn:hover {
     color: black;
 }
+
+.hide {
+    display: none;
+}

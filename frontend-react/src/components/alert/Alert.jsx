@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import style from "./style.module.css";
+import css from "classnames";
 
 function Alert({children, type, message}) {
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Testimonials.css';
-import '../../styles/global.css';
 
 
 function Testimonials() {

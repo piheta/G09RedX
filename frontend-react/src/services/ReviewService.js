@@ -13,8 +13,10 @@ export function addReview(review, productId) {
             "Authorization": "Bearer " + getCookie("jwt")
         },
         data: review
-    }).catch(error => {
-        console.log(error.response.statusCode);
+    }).then((response) => {
+        if (response.status === 200) {
+            return response.data;
+        }
     })
 };
 

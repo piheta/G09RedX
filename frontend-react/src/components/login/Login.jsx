@@ -1,6 +1,5 @@
 import React from 'react';
 import '../../styles/LoginForms.css';
-import '../../styles/global.css'
 import {useNavigate} from 'react-router';
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
