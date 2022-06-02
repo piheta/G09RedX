@@ -14,6 +14,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
+        sudo /usr/bin/git pull /redx/frontend/
         sudo docker stop redx-front-react-production
         sudo docker rm redx-front-react-production
         sudo docker build -t group09/frontend-react-production /redx/frontend/frontend-react
