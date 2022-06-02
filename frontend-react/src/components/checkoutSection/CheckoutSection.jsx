@@ -3,6 +3,7 @@ import '../../styles/global.css'
 import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
+import CheckOutModal from "../checkoutModal/CheckOutModal";
 
 function CheckoutSection({products, productId}) {
 
@@ -12,13 +13,14 @@ function CheckoutSection({products, productId}) {
     const [displayModal, setDisplayModal] = useState(false);
     const navigate = useNavigate();
 
-
-    let choices = {
+    const [choices, setChoices] = useState({
         timeOfDay: 'Morning',
         language: 'Norwegian',
         groupSize: 1,
         date: getTomorrowsDate(),
-    };
+    })
+
+
 
     const handleClickOutside = (event) => {
         if (event.target.className === 'checkout-modal' || event.target.className === 'checkout-modal-exit') {
@@ -44,24 +46,23 @@ function CheckoutSection({products, productId}) {
     function handleGroupChange(newGroupSize) {
         if (parseInt(newGroupSize) === 1) {
             setPrice(currentProduct.basePrice);
-            choices.groupSize = 1;
+            setChoices({...choices, groupSize : newGroupSize})
         } else {
-            console.log('here');
             setPrice(currentProduct.groupPrice);
-            choices.groupSize = 5;
+            setChoices({...choices, groupSize : newGroupSize})
         }
     }
 
     function handleTimeOfDayChange(newTime) {
-        choices.timeOfDay = newTime;
+        setChoices({...choices, timeOfDay : newTime})
     }
 
     function handleLanguageChange(newLanguage) {
-        choices.language = newLanguage;
+        setChoices({...choices, language : newLanguage})
     }
 
     function handleDateChange(newDate) {
-        choices.date = newDate;
+        setChoices({...choices, date : newDate})
     }
 
 
@@ -86,10 +87,10 @@ function CheckoutSection({products, productId}) {
                          src={'/images/squoosed-product' + productId + '.jpg'}/>
                 </div>
                 <div className={"choices"}>
-                    <form>
+                    <form key={productId}>
                         <h1 className={'product-title'}>{currentProduct.productName}</h1>
                         <RadioGroup onChange={(event, value) => handleTimeOfDayChange(value)}
-                                    key={productId + choices.timeOfDay} defaultValue={'Morning'}>
+                                     defaultValue={'Morning'}>
                             <h3 className={'choice-title'}>Time of day</h3>
                             <FormControlLabel
                                 control={<Radio
@@ -105,7 +106,7 @@ function CheckoutSection({products, productId}) {
                             />
                         </RadioGroup>
                         <RadioGroup onChange={(event, value) => handleLanguageChange(value)}
-                                    key={productId + choices.language} defaultValue={'Norwegian'}>
+                                    defaultValue={'Norwegian'}>
                             <h3 className={'choice-title'}>Language</h3>
                             <FormControlLabel
                                 control={<Radio
@@ -120,7 +121,7 @@ function CheckoutSection({products, productId}) {
                                 value={'English'}
                             />
                         </RadioGroup>
-                        <RadioGroup key={productId + choices.groupSize} defaultValue={1}
+                        <RadioGroup  defaultValue={1}
                                     onChange={(event, value) => handleGroupChange(value)}>
                             <h3 className={'choice-title'}>Group size</h3>
                             <FormControlLabel
@@ -147,34 +148,8 @@ function CheckoutSection({products, productId}) {
             </div>
             {
                 displayModal ?
-                    <div className={"checkout-modal"}>
-                        <div className={"checkout-modal-content"}>
-                            <span className={"checkout-modal-exit"}>
-                                &#10060;
-                            </span>
-                            <h1>Thank you for the Order!</h1>
-                            <p>
-                                An email will shortly be sent to you! The Email will consist of information of you're order.
-                                We appreciate everyone and wants to make sure every customer gets the best services from us.
-                            </p>
-                            <table className={"modal-table"}>
-                                <caption className={"modal-table-title"}>ORDER SUMMARY</caption>
-                                <tr>
-                                    <th>Time of day</th>
-                                    <th>Language</th>
-                                    <th>Group size</th>
-                                    <th>Date</th>
-                                </tr>
-                                <tr>
-                                    <td>{choices.timeOfDay}</td>
-                                    <td>{choices.language}</td>
-                                    <td>{choices.groupSize}</td>
-                                    <td>{choices.date}</td>
-                                </tr>
-                            </table>
-                            <h2>{price},-</h2>
-                        </div>
-                    </div>
+                    <CheckOutModal timeOfDay={choices.timeOfDay} language={choices.language}
+                    groupSize={choices.groupSize} date={choices.date} price={price}/>
                     : null
             }
 

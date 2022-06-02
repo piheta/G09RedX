@@ -8,7 +8,7 @@ function Footer() {
             <div className="footer-container">
                 <div className="dropbar-container">
                     <nav>
-                        <label htmlFor="touch"><span>Shortcut</span></label>
+                        <label htmlFor="touch"><span>Legal</span></label>
                         <input type="checkbox" id="touch"/>
 
                         <ul className="slide">
@@ -42,7 +42,7 @@ function Footer() {
                 </div>
 
                 <div className="shortcut">
-                    <h1>Shortcut</h1>
+                    <h1>Legal</h1>
                     <ul>
                         <li><a href="/#">Certification</a></li>
                         <li><a href="/#">Payments</a></li>

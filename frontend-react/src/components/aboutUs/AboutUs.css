@@ -1,20 +1,20 @@
 #about-us{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    margin-top: 6%;
 }
 
 .simple-image-slider{
     display: flex;
     justify-content: center;
-    align-items: center;
 
 }
 
 .about-text{
     text-align: center;
-    margin-top: 5rem;
     font-size: large;
+    width: 30%;
 }
 
 .about-text > h1 {
@@ -23,11 +23,12 @@
 
 .about-text p {
     margin: 3rem;
+    text-align: left;
 }
 
 .text-under{
     text-align: center;
-    margin: 5rem;
+
     font-size: large;
     height: auto;
 }
@@ -37,16 +38,24 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .simple-image-slider{
         display: none;
     }
 
     .about-text img{
-        display: inline-block;
-        height: 20rem;
-        width: auto;
+        display: flex;
+        width: 100%;
     }
 
-}
+    .about-text{
+        text-align: center;
+        font-size: large;
+        width: 90%;
+    }
 
+    .about-text p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
