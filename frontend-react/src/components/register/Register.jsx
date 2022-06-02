@@ -13,6 +13,7 @@ function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [email, setEmail] = useState("");
+    const [warningText, setWarningText] = useState("");
 
     function sendCreateUserRequest() {
         if (password === confirmPassword) {
@@ -34,11 +35,13 @@ function Register() {
                data: userInfo
             }).then((response) => {
                 if (response.status === 201) {
-
+                    navigate('/login');
                 }
             }).catch((error) => {
-                console.log(error.response.status);
+                setWarningText(error.response.data);
             })
+        } else {
+            setWarningText('Make sure the passwords match.');
         }
     }
 
@@ -53,6 +56,9 @@ function Register() {
                     <TextField onChange={(elem) => setUsername(elem.target.value)} label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField onChange={(elem) => setPassword(elem.target.value)}  label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField onChange={(elem) => setConfirmPassword(elem.target.value)}  label="Confirm password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    {
+                        (warningText !== '') ? <div className={'sign-up-warning'}><p>{warningText}</p></div> : null
+                    }
                     <Button onClick={sendCreateUserRequest} variant="outlined" color={"error"}>Confirm</Button>
                 </div>
 
