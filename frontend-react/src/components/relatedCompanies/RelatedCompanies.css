@@ -5,17 +5,14 @@
 */
 #related-companies > h1 {
     font-size: 3rem;
-    padding-bottom: 6rem;
     text-align: center;
-    margin-top: 2%;
 }
 
 /*
  * Positioning and styling of the Boxes
 */
 #related-companies {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
+    margin-top: 6%;
 }
 
 .company-image img {
