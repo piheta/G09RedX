@@ -67,14 +67,16 @@
     border-color: #ffffff;
     border-style: solid;
     border-radius: 0.3rem;
-    color: white;
+    color: #fff;
     padding: 1.5rem 3.2rem;
     font-size: 1.6rem;
     margin-top: 4rem;
 }
 
 .signup-btn button:hover {
-    background-color: #8a2315;
+    background-color: #e86555;
+    transform: scale(1.025);
+    cursor: pointer;
 }
 
 .nav-toggler {
