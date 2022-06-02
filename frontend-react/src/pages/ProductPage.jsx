@@ -4,7 +4,7 @@ import CheckoutSection from "../components/checkoutSection/CheckoutSection";
 import ReviewSection from "../components/reviewSection/ReviewSection";
 import Footer from "../components/footer/Footer";
 import {useParams} from "react-router";
-import {getAllProducts, getProductById} from "../services/ProductService";
+import {getAllProducts} from "../services/ProductService";
 
 function ProductPage() {
 

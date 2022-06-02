@@ -3,7 +3,6 @@
     justify-content: center;
     margin: 10rem 0rem;
     gap: 2rem 1rem;
-    flex-wrap: wrap;
 }
 
 .product {
@@ -132,6 +131,20 @@
     font-weight: lighter;
 }
 
+@media (max-width: 1580px) {
+    .product-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-image {
+        width: 60rem;
+        height: auto;
+    }
+}
+
 .checkout-modal-content{
     width: 90rem;
     height: 70rem;
@@ -218,9 +231,4 @@ tr:nth-child(even) {
         width: 30rem;
         height: auto;
     }
-    .product-image {
-        width: 33.5rem;
-        height: auto;
-    }
-
 }

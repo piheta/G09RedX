@@ -42,10 +42,11 @@ function CheckoutSection({products, productId}) {
     }
 
     function handleGroupChange(newGroupSize) {
-        if (newGroupSize === 1) {
+        if (parseInt(newGroupSize) === 1) {
             setPrice(currentProduct.basePrice);
             choices.groupSize = 1;
         } else {
+            console.log('here');
             setPrice(currentProduct.groupPrice);
             choices.groupSize = 5;
         }
@@ -85,7 +86,7 @@ function CheckoutSection({products, productId}) {
                          src={'/images/squoosed-product' + productId + '.jpg'}/>
                 </div>
                 <div className={"choices"}>
-                    <form className={''}>
+                    <form>
                         <h1 className={'product-title'}>{currentProduct.productName}</h1>
                         <RadioGroup onChange={(event, value) => handleTimeOfDayChange(value)}
                                     key={productId + choices.timeOfDay} defaultValue={'Morning'}>
@@ -183,12 +184,15 @@ function CheckoutSection({products, productId}) {
                 {
                     relatedProducts.length > 0 ? relatedProducts.map((product) => {
                         return (
-                            <a key={product.productId} onClick={() => navigate('/checkout/' + product.productId)}
-                               className={'related-product'}>
-                                <img alt={''} className={'related-product-images'}
-                                     src={'/images/squoosed-product' + product.productId + '.jpg'}/>
-                                <p className={'related-product-tag'}>{product.productName}</p>
-                            </a>
+                            <div className={'related-product'}>
+                                <h4>{product.productName}</h4>
+                                <a key={product.productId} onClick={() => navigate('/checkout/' + product.productId)}
+                                   className={'related-product-image'}>
+                                    <img alt={''} className={'related-product-images'}
+                                         src={'/images/squoosed-product' + product.productId + '.jpg'}/>
+                                    <p className={'related-product-tag'}>{product.productName}</p>
+                                </a>
+                            </div>
                         )
                     }) : null
                 }
