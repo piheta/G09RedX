@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
 }
 
 .simple-image-slider{
@@ -29,7 +27,7 @@
 
 .text-under{
     text-align: center;
-    margin: 5rem;
+
     font-size: large;
     height: auto;
 }
@@ -39,22 +37,24 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     .simple-image-slider{
         display: none;
     }
 
     .about-text img{
-        display: inline-block;
-        height: 20rem;
-        width: auto;
+        display: flex;
+        width: 100%;
     }
-
 
     .about-text{
         text-align: center;
         font-size: large;
         width: 90%;
     }
-}
 
+    .about-text p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
