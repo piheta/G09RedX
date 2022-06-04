@@ -30,7 +30,3 @@ export function logout(dispatch, navigate) {
     dispatch(removeUser());
     navigate('/login')
 }
-
-export function isLoggedIn(isLogged) {
-    return isLogged.isLogged;
-}

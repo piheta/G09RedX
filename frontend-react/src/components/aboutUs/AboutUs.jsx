@@ -21,7 +21,7 @@ function AboutUs() {
                 <p>We provide courses both during work time and evening courses. <br/> Since 2020, we don't provide
                     weekend
                     courses anymore.</p>
-                <img src={"/images/squoosed-medic2.jpg"}/>
+                <img alt={"Person performing CPR on dummy."} src={"/images/squoosed-medic2.jpg"}/>
                 <p>
                     Our team consists of medical professionals with more than 30 years of experience. <br/>We are
                     certified
@@ -37,7 +37,7 @@ function AboutUs() {
                     width={896}
                     height={504}
                     images={images}
-                    showBullets={true}
+                    showBullets={false}
                     showNavs={true}
                     autoPlay={true}
                     autoPlayDelay={3.0}

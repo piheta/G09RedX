@@ -16,7 +16,7 @@ function Nav({productId}) {
 
     const [icon, setIcon] = useState("nav-toggler");
 
-    const isLogged = useSelector(state => state.isLogged);
+    const isLogged = useSelector(state => state.isLogged.isLogged);
 
     const dispatch = useDispatch();
 
@@ -43,7 +43,7 @@ function Nav({productId}) {
             <div className={location.pathname === '/checkout/' + productId ? 'menubar-tiny' : 'menubar'}>
                 <nav className="header-container">
 
-                    <a href={'/'}><img className={"brand-image"} src={"/images/cross.png"} alt=""/></a>
+                    <a href={'/'}><img className={"brand-image"} src={"/images/cross.png"} alt="Red Cross Logo"/></a>
 
                     <div onClick={navToggle} className={icon}>
                         <div className="line1"/>
@@ -87,9 +87,9 @@ function Nav({productId}) {
                                 </>
                         }
                         <li className="nav-item">
-                            <a href='' onClick={() => (isLoggedIn(isLogged) ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a href='' onClick={() => (isLogged ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
                                 {
-                                    isLoggedIn(isLogged) ? <MdLogout className={"logout-icon"} color="white"/> : 'Login'
+                                    isLogged ? <MdLogout className={"logout-icon"} color="white"/> : 'Login'
                                 }
                             </a>
                         </li>
@@ -101,7 +101,7 @@ function Nav({productId}) {
                         :
                         <div className="container-text">
                             <h1>RED CROSS ÅLESUND</h1>
-                            <h6>We value every life</h6>
+                            <h2>We value every life</h2>
                             <div className="signup-btn">
                                 <button type="button">Sign up for course</button>
                             </div>

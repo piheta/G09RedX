@@ -1,6 +1,6 @@
 import './CheckoutSection.css';
 import '../../styles/global.css'
-import {FormControl, FormControlLabel, Radio, RadioGroup} from "@mui/material";
+import {FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
@@ -83,7 +83,7 @@ function CheckoutSection({products, productId}) {
         <section id={'checkout-and-related-products'}>
             <div className={'product-section'}>
                 <div className={'product'}>
-                    <img alt={"Product image"} className={'product-image'}
+                    <img alt={currentProduct.productName} className={'product-image'}
                          src={'/images/squoosed-product' + productId + '.jpg'}/>
                 </div>
                 <div className={"choices"}>
