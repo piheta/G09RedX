@@ -32,7 +32,8 @@
 
 .footer-container li{
     list-style-type: none;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-container li a {
@@ -89,7 +90,7 @@
 
     .dropbar-container nav{
         width : 30rem;
-        background: #e3d7d7;
+        background: #f5f5f5;
         margin : 4rem auto;
         border-radius: 0.4rem;
     }
@@ -98,8 +99,7 @@
         padding : 3rem;
         background : #ffffff;
         color : rgb(0, 0, 0);
-        font-size : 1.2em;
-        font-variant : small-caps;
+        font-size : 2.0em;
         cursor : pointer;
         display: block;
         border-radius: 0.4rem;
@@ -132,8 +132,4 @@
         height: 25rem;
     }
 }
-@media (max-width: 1300px) {
-    .footer-container ul li{
-        font-size: 1.3rem;
-    }
-}
+
