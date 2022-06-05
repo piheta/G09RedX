@@ -7,15 +7,12 @@ import {addReview, deleteReview, editReview, getAllProductReviewById} from "../.
 import ReviewModal from "../reviewModal/ReviewModal";
 
 
-
-
-
-
 function ReviewSection({productId}) {
 
     const [reviews, setReviews] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
     const [reviewToEdit, setReviewToEdit] = useState({});
+    const [warningText, setWarningText] = useState('');
     const isLogged = useSelector(state => state.isLogged.isLogged);
 
     useEffect(() => {
@@ -25,7 +22,7 @@ function ReviewSection({productId}) {
     }, [productId])
 
 
-    function submitNewReview(event){
+    function submitNewReview(event) {
         event.preventDefault();
         const inputList = [...event.target]
         const reviewData = {
@@ -33,8 +30,12 @@ function ReviewSection({productId}) {
             "description": inputList[6].value
         }
         addReview(reviewData, productId).then((newReview) => {
-            setReviews((prevReviews) => [...prevReviews, newReview]);
-            setDisplayModal(false);
+            if (newReview != null) {
+                setReviews((prevReviews) => [...prevReviews, newReview]);
+                setDisplayModal(false);
+            } else {
+                setWarningText('You might already have a review for this product.')
+            }
         })
     }
 
@@ -46,8 +47,9 @@ function ReviewSection({productId}) {
             "description": inputList[6].value
         };
         editReview(reviewData, reviewId).then((newReview) => {
-            console.log(newReview);
-            setReviews((prevReviews) => [...prevReviews.splice(reviews.indexOf((review) => review.id === reviewId), 1, newReview), newReview]);
+            const newReviews = [...reviews];
+            newReviews[reviews.findIndex((review) => review.reviewId === reviewId)] = newReview;
+            setReviews(newReviews);
             setDisplayModal(false);
             setReviewToEdit({});
         });
@@ -58,9 +60,9 @@ function ReviewSection({productId}) {
         deleteReview(reviewId);
     }
 
-    function checkHeartRate(hearts){
-        for (let i = 0; i < hearts.length; i++){
-            if (hearts[i].checked === true){
+    function checkHeartRate(hearts) {
+        for (let i = 0; i < hearts.length; i++) {
+            if (hearts[i].checked === true) {
                 return i + 1;
             }
         }
@@ -69,6 +71,8 @@ function ReviewSection({productId}) {
     const handleClickOutside = (event) => {
         if (event.target.className === 'modal') {
             setDisplayModal(false);
+            setWarningText('');
+            setReviewToEdit({})
         }
     };
 
@@ -84,18 +88,23 @@ function ReviewSection({productId}) {
         <section id={"review-section"}>
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
-                { displayModal === false && isLogged ?
-                    <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
+                {displayModal === false && isLogged ?
+                    <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add
+                        review</Button>
                     : null
                 }
             </div>
-            { displayModal === true ? <ReviewModal reviewToEdit={reviewToEdit} handleEditReview={handleEditReview} submitNewReview={submitNewReview}/>
+            {displayModal === true ? <ReviewModal reviewToEdit={reviewToEdit} handleEditReview={handleEditReview}
+                                                  submitNewReview={submitNewReview}
+                                                  warningText={warningText}/>
                 : null
             }
-            <hr />
+            <hr/>
             <div className={"review-section-review-list"}>
                 {
-                    reviews.map((review) => <Review review={review} key={review.reviewId} onDelete={handleDeleteReview} setReviewToEdit={setReviewToEdit} setDisplayModal={setDisplayModal}/>)
+                    reviews.map((review) => <Review review={review} key={review.reviewId} onDelete={handleDeleteReview}
+                                                    setReviewToEdit={setReviewToEdit}
+                                                    setDisplayModal={setDisplayModal}/>)
                 }
             </div>
         </section>

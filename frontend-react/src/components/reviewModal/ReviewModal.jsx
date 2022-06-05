@@ -6,7 +6,7 @@ import React from "react";
 import {useSelector} from "react-redux";
 import "./ReviewModal.css";
 
-function ReviewModal({reviewToEdit, handleEditReview, submitNewReview}) {
+function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningText}) {
 
     const user = useSelector(state => state.userReducer.user);
 
@@ -32,6 +32,9 @@ function ReviewModal({reviewToEdit, handleEditReview, submitNewReview}) {
                         size={"large"}
                     />
                     <textarea defaultValue={isEditing() ? reviewToEdit.description : ''} className={"modal-text"}/>
+                    {
+                        warningText !== '' ? <p className={'error-message'}>{warningText}</p> : null
+                    }
                     <Button type={"submit"} className={"modal-button"} variant="outlined"
                             sx={{color: "#ec361e", borderColor: "#ec361e"}}>{isEditing() ? 'Edit' : 'Add'} Review</Button>
                 </form>
