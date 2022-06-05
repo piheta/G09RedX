@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
 
+
 function CheckoutSection({products, productId}) {
 
     const [price, setPrice] = useState('');

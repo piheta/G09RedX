@@ -41,6 +41,7 @@ function ReviewSection({productId}) {
         })
     }
 
+
     function handleDeleteReview(reviewId) {
         setReviews((prevReviews) => [...prevReviews.filter((review) => review.reviewId !== reviewId)]);
         deleteReview(reviewId);
@@ -72,7 +73,7 @@ function ReviewSection({productId}) {
         <section id={"review-section"}>
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
-                { displayModal === false && isLogged ?
+                { isLogged ?
                     <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
                 }
