@@ -1,7 +1,7 @@
 import axios from "axios";
 import {removeUser, setUser} from "../store/action/UserAction";
 import {setLoginStatus} from "../store/action/IsLoggedAction";
-import {deleteCookie, setCookie} from "./CookieService";
+import {deleteCookie} from "./CookieService";
 
 export function GetUserInfo(token, dispatch) {
     axios({
@@ -29,8 +29,4 @@ export function logout(dispatch, navigate) {
     }));
     dispatch(removeUser());
     navigate('/login')
-}
-
-export function isLoggedIn(isLogged) {
-    return isLogged.isLogged;
 }
