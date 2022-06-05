@@ -3,63 +3,49 @@
 /*
  * Title above the flex managed boxes
 */
-#related-companies > h1 {
-    font-size: 3rem;
-    text-align: center;
-}
 
 /*
  * Positioning and styling of the Boxes
 */
 #related-companies {
-    margin-top: 6%;
+    margin-top: 10rem;
 }
 
 .company-image img {
     height: 20rem;
-    opacity: 1;
-    transition: .5s ease;
     backface-visibility: hidden;
     box-shadow: 2rem 2rem 3rem #e0e0e0;
-}
-
-.company-image:hover {
-    transition: 0.5s ease;
 }
 
 #company-cards {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10vh;
+
+    justify-content: left;
+    gap: 5vh;
 }
 
 
 .company-parah p{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    font-size: 2rem;
     text-align: left;
 }
 
-.company-parah{
-    margin: 5rem;
-}
 
 /*
  * The content inside of the cards
 */
 .company-card-item {
-    background-color: white;
-    width: 60%;
     height: auto;
     display: flex;
     text-align: center;
     justify-content: left;
     align-items: center;
+    gap: 2vh;
+
 }
 
 
@@ -77,3 +63,7 @@
     }
 
 }
+
+
+
+

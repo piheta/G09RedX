@@ -1,7 +1,14 @@
 #product-card-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20rem;
+    gap: 1rem;
     margin-top: 6%;
+}
+
+@media (max-width: 920px){
+    #product-card-section {
+        justify-content: center;
+        gap: 5rem;
+    }
 }

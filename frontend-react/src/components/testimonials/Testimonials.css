@@ -3,10 +3,10 @@
 #testimonial-section{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(#ffffff, #f3e5e5);
-    margin-top: 6%;
+    justify-content: space-between;
+
+
+    margin-top: 15rem;
 }
 
 .testimonial-header {
@@ -16,17 +16,17 @@
 }
 
 .testimonial-header h2 {
-    margin: 5%;
+    margin-bottom: 6%;
     font-size: 2rem;
 }
 
 .testimonial-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10%;
+    gap: 1rem;
+
+    justify-content: space-between;
+
 }
 
 
@@ -43,8 +43,8 @@
     background-color: #fff;
     border-radius: 0.4rem;
     padding: 3rem;
-    box-shadow: 2rem 2rem 3rem #ddd7d7;
-    margin: 2rem;
+    box-shadow: 2rem 2rem 3rem #e0e0e0;
+
     position: relative;
 
 }
@@ -52,7 +52,7 @@
 .testimonial-wrapper img {
     border-radius: 100%;
     margin: 2%;
-    width: 20%;
+    width: 7rem;
 }
 
 .signature {
@@ -64,8 +64,11 @@
 
 
 
-@media (max-width: 602px){
-    .testimonial {
-        width: 100%;
+
+
+@media (max-width: 1350px){
+    .testimonial-wrapper {
+        justify-content: center;
+
     }
 }
