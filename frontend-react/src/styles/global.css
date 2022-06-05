@@ -24,6 +24,13 @@ button {
 html {
     font-size: 10px;
     scroll-behavior: smooth;
+
+    --background-color: #fffefe;
+    --primary-color: #ec361e;
+    --shadow-color: #e0e0e0;
+    --text-color: black;
+    --heading-color: #2f0b06;
+
 }
 
 
@@ -33,10 +40,22 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
+    background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5 {
-    font-weight: bold;
+    font-weight: lighter;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-size: 5rem;
+    text-align: center;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 2rem;
 }
 
 a {

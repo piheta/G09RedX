@@ -1,4 +1,5 @@
 import React from 'react';
+import './Homepage.css';
 
 import Related from '../components/relatedCompanies/RelatedCompanies.jsx';
 import About from '../components/aboutUs/AboutUs.jsx';
@@ -12,10 +13,12 @@ function HomePage() {
     return (
         <div>
             <Nav />
+            <div className='center'>
             <ProductSection />
             <About />
             <Related />
             <Testimonials />
+            </div>
             <Footer />
         </div>
     );
