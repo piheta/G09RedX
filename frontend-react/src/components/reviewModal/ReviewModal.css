@@ -49,3 +49,15 @@
 .modal-button:hover{
     border-color: #ec361e;
 }
+
+.error-message {
+    font-size: 1.25rem;
+    align-self: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #ec361e;
+    color: white;
+    border-radius: 0.25rem;
+    margin-bot: 2rem;
+}

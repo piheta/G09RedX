@@ -18,7 +18,7 @@ export async function addReview(review, productId) {
             return response.data;
         }
     }).catch(error => {
-        console.log(error.response.statusCode);
+        console.log(error.response.status);
     })
 };
 
