@@ -20,8 +20,11 @@ function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningTe
                 <form onSubmit={(event) => {
                     isEditing() ? handleEditReview(event, reviewToEdit.reviewId) : submitNewReview(event)
                 }} className={"modal-wrapper"}>
-                    <label className={"modal-title"}>{isEditing() ? 'Edit' : 'Add'} Review</label>
-                    <label className={"modal-username"}>{user.userName}</label>
+                    <label className={"modal-title"}>{isEditing() ? 'EDIT' : 'ADD'} REVIEW</label>
+                    <label className={"modal-username-wrap"}>Logged in as:
+                        <label className={"modal-username"}>{user.userName}</label>
+                    </label>
+                    <label className={"modal-rating-label"}>Select hearts:</label>
                     <Rating
                         name="customized-color"
                         defaultValue={isEditing() ? reviewToEdit.rating : 3}
@@ -30,13 +33,14 @@ function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningTe
                         icon={<FavoriteIcon sx={{color: "#ec361e"}} fontSize="inherit"/>}
                         emptyIcon={<FavoriteBorderIcon sx={{color: "#ec361e"}} fontSize="inherit"/>}
                         size={"large"}
+                        sx={{fontSize: "3rem"}}
                     />
                     <textarea defaultValue={isEditing() ? reviewToEdit.description : ''} className={"modal-text"}/>
                     {
                         warningText !== '' ? <p className={'error-message'}>{warningText}</p> : null
                     }
                     <Button type={"submit"} className={"modal-button"} variant="outlined"
-                            sx={{color: "#ec361e", borderColor: "#ec361e"}}>{isEditing() ? 'Edit' : 'Add'} Review</Button>
+                            sx={{color: "#ec361e", borderColor: "#ec361e", fontSize: "1.5rem"}}>{isEditing() ? 'Edit' : 'Add'} Review</Button>
                 </form>
             </div>
         </div>
