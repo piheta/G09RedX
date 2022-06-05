@@ -3,7 +3,7 @@ import './Nav.css';
 import {disableBodyScroll, enableBodyScroll} from 'body-scroll-lock';
 import {useLocation, useNavigate} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
-import {isLoggedIn, logout} from "../../services/UserService";
+import {logout} from "../../services/UserService";
 import { MdLogout } from 'react-icons/md';
 
 function Nav({productId}) {
@@ -103,7 +103,7 @@ function Nav({productId}) {
                             <h1>RED CROSS ÅLESUND</h1>
                             <h2>We value every life</h2>
                             <div className="signup-btn">
-                                <button type="button">Sign up for course</button>
+                                <button onClick={() => navigate("/checkout/1")} type="button">Sign up for course</button>
                             </div>
                         </div>
                 }

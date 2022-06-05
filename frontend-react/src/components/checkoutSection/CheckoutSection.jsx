@@ -4,6 +4,7 @@ import {FormControlLabel, Radio, RadioGroup} from "@mui/material";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
+import {useSelector} from "react-redux";
 
 function CheckoutSection({products, productId}) {
 
@@ -11,6 +12,8 @@ function CheckoutSection({products, productId}) {
     const [currentProduct, setCurrentProduct] = useState({});
     const [relatedProducts, setRelatedProducts] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
+
+    const isLogged = useSelector(state => state.isLogged.isLogged);
     const navigate = useNavigate();
 
     const [choices, setChoices] = useState({
@@ -143,7 +146,7 @@ function CheckoutSection({products, productId}) {
                                defaultValue={getTomorrowsDate()}/>
                         <h2 className={'price'}>{price},-</h2>
                     </form>
-                    <button onClick={() => setDisplayModal(true)} className={'buynow-button'}>SIGN UP NOW</button>
+                    <button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} className={'buynow-button'}>SIGN UP NOW</button>
                 </div>
             </div>
             {
