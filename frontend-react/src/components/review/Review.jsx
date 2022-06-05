@@ -20,7 +20,7 @@ function Review({review, onDelete}) {
         <div className={"review-component"}>
             <div className={"review-header"}>
                 <div className={"review-username"}>
-                    <h1>{review.customer.userName}</h1>
+                    <h2>{review.customer.userName}</h2>
                     {
                         user.user.roles && user.user.roles.includes("ROLE_ADMIN") ?
                         <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>

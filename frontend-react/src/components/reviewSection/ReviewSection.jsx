@@ -71,7 +71,8 @@ function ReviewSection({productId}) {
     return (
         <section id={"review-section"}>
             <div className={"review-section-header"}>
-                <label className={"review-section-label"}>Customer reviews</label>
+                <h1 className={"review-section-label"}>Customer reviews</h1>
+
                 { displayModal === false && isLogged ?
                     <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add review</Button>
                     : null
@@ -85,7 +86,7 @@ function ReviewSection({productId}) {
                             <label className={"modal-username"}>{ user.user.userName }</label>
                             <Rating
                                 name="customized-color"
-                                defaultValue={3}
+                                defaultValue={5}
                                 getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}
                                 precision={1}
                                 icon={<FavoriteIcon sx={{color: "#ec361e"}} fontSize="inherit" />}

@@ -116,7 +116,7 @@ function CheckoutSection({products, productId}) {
                     <button className={'buynow-button'}>SIGN UP NOW</button>
                 </form>
             </div>
-            <h2 id={'related-products-header'} className={'related-products-header'}>Related products</h2>
+            <h1 id={'related-products-header'} className={'related-products-header'}>Related products</h1>
             <hr />
             <div id={'related-products'} className={'related-products'}>
                 {
