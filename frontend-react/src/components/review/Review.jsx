@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import "./Review.css"
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import {useSelector} from "react-redux";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import {Edit} from "@mui/icons-material";
 
-function Review({review, onDelete}) {
+function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
 
 
-    const user = useSelector(state => state.userReducer);
+    const user = useSelector(state => state.userReducer.user);
     const current = new Date();
 
     function getCurrentDate(){
@@ -22,7 +23,13 @@ function Review({review, onDelete}) {
                 <div className={"review-username"}>
                     <h1>{review.customer.userName}</h1>
                     {
-                        user.user.roles && user.user.roles.includes("ROLE_ADMIN") ?
+                        user.userName && user.userName === review.customer.userName ?
+                        <Edit onClick={() => (setReviewToEdit(review), setDisplayModal(true))} className={'review-icon'} sx={{fontSize: 25}}/>
+                        :
+                        null
+                    }
+                    {
+                        user.roles && user.roles.includes("ROLE_ADMIN") ?
                         <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
                         :null
                     }

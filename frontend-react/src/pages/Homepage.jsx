@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../styles/global.css';
 import Related from '../components/relatedCompanies/RelatedCompanies.jsx';
 import About from '../components/aboutUs/AboutUs.jsx';
 import Testimonials from '../components/testimonials/Testimonials.jsx';
