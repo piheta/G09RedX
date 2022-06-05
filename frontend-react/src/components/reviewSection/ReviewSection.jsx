@@ -2,12 +2,8 @@ import React, {useEffect, useState} from 'react';
 import Review from "../review/Review";
 import "./ReviewSection.css"
 import {Button} from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import Rating from "@mui/material/Rating";
 import {useSelector} from "react-redux";
 import {addReview, deleteReview, editReview, getAllProductReviewById} from "../../services/ReviewService";
-import {useParams} from "react-router";
 import ReviewModal from "../reviewModal/ReviewModal";
 
 
@@ -20,7 +16,6 @@ function ReviewSection({productId}) {
     const [reviews, setReviews] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
     const [reviewToEdit, setReviewToEdit] = useState({});
-    const user = useSelector(state => state.userReducer);
     const isLogged = useSelector(state => state.isLogged.isLogged);
 
     useEffect(() => {
