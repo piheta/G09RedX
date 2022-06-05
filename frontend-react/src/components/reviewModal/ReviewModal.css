@@ -56,6 +56,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    border: #ec361e solid 0.1rem;
 }
 
 .modal-wrapper{

@@ -16,18 +16,22 @@ function CheckOutModal({timeOfDay, language, groupSize, date, price}) {
                 </p>
                 <table className={"modal-table"}>
                     <caption className={"modal-table-title"}>ORDER SUMMARY</caption>
+                    <thead>
                     <tr>
                         <th>Time of day</th>
                         <th>Language</th>
                         <th>Group size</th>
                         <th>Date</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>{timeOfDay}</td>
                         <td>{language}</td>
                         <td>{groupSize}</td>
                         <td>{date}</td>
                     </tr>
+                    </tbody>
                 </table>
                 <h2>{price},-</h2>
             </div>
