@@ -126,10 +126,6 @@
     margin-top: 0.5rem;
 }
 
-#checkout-and-related-products {
-    margin: 5%;
-
-}
 
 #related-products-header {
     display: flex;
@@ -171,9 +167,6 @@
         justify-content: center;
     }
 
-    #checkout-and-related-products {
-        margin: 5%;
-    }
 
 }
 

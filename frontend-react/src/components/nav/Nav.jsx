@@ -57,12 +57,12 @@ function Nav({productId}) {
                             location.pathname === '/checkout/' + productId ?
                                 <>
                                     <li className={"nav-item"}>
-                                        <a href='#related-products-header' className={'nav-link'}>
+                                        <a onClick={navToggle} href='#related-products-header' className={'nav-link'}>
                                             Related products
                                         </a>
                                     </li>
                                     <li href='' className={"nav-item"}>
-                                        <a href='#review-section' className={'nav-link'}>
+                                        <a  onClick={navToggle} href='#review-section' className={'nav-link'}>
                                             Reviews
                                         </a>
                                     </li>
@@ -70,17 +70,17 @@ function Nav({productId}) {
                                 :
                                 <>
                                     <li className="nav-item">
-                                        <a href='#product-card-section' className="nav-link">
+                                        <a onClick={navToggle} href='#product-card-section' className="nav-link">
                                             Products
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="#related-companies" className="nav-link">
+                                        <a onClick={navToggle} href="#related-companies" className="nav-link">
                                             Companies
                                         </a>
                                     </li>
                                     <li className="nav-item">
-                                        <a href="#testimonial-section" className="nav-link">
+                                        <a onClick={navToggle} href="#testimonial-section" className="nav-link">
                                             Testimonials
                                         </a>
                                     </li>
