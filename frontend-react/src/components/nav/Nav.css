@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 55vh;
+    height: 60rem;
     display: flex;
     flex-direction: column;
 }
