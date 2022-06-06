@@ -1,19 +1,9 @@
 import React from 'react';
-import SimpleImageSlider from "react-simple-image-slider";
 import '../aboutUs/AboutUs.css';
 import '../../styles/global.css';
 
 
 function AboutUs() {
-
-
-    const images = [
-        { url: "/images/squoosed-medic1.jpg" },
-        { url: "/images/squoosed-medic2.jpg" },
-        { url: "/images/squoosed-medic3.jpg" },
-    ];
-
-
     return (
         <section id="about-us">
             <div className="about-text">
@@ -21,7 +11,7 @@ function AboutUs() {
                 <p>We provide courses both during work time and evening courses. <br/> Since 2020, we don't provide
                     weekend
                     courses anymore.</p>
-                <img src={"/images/squoosed-medic2.jpg"}/>
+                <img src='/images/home3.jpg' alt='redcross team' />
                 <p>
                     Our team consists of medical professionals with more than 30 years of experience. <br/>We are
                     certified
@@ -32,16 +22,16 @@ function AboutUs() {
                     
                 </p>
             </div>
-            <div className={"simple-image-slider"}>
-                <SimpleImageSlider
-                    width={896}
-                    height={504}
-                    images={images}
-                    showBullets={true}
-                    showNavs={true}
-                    autoPlay={true}
-                    autoPlayDelay={3.0}
-                />
+            <div id="slider-box">
+                <div id="slider">
+                    <figure>
+                        <img src='/images/home1.jpg' alt='redcross flag' />
+                        <img src='/images/home2.jpg' alt='supply delivery' />
+                        <img src='/images/home3.jpg' alt='redcross team' />
+                        <img src='/images/home4.jpg' alt='redcross truck' />
+                        <img src='/images/home1.jpg' alt='redcross flag' />
+                    </figure>
+                </div>
             </div>
         </section>
     );
