@@ -5,10 +5,9 @@
     gap: 1rem;
     width: 35rem;
     height: 50rem;
-    background-color: white;
     overflow: hidden;
-    border-radius: 0.25rem;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
+    border-radius: var(--border-radius);
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
 }
 
 .product-card-title {
@@ -30,14 +29,14 @@
 
 .product-card-item a {
     text-decoration: none;
-    background-color: #ec361e;
+    border-radius: 0.25rem;
+    background-color: var(--primary-color);
     color: white;
     width: 15rem;
     align-self: center;
     margin-top: auto;
     margin-bottom: 10%;
     padding: 1.5rem;
-    border-radius: 0.25rem;
     font-size: 1.5rem;
 }
 

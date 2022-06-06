@@ -21,7 +21,7 @@ function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
         <div className={"review-component"}>
             <div className={"review-header"}>
                 <div className={"review-username"}>
-                    <h1>{review.customer.userName}</h1>
+                    <h2>{review.customer.userName}</h2>
                     {
                         user.userName && user.userName === review.customer.userName ?
                         <Edit onClick={() => (setReviewToEdit(review), setDisplayModal(true))} className={'review-icon'} sx={{fontSize: 25}}/>
