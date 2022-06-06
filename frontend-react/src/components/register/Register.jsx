@@ -59,11 +59,11 @@ function Register() {
                     {
                         (warningText !== '') ? <div className={'sign-up-warning'}><p>{warningText}</p></div> : null
                     }
-                    <Button onClick={sendCreateUserRequest} variant="outlined" color={"error"}>Confirm</Button>
+                    <button className='login-signup-button'>Register</button>
                 </div>
 
                 <div className="form-footer">
-                    <img className={"brand-logo"} src={"images/cross.png"} alt=""/>
+                    <img className={"brand-logo"} src={"images/cross.png"} alt="logo"/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
             </div>

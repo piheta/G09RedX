@@ -20,7 +20,27 @@
     width: 190rem;
 }
 
+@media (max-width: 1600px) {
+    #about-us{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #slider-box {
+
+        width: 80vw;
+    }
+
+    
+}
+
+
 @media (max-width: 900px) {
+    #about-us{
+        align-items: flex-start;
+    }
+
     #slider-box{
         display: none;
     }
@@ -62,9 +82,3 @@ div#slider figure {
   width: 500%;
   animation: 30s slidy infinite; 
 }
-    
-
-
-
-
-

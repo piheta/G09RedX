@@ -44,7 +44,7 @@ function Nav({productId}) {
                 <nav className="header-container">
 
                     <a href={'/'}><img className={"brand-image"} src={"/images/cross.png"} alt="Red Cross Logo"/></a>
-
+                    <p id='mobile-logo'>Red Cross</p>
                     <div onClick={navToggle} className={icon}>
                         <div className="line1"/>
                         <div className="line2"/>
@@ -87,7 +87,7 @@ function Nav({productId}) {
                                 </>
                         }
                         <li className="nav-item">
-                            <a href='' onClick={() => (isLogged ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a href={!isLogged ? '/login' : ''} onClick={() => (isLogged ? logout(dispatch, navigate) : null, enableBodyScroll(document))} className="nav-link">
                                 {
                                     isLogged ? <MdLogout className={"logout-icon"} color="white"/> : 'Login'
                                 }

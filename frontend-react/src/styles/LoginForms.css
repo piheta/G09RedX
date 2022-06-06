@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient( rgba(12, 11, 11, 0.45), rgb(141, 100, 99)), url("/public/images/longdoctor.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -18,15 +18,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
     padding: 5rem 8rem;
 }
 
 .header-forms-label{
     margin-bottom: 10%;
-    font-size: 4rem;
-    color: rgb(32, 28, 28);
     align-self: center;
 }
 
@@ -36,11 +34,6 @@
     gap: 1rem;
     width: 20rem;
 }
-
-.form-container input:focus{
-    outline: none;
-}
-
 
 .form-container label{
     font-size: 1.7rem;
@@ -59,13 +52,13 @@
 
 .brand-logo{
     height: 8rem;
-    border-radius: 0.2rem;
+    border-radius: var(--border-radius);
     margin-top: 1rem;
     padding: 1rem;
 }
 
 .register-anchor, .main-anchor{
-    color: black;
+    color: #000000;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
@@ -78,7 +71,7 @@
 }
 
 .register-anchor:hover, .main-anchor:hover{
-    color: #e2a1a1;
+    text-decoration: underline var(--primary-color);
     cursor: pointer;
 }
 
@@ -91,4 +84,19 @@
     background-color: #ec361e;
     color: white;
     border-radius: 0.25rem;
+}
+
+.login-signup-button {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.login-signup-button:hover {
+    background-color: #e86555;
+    transform: scale(1.025);
+    cursor: pointer;
 }

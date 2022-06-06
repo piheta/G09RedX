@@ -59,12 +59,12 @@ function Login() {
                     {
                         (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : null
                     }
-                    <Button type={"submit"} variant="outlined" color={"error"}>Confirm</Button>
+                    <button className='login-signup-button'>Login</button>
                 </div>
 
                 <div className={"form-footer"}>
                     <a className={"register-anchor"} onClick={() => navigate("/register")}>Not registered? Sign up</a>
-                    <img className={"brand-logo"} src={"/images/cross.png"} alt=""/>
+                    <img className={"brand-logo"} src={"/images/cross.png"} alt="logo"/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
             </form>
