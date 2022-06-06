@@ -23,9 +23,15 @@
 .review-section-button {
     font-size: 1.6rem;
     padding: 1.5rem;
-    background-color: #ec361e;
+    background-color: var(--primary-color);
     color: white;
     border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.review-section-button:hover {
+    background-color: #e86555;
+    transform: scale(1.025);
     cursor: pointer;
 }
 
