@@ -16,7 +16,7 @@
 
     justify-content: left;
     margin-top: 3rem;
-    gap: 5vh;
+    gap: 4rem;
 }
 
 
@@ -37,7 +37,7 @@
     text-align: center;
     justify-content: left;
     align-items: center;
-    gap: 3vh;
+    gap: 4rem;
 
 }
 
@@ -50,7 +50,15 @@
     }
 
     .company-parah p{
-        width: 30rem;
+        width: 50rem;
     }
 
+}
+
+
+@media (max-width: 800px) {
+
+    .company-parah p{
+        width: 25rem;
+    }
 }

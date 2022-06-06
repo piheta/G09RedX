@@ -20,7 +20,7 @@
 .testimonial-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 2vh;
+    gap: 4rem;
 
     justify-content: space-between;
 
@@ -62,7 +62,6 @@
 @media (max-width: 2090px){
     .testimonial-wrapper {
         justify-content: center;
-
     }
 }
 
