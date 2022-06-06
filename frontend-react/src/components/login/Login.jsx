@@ -54,8 +54,8 @@ function Login() {
                 <h1 className="header-forms-label">Sign In</h1>
 
                 <div className="form-container">
-                    <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
-                    <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
+                    <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} sx={{color: "#ec361e"}}/>
+                    <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} sx={{color: "#ec361e"}}/>
                     {
                         (warning === true) ? <div className={"sign-up-warning"}><p>{warningText}</p></div> : null
                     }

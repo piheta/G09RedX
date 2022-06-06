@@ -85,6 +85,7 @@ textarea:focus {
 .error-message {
     font-size: 1.25rem;
     align-self: center;
+    width: 100%;
     justify-content: center;
     padding: 1.5rem;
     text-align: center;
