@@ -102,7 +102,7 @@ function Nav({productId}) {
                         :
                         <div className="container-text">
                             <h1>RED CROSS ÅLESUND</h1>
-                            <h6>We value every life</h6>
+                            <h2>We value every life</h2>
                             <div className="signup-btn">
                                 <button type="button">Sign up for course</button>
                             </div>

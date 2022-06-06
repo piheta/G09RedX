@@ -1,5 +1,5 @@
 .menubar {
-    background-image: linear-gradient(rgba(12, 11, 11, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -9,7 +9,7 @@
 }
 
 .menubar-tiny {
-    background-image: linear-gradient(rgba(12, 11, 11, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -32,6 +32,7 @@
     justify-content: space-between;
     padding: 3rem 3rem;
     font-size: 2rem;
+    color: white;
 }
 
 .menubar-links,
@@ -55,11 +56,22 @@
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5vh;
+    margin-top: 6vh;
     gap: 20px;
     font-size: 3.5rem;
-    color: rgb(255, 255, 255);
+    color: white;
     margin-bottom: 10rem;
+}
+
+.container-text h1 {
+    font-size: 8rem;
+    color: white;
+}
+
+.container-text h2 {
+    color: white;
+    font-weight: lighter;
+    font-size: 3rem;
 }
 
 .signup-btn button {
