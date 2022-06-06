@@ -126,6 +126,9 @@
     margin-top: 0.5rem;
 }
 
+.related-products-wrapper{
+    margin: 5%;
+}
 
 #related-products-header {
     display: flex;

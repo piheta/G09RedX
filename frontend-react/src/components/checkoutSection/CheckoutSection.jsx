@@ -150,30 +150,32 @@ function CheckoutSection({products, productId}) {
                     <button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} className={'buynow-button'}>SIGN UP NOW</button>
                 </div>
             </div>
-            <h1 id={'related-products-header'} className={'related-products-header'}>Related products</h1>
-            <hr />
-            {
-                displayModal ?
-                    <CheckOutModal timeOfDay={choices.timeOfDay} language={choices.language}
-                    groupSize={choices.groupSize} date={choices.date} price={price}/>
-                    : null
-            }
-            <div id={'related-products'} className={'related-products'}>
+            <div className={"related-products-wrapper"}>
+                <h1 id={'related-products-header'} className={'related-products-header'}>Related products</h1>
+                <hr />
                 {
-                    relatedProducts.length > 0 ? relatedProducts.map((product) => {
-                        return (
-                            <div className={'related-product'}>
-                                <h4>{product.productName}</h4>
-                                <a key={product.productId} onClick={() => navigate('/checkout/' + product.productId)}
-                                   className={'related-product-image'}>
-                                    <img alt={''} className={'related-product-images'}
-                                         src={'/images/squoosed-product' + product.productId + '.jpg'}/>
-                                    <p className={'related-product-tag'}>{product.productName}</p>
-                                </a>
-                            </div>
-                        )
-                    }) : null
+                    displayModal ?
+                        <CheckOutModal timeOfDay={choices.timeOfDay} language={choices.language}
+                                       groupSize={choices.groupSize} date={choices.date} price={price}/>
+                        : null
                 }
+                <div id={'related-products'} className={'related-products'}>
+                    {
+                        relatedProducts.length > 0 ? relatedProducts.map((product) => {
+                            return (
+                                <div className={'related-product'}>
+                                    <h4>{product.productName}</h4>
+                                    <a key={product.productId} onClick={() => navigate('/checkout/' + product.productId)}
+                                       className={'related-product-image'}>
+                                        <img alt={''} className={'related-product-images'}
+                                             src={'/images/squoosed-product' + product.productId + '.jpg'}/>
+                                        <p className={'related-product-tag'}>{product.productName}</p>
+                                    </a>
+                                </div>
+                            )
+                        }) : null
+                    }
+                </div>
             </div>
         </section>
     )
