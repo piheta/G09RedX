@@ -3,10 +3,10 @@
     flex-direction: column;
     width: 30rem;
     height: 18rem;
-    background-color: #ecdede;
     padding: 2rem;
-    border-radius: 0.3rem;
-    box-shadow: 1rem 1rem 7rem 0.3rem rgba(107, 61, 61, 0.4);
+    border-radius: 0.25rem;
+    background: #fff;
+    box-shadow: 2rem 2rem 3rem #e0e0e0;
 }
 
 .review-header{
@@ -30,9 +30,17 @@
     display: flex;
     justify-content: space-between;
 }
+
+.review-icon {
+    margin-left: 1rem;
+}
+
 .review-icon:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.20);
+
 }
+
+
 
 

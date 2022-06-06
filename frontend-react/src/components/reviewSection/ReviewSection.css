@@ -19,3 +19,26 @@
     gap: 10rem;
     flex-wrap: wrap;
 }
+
+.review-section-button {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    background-color: #ec361e;
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .review-section-review-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .review-section-header {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

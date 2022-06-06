@@ -1,15 +1,15 @@
 .menubar {
-    background-image: linear-gradient(rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url("/public/images/longdoctor.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 60rem;
+    height: 55vh;
     display: flex;
     flex-direction: column;
 }
 
 .menubar-tiny {
-    background-image: linear-gradient(rgba(12, 11, 11, 0.45), rgb(236, 113, 111)), url("/public/images/longdoctor.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -32,6 +32,7 @@
     justify-content: space-between;
     padding: 3rem 3rem;
     font-size: 2rem;
+    color: white;
 }
 
 .menubar-links,
@@ -43,7 +44,8 @@
 }
 
 .brand-image {
-    height: 50px;
+    height: 60px;
+    vertical-align:middle;
     width: auto;
     z-index: 1000;
 }
@@ -55,11 +57,21 @@
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 5vh;
+    margin-top: 8rem;
     gap: 20px;
-    font-size: 3.5rem;
-    color: rgb(255, 255, 255);
+    color: white;
     margin-bottom: 10rem;
+}
+
+.container-text h1 {
+    font-size: 8rem;
+    color: white;
+}
+
+.container-text h2 {
+    color: white;
+    font-weight: lighter;
+    font-size: 3rem;
 }
 
 .signup-btn button {
@@ -91,6 +103,7 @@
     transition: 0.3s ease-in;
 }
 
+
 @media (max-width: 600px) {
 
     .nav-toggler {
@@ -112,6 +125,16 @@
         transform: translateX(100%);
         z-index: 99;
     }
+
+    .container-text {
+        display: none;
+    }
+
+    .menubar {
+        height: 9vh;
+    }
+
+
 }
 
 
