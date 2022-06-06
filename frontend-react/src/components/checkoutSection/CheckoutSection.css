@@ -1,6 +1,6 @@
 .product-section {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     margin: 10rem 0rem;
     gap: 2rem 1rem;
     flex-wrap: wrap;
