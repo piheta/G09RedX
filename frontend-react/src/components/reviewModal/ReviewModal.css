@@ -37,15 +37,20 @@ textarea:focus {
 
 .modal-title{
     text-align: center;
-    font-weight: bold;
-    font-size: 3rem;
-    text-decoration: underline;
+    font-weight: lighter;
+    font-size: 5rem;
+    color: #2f0b06;
 }
 
 .modal-button {
     width: 100%;
     align-self: center;
     font-size: 2rem;
+    background-color: #ec361e;
+    color: white;
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
 }
 
 .modal-content{
