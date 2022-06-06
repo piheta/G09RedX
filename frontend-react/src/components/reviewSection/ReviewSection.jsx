@@ -5,6 +5,7 @@ import {Button} from "@mui/material";
 import {useSelector} from "react-redux";
 import {addReview, deleteReview, editReview, getAllProductReviewById} from "../../services/ReviewService";
 import ReviewModal from "../reviewModal/ReviewModal";
+import {useNavigate} from "react-router";
 
 
 function ReviewSection({productId}) {
@@ -14,6 +15,7 @@ function ReviewSection({productId}) {
     const [reviewToEdit, setReviewToEdit] = useState({});
     const [warningText, setWarningText] = useState('');
     const isLogged = useSelector(state => state.isLogged.isLogged);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getAllProductReviewById(productId).then((reviewData) => {
@@ -88,8 +90,8 @@ function ReviewSection({productId}) {
         <section id={"review-section"}>
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
-                {displayModal === false && isLogged ?
-                    <Button onClick={() => setDisplayModal(true)} size={"large"} variant="outlined" color={"error"}>Add
+                {displayModal === false ?
+                    <Button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} size={"large"} variant="outlined" color={"error"}>Add
                         review</Button>
                     : null
                 }
