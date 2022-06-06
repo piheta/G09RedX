@@ -3,7 +3,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 80vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
 }
@@ -44,7 +44,8 @@
 }
 
 .brand-image {
-    height: 50px;
+    height: 60px;
+    vertical-align:middle;
     width: auto;
     z-index: 1000;
 }
@@ -102,6 +103,7 @@
     transition: 0.3s ease-in;
 }
 
+
 @media (max-width: 600px) {
 
     .nav-toggler {
@@ -124,9 +126,15 @@
         z-index: 99;
     }
 
-    .container-text h1 {
-        font-size: 5rem;
+    .container-text {
+        display: none;
     }
+
+    .menubar {
+        height: 9vh;
+    }
+
+
 }
 
 
