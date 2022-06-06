@@ -1,20 +1,12 @@
-/* Company section */
-
-/*
- * Title above the flex managed boxes
-*/
-
-/*
- * Positioning and styling of the Boxes
-*/
 #related-companies {
-    margin-top: 10rem;
+    margin-top: var(--section-margin);
 }
 
 .company-image img {
     height: 20rem;
     backface-visibility: hidden;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
+    border-radius: var(--border-radius);
 }
 
 #company-cards {
@@ -49,8 +41,6 @@
 }
 
 
-
-
 @media (max-width: 1350px) {
 
     .company-card-item {
@@ -63,7 +53,3 @@
     }
 
 }
-
-
-
-

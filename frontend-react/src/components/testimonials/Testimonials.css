@@ -4,16 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
-    margin-top: 15rem;
+    margin-top: var(--section-margin);
 }
 
 .testimonial-header {
-    font-size: 3rem;
     text-align: center;
-
 }
+
 
 .testimonial-header h2 {
     margin-bottom: 6%;
@@ -41,10 +38,9 @@
     width: 40rem;
     text-align: left;
     background-color: #fff;
-    border-radius: 0.4rem;
+    border-radius: var(--border-radius);
     padding: 3rem;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
-
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
     position: relative;
 
 }
@@ -59,7 +55,7 @@
     position: absolute;
     bottom: 10%;
     font-style: italic;
-    color: #606060;
+    color: #666666;
 }
 
 
