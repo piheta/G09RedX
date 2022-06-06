@@ -63,7 +63,7 @@ thead tr:nth-child(odd) {
 
 
 @media (max-width: 800px) {
-    h1 {
+    .checkout-modal-header{
         font-size: 2.5rem;
     }
 
@@ -72,7 +72,7 @@ thead tr:nth-child(odd) {
         padding: 2rem;
     }
 
-    p {
+    .checkout-modal-paragraph {
         font-size: 2rem;
     }
 

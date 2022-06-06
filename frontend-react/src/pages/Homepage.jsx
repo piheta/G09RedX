@@ -13,14 +13,14 @@ function HomePage() {
 
     return (
         <div>
-            <Nav />
+            <Nav/>
             <div className='center'>
-            <ProductSection />
-            <About />
-            <Related />
-            <Testimonials />
+                <ProductSection/>
+                <About/>
+                <Related/>
+                <Testimonials/>
             </div>
-            <Footer />
+            <Footer/>
         </div>
     );
 }

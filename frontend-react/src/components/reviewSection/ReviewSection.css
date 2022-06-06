@@ -1,9 +1,5 @@
 #review-section{
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
+    margin: 5%;
 }
 
 .review-section-header{
@@ -31,4 +27,18 @@
     color: white;
     border-radius: 0.25rem;
     cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .review-section-review-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .review-section-header {
+        flex-direction: column;
+        gap: 3rem;
+    }
 }

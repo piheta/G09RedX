@@ -1,7 +1,7 @@
 .product-section {
     display: flex;
     justify-content: left;
-
+    margin: 10rem 0rem;
     gap: 2rem 1rem;
     flex-wrap: wrap;
 }
@@ -127,9 +127,7 @@
 }
 
 #checkout-and-related-products {
-    margin-left: 15%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 5%;
 
 }
 
@@ -174,7 +172,19 @@
     }
 
     #checkout-and-related-products {
-        margin: 0;
+        margin: 5%;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .choices {
+        width: 35rem;
+    }
+
+    .product-image {
+        width: 35rem;
+        height: auto;
     }
 
 
@@ -186,4 +196,7 @@
         width: 30rem;
         height: auto;
     }
+
+
+
 }
