@@ -87,7 +87,7 @@ function Nav({productId}) {
                                 </>
                         }
                         <li className="nav-item">
-                            <a href='' onClick={() => (isLogged ? logout(dispatch, navigate) : navigate("/login"), enableBodyScroll(document))} className="nav-link">
+                            <a href={!isLogged ? '/login' : ''} onClick={() => (isLogged ? logout(dispatch, navigate) : null, enableBodyScroll(document))} className="nav-link">
                                 {
                                     isLogged ? <MdLogout className={"logout-icon"} color="white"/> : 'Login'
                                 }

@@ -11,7 +11,7 @@ function ProductCard({product, imageAlt}) {
                 <h3 className="product-card-title">{ product.productName }</h3>
                 <p className="product-card-description">{ product.description }</p>
             </div>
-            <a onClick={() => navigate("/checkout/" + product.productId)}>Order now</a>
+            <a href={"/checkout/" + product.productId }>Order now</a>
         </div>
     );
 }
