@@ -31,12 +31,10 @@ function ReviewSection({productId}) {
             "rating": checkHeartRate(inputList.slice(0, 5)),
             "description": inputList[6].value
         }
-        addReview(reviewData, productId).then((newReview) => {
+        addReview(reviewData, productId, setWarningText).then((newReview) => {
             if (newReview != null) {
                 setReviews((prevReviews) => [...prevReviews, newReview]);
                 setDisplayModal(false);
-            } else {
-                setWarningText('You might already have a review for this product.')
             }
         })
     }

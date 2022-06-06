@@ -3,7 +3,7 @@ import {getCookie} from "./CookieService";
 
 const API_BASE_URL = process.env.REACT_APP_URL;
 
-export async function addReview(review, productId) {
+export async function addReview(review, productId, setWarningText) {
     return await axios({
         method: 'post',
         url: API_BASE_URL + '/review/products/' + productId,
@@ -17,8 +17,12 @@ export async function addReview(review, productId) {
         if (response.status === 201) {
             return response.data;
         }
-    }).catch(error => {
-        console.log(error.response.status);
+    }).catch((error) => {
+        if (error.response.status === 409) {
+            setWarningText("You already have a review for this product.");
+        } else {
+            setWarningText("Enter at least a few words.");
+        }
     })
 };
 
