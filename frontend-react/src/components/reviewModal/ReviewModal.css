@@ -24,7 +24,7 @@
 textarea:focus {
     outline: none !important;
     border-color: #ec361e;
-    box-shadow: 0 0 10px #ec361e;
+    box-shadow: 0 0 1px #ec361e;
 }
 
 .modal-username {
@@ -37,15 +37,20 @@ textarea:focus {
 
 .modal-title{
     text-align: center;
-    font-weight: bold;
-    font-size: 3rem;
-    text-decoration: underline;
+    font-weight: lighter;
+    font-size: 5rem;
+    color: #2f0b06;
 }
 
 .modal-button {
     width: 100%;
     align-self: center;
     font-size: 2rem;
+    background-color: #ec361e;
+    color: white;
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
 }
 
 .modal-content{
@@ -56,7 +61,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    border: #ec361e solid 0.1rem;
+    border: #000000 solid 0.1rem;
 }
 
 .modal-wrapper{

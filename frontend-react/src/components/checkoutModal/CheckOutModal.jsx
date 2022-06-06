@@ -9,10 +9,10 @@ function CheckOutModal({timeOfDay, language, groupSize, date, price}) {
                             <span className={"checkout-modal-exit"}>
                                 &#10060;
                             </span>
-                <h1>Successful Order! <BsSuitHeartFill color={"ec361e"} /></h1>
+                <h1>Successful Order! <BsSuitHeartFill height={""} color={"ec361e"} /></h1>
                 <p>
-                    An email will shortly be sent to you! The email will consist of information of you're order.
-                    We appreciate everyone and wants to make sure every customer gets the best services from us.
+                    An email will be sent to you shortly! <br/>
+                    We appreciate everyone, and want to make sure every customer gets the best services from us.
                 </p>
                 <table className={"modal-table"}>
                     <caption className={"modal-table-title"}>ORDER SUMMARY</caption>

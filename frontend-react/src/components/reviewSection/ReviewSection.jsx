@@ -91,8 +91,8 @@ function ReviewSection({productId}) {
             <div className={"review-section-header"}>
                 <label className={"review-section-label"}>Customer reviews</label>
                 {displayModal === false ?
-                    <Button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} size={"large"} variant="outlined" color={"error"}>Add
-                        review</Button>
+                    <button className={"review-section-button"} onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")}>Add
+                        review</button>
                     : null
                 }
             </div>
