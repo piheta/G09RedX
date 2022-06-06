@@ -150,15 +150,14 @@ function CheckoutSection({products, productId}) {
                     <button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} className={'buynow-button'}>SIGN UP NOW</button>
                 </div>
             </div>
+            <h1 id={'related-products-header'} className={'related-products-header'}>Related products</h1>
+            <hr />
             {
                 displayModal ?
                     <CheckOutModal timeOfDay={choices.timeOfDay} language={choices.language}
                     groupSize={choices.groupSize} date={choices.date} price={price}/>
                     : null
             }
-
-            <h2 id={'related-products-header'} className={'related-products-header'}>Related products</h2>
-            <hr/>
             <div id={'related-products'} className={'related-products'}>
                 {
                     relatedProducts.length > 0 ? relatedProducts.map((product) => {

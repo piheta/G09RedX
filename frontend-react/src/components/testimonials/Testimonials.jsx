@@ -26,8 +26,7 @@ function Testimonials() {
                     <img src={ "/images/user2.png" } alt=""/>
                     <h3>Great Service</h3>
                     <p>
-                        "I have been HR responsible at my company for 12 years, and every year I update my certification with Red Cross Ålesund.
-                        I can proudly say that no one has died under my watch."
+                        "I have been HR responsible at my company for 12 years, and every year I update my certification with Red Cross Ålesund."
                     </p>
                     <p className="signature">- Håkon Sætre</p>
                 </div>

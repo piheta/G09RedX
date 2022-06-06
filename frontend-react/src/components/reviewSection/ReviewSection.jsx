@@ -89,7 +89,8 @@ function ReviewSection({productId}) {
     return (
         <section id={"review-section"}>
             <div className={"review-section-header"}>
-                <label className={"review-section-label"}>Customer reviews</label>
+              
+                <h1 className={"review-section-label"}>Customer reviews</h1>
                 {displayModal === false ?
                     <Button onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")} size={"large"} variant="outlined" color={"error"}>Add
                         review</Button>
@@ -99,6 +100,7 @@ function ReviewSection({productId}) {
             {displayModal === true ? <ReviewModal reviewToEdit={reviewToEdit} handleEditReview={handleEditReview}
                                                   submitNewReview={submitNewReview}
                                                   warningText={warningText}/>
+
                 : null
             }
             <hr/>
