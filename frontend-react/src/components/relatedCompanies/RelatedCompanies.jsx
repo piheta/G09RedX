@@ -19,11 +19,9 @@ function RelatedCompanies() {
                     </div>
                     <div className="company-parah">
                         <p>
-                            Radio Ålesund sender live fra bystudioet i Ålesund sentrum hver eneste dag,
-                            og gir deg alt du trenger av lokale nyheter, sport, vær,
-                            trafikk og reportasjer i tillegg til favorittmusikken din på løpende bånd.
-                            Hos oss får du en unik miks av de nyeste hitlåtene,
-                            blandet sammen med gode gamle klassikere.
+                        Radio Ålesund broadcasts live from the city studio in the center of Ålesund every single day,
+                         and gives you everything you need for local news, sports, weather, traffic and reports in addition 
+                         to your favorite music on the assembly line. With us you get a unique mix of the latest hit songs, mixed with good old classics.
                         </p>
                     </div>
 
@@ -38,9 +36,9 @@ function RelatedCompanies() {
                     </div>
                     <div className="company-parah">
                         <p>
-                            Sunnmørsposten er ei dagsavis som kjem ut i Ålesund.
-                            Avisa blei grunnlagt i 1882 og er den dominerende avisa på Sunnmøre og Nordvestlandet.
-                            Avisa er eigd av Polaris Media ASA.
+                        Sunnmørsposten is a daily newspaper published in Ålesund. 
+                        Avisa was founded in 1882 and is the dominant newspaper in Sunnmøre and Northwest Norway. 
+                        Avisa is owned by Polaris Media ASA.
                         </p>
                     </div>
                 </div>
@@ -54,9 +52,7 @@ function RelatedCompanies() {
 
                     <div className="company-parah">
                         <p>
-                            Norsk rikskringkasting AS (NRK) fyller viktige sosiale,
-                            kulturelle og demokratiske behov i det norske samfunnet gjennom innhold på nett,
-                            TV og radio.
+                        Norsk rikskringkasting AS (NRK) fills important social, cultural and democratic needs in Norwegian society through content on the internet, TV and radio.
                         </p>
                     </div>
                 </div>
