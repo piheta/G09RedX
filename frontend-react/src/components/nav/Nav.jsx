@@ -44,7 +44,7 @@ function Nav({productId}) {
                 <nav className="header-container">
 
                     <a href={'/'}><img className={"brand-image"} src={"/images/cross.png"} alt="Red Cross Logo"/></a>
-
+                    <p id='mobile-logo'>Red Cross</p>
                     <div onClick={navToggle} className={icon}>
                         <div className="line1"/>
                         <div className="line2"/>

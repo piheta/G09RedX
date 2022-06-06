@@ -53,6 +53,12 @@ textarea:focus {
     border-radius: 0.25rem;
 }
 
+.modal-button:hover {
+    background-color: #e86555;
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
 .modal-content{
     width: 40rem;
     height: 60rem;

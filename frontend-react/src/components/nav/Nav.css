@@ -43,6 +43,8 @@
     gap: 3rem;
 }
 
+
+
 .brand-image {
     height: 60px;
     vertical-align:middle;
@@ -95,6 +97,11 @@
     display: none;
 }
 
+.nav-item a:hover{
+    text-decoration: underline var(--primary-color);
+}
+
+
 .nav-toggler div {
     width: 2.5rem;
     height: 0.2rem;
@@ -103,8 +110,20 @@
     transition: 0.3s ease-in;
 }
 
+#mobile-logo {
+    display: none;
+}
 
 @media (max-width: 600px) {
+
+    #mobile-logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 3.5rem;
+
+
+    }
 
     .nav-toggler {
         display: flex;
@@ -131,7 +150,7 @@
     }
 
     .menubar {
-        height: 9vh;
+        height: 12rem;
     }
 
 
