@@ -22,17 +22,19 @@ function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
             <div className={"review-header"}>
                 <div className={"review-username"}>
                     <h2>{review.customer.userName}</h2>
-                    {
-                        user.userName && user.userName === review.customer.userName ?
-                        <Edit onClick={() => (setReviewToEdit(review), setDisplayModal(true))} className={'review-icon'} sx={{fontSize: 25}}/>
-                        :
-                        null
-                    }
-                    {
-                        user.roles && user.roles.includes("ROLE_ADMIN") ?
-                        <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
-                        :null
-                    }
+                    <div className={"review-icon-wrapper"}>
+                        {
+                            user.userName && user.userName === review.customer.userName ?
+                                <Edit onClick={() => (setReviewToEdit(review), setDisplayModal(true))} className={'review-icon'} sx={{fontSize: 25}}/>
+                                :
+                                null
+                        }
+                        {
+                            user.roles && user.roles.includes("ROLE_ADMIN") ?
+                                <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
+                                :null
+                        }
+                    </div>
                 </div>
 
                 <h4>{getCurrentDate()}</h4>

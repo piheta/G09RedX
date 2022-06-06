@@ -31,5 +31,16 @@
     justify-content: space-between;
 }
 
+.review-icon {
+    margin-left: 1rem;
+}
+
+.review-icon:hover {
+    cursor: pointer;
+    transform: scale(1.20);
+
+}
+
+
 
 
