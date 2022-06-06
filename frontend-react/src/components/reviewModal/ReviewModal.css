@@ -1,0 +1,90 @@
+.modal {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-username-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-color: #ec361e;
+    box-shadow: 0 0 10px #ec361e;
+}
+
+.modal-username {
+    font-size: 3rem;
+}
+
+.modal-rating-label {
+    font-size: 1.5rem;
+}
+
+.modal-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.modal-button {
+    width: 100%;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.modal-content{
+    width: 40rem;
+    height: 60rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border: #ec361e solid 0.1rem;
+}
+
+.modal-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.modal-text{
+    height: 20rem;
+    width: 30rem;
+    resize: none;
+    padding: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+.error-message {
+    font-size: 1.25rem;
+    align-self: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #ec361e;
+    color: white;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}

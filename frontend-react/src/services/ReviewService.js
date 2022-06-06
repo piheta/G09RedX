@@ -18,7 +18,7 @@ export async function addReview(review, productId) {
             return response.data;
         }
     }).catch(error => {
-        console.log(error.response.statusCode);
+        console.log(error.response.status);
     })
 };
 
@@ -50,3 +50,20 @@ export function deleteReview(reviewId) {
         console.log(error.response.statusCode);
     })
 };
+
+export async function editReview(newReview, reviewId) {
+   return await axios({
+       method: 'patch',
+       url: API_BASE_URL + '/review/products/' + reviewId,
+       headers: {
+           'Accept': '*/*',
+           "Content-Type": "application/json",
+           "Authorization": "Bearer " + getCookie("jwt")
+       },
+       data: newReview
+   }).then((response) => {
+       if (response.status === 200) {
+           return response.data;
+       }
+   })
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Homepage.css';
+import '../styles/global.css';
 
 import Related from '../components/relatedCompanies/RelatedCompanies.jsx';
 import About from '../components/aboutUs/AboutUs.jsx';
