@@ -77,10 +77,10 @@
 }
 
 .signup-btn button {
-    background-color: #ec361e;
+    background-color: var(--primary-color);
     border-color: #ffffff;
     border-style: solid;
-    border-radius: 0.3rem;
+    border-radius: var(--border-radius);
     color: #fff;
     padding: 1.5rem 3.2rem;
     font-size: 1.6rem;
@@ -139,7 +139,7 @@
         right: 0;
         height: 100vh;
         width: 100%;
-        background: linear-gradient(rgb(105, 103, 103), rgb(140, 57, 54));
+        background: linear-gradient(#5e160c, var(--primary-color));
         flex-direction: column;
         transform: translateX(100%);
         z-index: 99;
