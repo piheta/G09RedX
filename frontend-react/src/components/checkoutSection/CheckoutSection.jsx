@@ -9,7 +9,6 @@ import {useSelector} from "react-redux";
 
 function CheckoutSection({products, productId}) {
 
-    //useStates with different initialStates and
     const [price, setPrice] = useState('');
     const [currentProduct, setCurrentProduct] = useState({});
     const [relatedProducts, setRelatedProducts] = useState([]);
@@ -22,7 +21,6 @@ function CheckoutSection({products, productId}) {
         groupSize: 1,
         date: getTomorrowsDate(),
     })
-
 
 
     const handleClickOutside = (event) => {
