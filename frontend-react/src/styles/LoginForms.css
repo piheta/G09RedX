@@ -76,14 +76,18 @@
 }
 
 .sign-up-warning {
-    font-size: 1.25rem;
     align-self: center;
     justify-content: center;
     padding: 1.5rem;
     text-align: center;
-    background-color: #ec361e;
+    background-color: var(--primary-color);
     color: white;
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius);
+}
+
+#warningText {
+    font-size: 1.6rem;
+    color: white;
 }
 
 .login-signup-button {
