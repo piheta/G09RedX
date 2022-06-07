@@ -27,7 +27,7 @@ Red accents across the page (for example headers), on a white background. Clean 
 Our website’s color scheme is monochromatic, based on the primary color #ec361e.\
 As well as a background color #fffefe to make our cards not blend into the background so much.
 
-![](/git-pics/colors.png)
+![](./git-pics/colors.png)
 
 ## Shadows 
 
@@ -47,7 +47,7 @@ It was very important for us to keep radiuses and shadows consistent across our 
 Modern sans-serif font. Dark red font for headers to promote the brand, and grey color on chunks of text, grey represents professionalism, formality.\
 We have used a modern sans serif font called Montserrat.
 
-![](/git-pics/fox.png)
+![](./git-pics/fox.png)
 
 ## Sizes
 
@@ -61,14 +61,14 @@ We have used a modern sans serif font called Montserrat.
 We only used one icon on our website; the logout button.\
 This icon is from the Mui Library, which we also used for the textfields on the login/register page.
 
-![](/git-pics/icon.png)
+![](./git-pics/icon.png)
 
 ## Layout
 It was important for our layout to scale well on mobile devices. As well as look good on desktops.\
 Here you can see all the sections are aligned properly to eachother, they start and end at the same width.\
 The spacing we used between sections is `10rem`.
 
-![](/git-pics/layout.png)
+![](./git-pics/layout.png)
 
 # Responsive Design
 
@@ -80,4 +80,4 @@ All the Sections scale responsivly, not only from desktop to mobile but also inb
 We completley changed the header on mobile resolutions to capture the user attention on the product.\
 Our Header and Footer links also get collapsed into hamburger menus.
 
-![](/git-pics/layout2.png)![](/git-pics/layout3.png)![](/git-pics/layout4.png)
+![](./git-pics/layout2.png)![](./git-pics/layout3.png)![](./git-pics/layout4.png)
