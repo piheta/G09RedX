@@ -9,14 +9,13 @@ import {useSelector} from "react-redux";
 
 function CheckoutSection({products, productId}) {
 
+    //useStates with different initialStates and
     const [price, setPrice] = useState('');
     const [currentProduct, setCurrentProduct] = useState({});
     const [relatedProducts, setRelatedProducts] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
-
     const isLogged = useSelector(state => state.isLogged.isLogged);
     const navigate = useNavigate();
-
     const [choices, setChoices] = useState({
         timeOfDay: 'Morning',
         language: 'Norwegian',
@@ -66,7 +65,7 @@ function CheckoutSection({products, productId}) {
     }
 
     function handleDateChange(newDate) {
-        setChoices({...choices, date : newDate})
+        choices.date = newDate;
     }
 
 
