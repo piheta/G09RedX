@@ -13,17 +13,14 @@ function CheckoutSection({products, productId}) {
     const [currentProduct, setCurrentProduct] = useState({});
     const [relatedProducts, setRelatedProducts] = useState([]);
     const [displayModal, setDisplayModal] = useState(false);
-
     const isLogged = useSelector(state => state.isLogged.isLogged);
     const navigate = useNavigate();
-
     const [choices, setChoices] = useState({
         timeOfDay: 'Morning',
         language: 'Norwegian',
         groupSize: 1,
         date: getTomorrowsDate(),
     })
-
 
 
     const handleClickOutside = (event) => {
@@ -66,7 +63,7 @@ function CheckoutSection({products, productId}) {
     }
 
     function handleDateChange(newDate) {
-        setChoices({...choices, date : newDate})
+        choices.date = newDate;
     }
 
 

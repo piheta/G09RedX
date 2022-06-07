@@ -9,7 +9,7 @@
 
 ::selection {
     color: #fff;
-    background: #ec361e;
+    background: var(--primary-color);
 }
 
 button {
