@@ -59,7 +59,7 @@ function Login() {
                     <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
-                        (warning === true) ? <div className={"sign-up-warning"}><p id='warningText'>{warningText}</p></div> : null
+                        (warning === true) ? <div className={"sign-up-warning"}><p className='warningText'>{warningText}</p></div> : null
                     }
                     <button className='login-signup-button'>Login</button>
                 </div>

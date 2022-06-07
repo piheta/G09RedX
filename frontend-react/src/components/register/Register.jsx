@@ -57,9 +57,9 @@ function Register() {
                     <TextField onChange={(elem) => setPassword(elem.target.value)}  label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField onChange={(elem) => setConfirmPassword(elem.target.value)}  label="Confirm password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
-                        (warningText !== '') ? <div className={'sign-up-warning'}><p>{warningText}</p></div> : null
+                        (warningText !== '') ? <div className={'sign-up-warning'}><p className='warningText'>{warningText}</p></div> : null
                     }
-                    <button className='login-signup-button'>Register</button>
+                    <button className='login-signup-button' onClick={sendCreateUserRequest}>Register</button>
                 </div>
 
                 <div className="form-footer">
