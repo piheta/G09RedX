@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# About this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an example Red Cross website made by Group 9 in 2nd semester 2022, [NTNU](https://www.ntnu.no/). 
 
-## Available Scripts
+## Inspiration
 
-In the project directory, you can run:
+Our website is inspired by official Red Cross websites.
+- [European Red Cross](https://redcross.eu/)
+- [Australian Red Cross](https://www.redcross.org.au/)
+- [Red Cross Org](https://www.redcross.org/)
 
-### `npm start`
+## Main Theme
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Health, serious attitude, professionalism, red cross on white background theme. \
+Red accents across the page (for example headers), on a white background. Clean squared borders to express a serious attitude.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Colors
 
-### `npm run build`
+`--primary-color: #ec361e;`\
+`--bakcground-color: #fffefe;`\
+`--heading-color: #2f0b06;`\
+`--text-color: #191919;`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Our website’s color scheme is monochromatic, based on the primary color #ec361e.\
+As well as a background color #fffefe to make our cards not blend into the background so much.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](./git-pics/colors.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Shadows 
 
-### `npm run eject`
+`box-shadow: 2rem 2rem 3rem #e0e0e0;`\
+We don't want our shadows to pop out too much, so we chose a light gray shadow color.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Radiuses
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`border-radius: 0.25rem;`\
+Since our website is supposed to be very serious and professional, we decided not to use rounded corners, \
+we only added some border-radius to make elements look less sharp. \
+It was very important for us to keep radiuses and shadows consistent across our entire website, so elements don't look out of place.\
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Fonts
+`font-family: Montserrat;`\
+Modern sans-serif font. Dark red font for headers to promote the brand, and grey color on chunks of text, grey represents professionalism, formality.\
+We have used a modern sans serif font called Montserrat.
 
-## Learn More
+![](./git-pics/fox.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Sizes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`--heading-1-size: 5rem;`\
+`--heading-2-size: 3rem;`\
+`--text-size: 1rem;`\
+`--section-spacing: 10rem;`
 
-### Code Splitting
+## Icon
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+We only used one icon on our website; the logout button.\
+This icon is from the Mui Library, which we also used for the textfields on the login/register page.
 
-### Analyzing the Bundle Size
+![](./git-pics/icon.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Layout
+It was important for our layout to scale well on mobile devices. As well as look good on desktops.\
+Here you can see all the sections are aligned properly to eachother, they start and end at the same width.\
+The spacing we used between sections is `10rem`.
 
-### Making a Progressive Web App
+![](./git-pics/layout.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Responsive Design
 
-### Advanced Configuration
+## Sections
+All the Sections scale responsivly, not only from desktop to mobile but also inbetween resolutions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Mobile Layout
 
-### Deployment
+We completley changed the header on mobile resolutions to capture the user attention on the product.\
+Our Header and Footer links also get collapsed into hamburger menus.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![](./git-pics/layout2.png)![](./git-pics/layout3.png)![](./git-pics/layout4.png)
