@@ -24,19 +24,16 @@ function Nav({productId}) {
         //Menu
         if (active === "menubar-links") {
             setActive("menubar-links nav-active");
-        } else setActive("menubar-links");
+        } else {
+            setActive("menubar-links");
+        }
 
         // Icon Toggler
         if (icon === "nav-toggler") {
             setIcon("nav-toggler toggle");
         } else setIcon("nav-toggler");
-
-        if (active === "menubar-links nav-active") {
-            enableBodyScroll(document);
-        } else {
-            disableBodyScroll(document);
-        }
     };
+
 
     return (
         <section id="header">
@@ -52,7 +49,6 @@ function Nav({productId}) {
                     </div>
 
                     <ul className={active}>
-
                         {
                             location.pathname === '/checkout/' + productId ?
                                 <>
@@ -61,8 +57,8 @@ function Nav({productId}) {
                                             Related products
                                         </a>
                                     </li>
-                                    <li href='' className={"nav-item"}>
-                                        <a  onClick={navToggle} href='#review-section' className={'nav-link'}>
+                                    <li className={"nav-item"}>
+                                        <a onClick={navToggle} href='#review-section' className={'nav-link'}>
                                             Reviews
                                         </a>
                                     </li>
