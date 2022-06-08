@@ -20,7 +20,7 @@ function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningTe
                 <form onSubmit={(event) => {
                     isEditing() ? handleEditReview(event, reviewToEdit.reviewId) : submitNewReview(event)
                 }} className={"modal-wrapper"}>
-                    <label className={"modal-title"}>{isEditing() ? 'Edit' : 'Add'} review</label>
+                    <h1 className={"modal-title"}>{isEditing() ? 'Edit' : 'Add'} review</h1>
                     <label className={"modal-username-wrap"}>Logged in as:
                         <label className={"modal-username"}>{user.userName}</label>
                     </label>

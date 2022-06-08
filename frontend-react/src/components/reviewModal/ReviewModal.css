@@ -6,8 +6,7 @@
     overflow: auto;
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,25 +34,19 @@ textarea:focus {
     font-size: 1.5rem;
 }
 
-.modal-title{
-    text-align: center;
-    font-weight: lighter;
-    font-size: 5rem;
-}
-
 .modal-button {
     width: 100%;
     align-self: center;
     font-size: 2rem;
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     padding: 1.5rem;
     border-radius: var(--border-radius);
 }
 
 .modal-button:hover {
-    background-color: #e86555;
+    background-color: var(--hover-color);
     transform: scale(1.025);
     cursor: pointer;
 }
@@ -62,7 +55,7 @@ textarea:focus {
     width: 40rem;
     height: 60rem;
     background-color: #ffffff;
-    border: #838080 solid 1px;
+    border: #808080 solid 1px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,5 +1,4 @@
 /* testimonials */
-
 #testimonial-section{
     display: flex;
     flex-direction: column;
@@ -7,48 +6,45 @@
     margin-top: var(--section-margin);
 }
 
-.testimonial-header {
-    text-align: center;
-}
-
-
 .testimonial-header h2 {
+    text-align: center;
     margin-bottom: 6%;
     font-size: 2rem;
 }
 
+
 .testimonial-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
-
+    gap: var(--gap-flex);
     justify-content: space-between;
 
 }
 
-
-.testimonial p {
-    margin-top: 1.5rem;
-    text-align: left;
-}
-
+/* testimonial card content & size */
 .testimonial {
-    font-size: 2rem;
     height: 40rem;
     width: 40rem;
-    text-align: left;
-    background-color: #fff;
-    border-radius: var(--border-radius);
     padding: 3rem;
+
+    background-color: var(--card-background-color);
+    border-radius: var(--border-radius);
     box-shadow: 2rem 2rem 3rem var(--shadow-color);
     position: relative;
-
 }
 
 .testimonial-wrapper img {
     border-radius: 100%;
     margin: 2%;
     width: 7rem;
+}
+
+.testimonial h3 {
+    font-size: 2.5rem;
+}
+
+.testimonial p {
+    margin-top: 1.5rem;
 }
 
 .signature {
@@ -59,15 +55,8 @@
 }
 
 
-@media (max-width: 2090px){
+@media (max-width: 2133px){
     .testimonial-wrapper {
         justify-content: center;
-    }
-}
-
-@media (max-width: 1350px){
-    .testimonial-wrapper {
-        justify-content: center;
-
     }
 }

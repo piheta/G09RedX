@@ -19,19 +19,23 @@ button {
 
 /*---------------
   Global
----------------*/
 
+  Colors taken from our color scheme, can be found at github.
+---------------*/
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
 
     --background-color: #fffefe;
+    --card-background-color: #ffffff;
     --primary-color: #ec361e;
+    --hover-color: #f05e4b;
     --shadow-color: #e0e0e0;
     --border-radius: 0.25rem;
     --text-color: #191919;
     --heading-color: #2f0b06;
     --section-margin: 10rem;
+    --gap-flex: 4rem;
 
 }
 

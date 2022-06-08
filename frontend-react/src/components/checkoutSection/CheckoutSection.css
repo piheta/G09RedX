@@ -15,15 +15,15 @@
 .product-image {
     height: 65rem;
     width: auto;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
-    border-radius: 0.25rem;
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
+    border-radius: var(--border-radius);
 }
 
 .related-product-images {
     width: 40rem;
     height: auto;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
-    border-radius: 0.25rem;
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
+    border-radius: var(--border-radius);
 }
 
 .related-products {
@@ -52,18 +52,6 @@
     transform: scale(1.02);
 }
 
-.related-product:hover > .related-product-tag {
-    color: white;
-    background-color: grey;
-}
-
-.related-product-tag {
-    color: transparent;
-    transition: 250ms ease-in-out;
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    width: fit-content;
-}
 
 .choices {
     display: flex;
@@ -71,9 +59,9 @@
     width: 60rem;
     height: 65rem;
     padding: 5rem;
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius);
     background: #f9f9f9;
-    box-shadow: 2rem 2rem 3rem #e0e0e0;
+    box-shadow: 2rem 2rem 3rem var(--shadow-color);
     margin: 0;
 }
 
@@ -87,7 +75,7 @@
     margin-top: auto;
     padding: 1.5rem 0;
     border-radius: 0.25rem;
-    background-color: #ec361e;
+    background-color: var(--primary-color);
     color: white;
     width: 50%;
     font-size: 1.5rem;
@@ -96,7 +84,7 @@
 .buynow-button:hover {
     cursor: pointer;
     transform: scale(1.025);
-    background-color: #e86555;
+    background-color: var(--hover-color);
 }
 
 .radio-label {
@@ -154,14 +142,6 @@
 
 
 @media(max-width: 1300px) {
-    .product-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 60rem;
-        height: auto;
-    }
-
     .related-products {
         justify-content: center;
     }
@@ -169,8 +149,6 @@
     .product-section {
         justify-content: center;
     }
-
-
 }
 
 @media (max-width: 700px) {
@@ -182,8 +160,6 @@
         width: 35rem;
         height: auto;
     }
-
-
 }
 
 
@@ -192,7 +168,4 @@
         width: 30rem;
         height: auto;
     }
-
-
-
 }

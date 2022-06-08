@@ -6,10 +6,7 @@
 }
 
 .about-text p {
-    margin-right: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: left;
+    margin: 3rem 3rem 3rem 0;
 }
 
 .about-text img{

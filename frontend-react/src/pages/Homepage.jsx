@@ -9,12 +9,16 @@ import ProductSection from "../components/productSection/ProductSection";
 import Footer from "../components/footer/Footer";
 import Nav from "../components/nav/Nav";
 
-function HomePage() {
 
+/*
+ * Returns the homepage in components
+ */
+
+function HomePage() {
     return (
         <div>
             <Nav/>
-            <div className='center'>
+            <div id='center-wrapper'>
                 <ProductSection/>
                 <About/>
                 <Related/>
