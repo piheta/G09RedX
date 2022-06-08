@@ -6,7 +6,7 @@ import '../../styles/global.css';
  * Source for the slider.
  * https://codepen.io/dudleystorey/pen/kBrWvm
  * 
- * Filler text taken from:
+ * filler text taken from:
  * https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement
  */
 function AboutUs() {
@@ -28,7 +28,7 @@ function AboutUs() {
                     
                 </p>
             </div>
-            <div id="slider-box"> /
+            <div id="slider-box">
                 <div id="slider">
                     <figure>
                         <img src='/images/home1.jpg' alt='redcross flag' />
