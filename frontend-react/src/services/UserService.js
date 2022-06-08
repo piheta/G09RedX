@@ -3,6 +3,11 @@ import {removeUser, setUser} from "../store/action/UserAction";
 import {setLoginStatus} from "../store/action/IsLoggedAction";
 import {deleteCookie} from "./CookieService";
 
+/**
+ * A class to hold all the requests and helper functions sent to the
+ * /user endpoints.
+ */
+
 export function GetUserInfo(token, dispatch) {
     axios({
         method: "get",

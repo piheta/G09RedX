@@ -1,3 +1,10 @@
+/**
+ * Part of code taken from GitHub:
+ * https://github.com/AleksNords/INTQTOOL-Frontend/blob/master/src/store/reducer/isLoggedReducer.js
+ *
+ * A reducer to hold a boolean if someone is logged in or not.
+ */
+
 const initialState = {
     isLogged: false
 };

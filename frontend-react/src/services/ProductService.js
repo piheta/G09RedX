@@ -1,5 +1,10 @@
 import axios from "axios";
 
+/**
+ * A class to hold all the requests sent to the
+ * /products endpoints.
+ */
+
 const API_BASE_URL = process.env.REACT_APP_URL;
 
 export function getAllProducts() {
