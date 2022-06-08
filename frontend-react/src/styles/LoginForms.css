@@ -116,7 +116,7 @@
 }
 
 .login-signup-button:hover {
-    background-color: #e86555;
+    background-color: var(--hover-color);
     transform: scale(1.025);
     cursor: pointer;
 }

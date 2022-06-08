@@ -1,22 +1,21 @@
-.menubar {
+/**
+* changes height based on styling, menubar-tiny is used in /checkout.
+* menubar uses same styling when in mobile
+**/
+
+.menubar, .menubar-tiny {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 60rem;
     display: flex;
     flex-direction: column;
 }
 
-.menubar-tiny {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), var(--primary-color)), url("/public/images/longdoctor.jpeg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+.menubar {
+    height: 60rem;
 }
+
 
 .logout-icon{
     height: auto;
@@ -40,10 +39,8 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 3rem;
+    gap: var(--gap-flex);
 }
-
-
 
 .brand-image {
     height: 60px;
@@ -72,7 +69,6 @@
 
 .container-text h2 {
     color: white;
-    font-weight: lighter;
     font-size: 3rem;
 }
 
@@ -89,7 +85,7 @@
 }
 
 .signup-btn button:hover {
-    background-color: #e86555;
+    background-color: var(--hover-color);
     transform: scale(1.025);
     cursor: pointer;
 }
@@ -107,7 +103,7 @@
     width: 2.5rem;
     height: 0.2rem;
     margin: 0.4rem;
-    background: rgb(204, 204, 204);
+    background: white;
     transition: 0.3s ease-in;
 }
 
@@ -122,8 +118,6 @@
         align-items: center;
         color: white;
         font-size: 3.5rem;
-
-
     }
 
     .nav-toggler {

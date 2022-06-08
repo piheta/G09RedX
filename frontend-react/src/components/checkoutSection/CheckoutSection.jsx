@@ -208,7 +208,6 @@ function CheckoutSection({products, productId}) {
                                        className={'related-product-image'}>
                                         <img alt={'Related product, ' + product.productName} className={'related-product-images'}
                                              src={'/images/squoosed-product' + product.productId + '.jpg'}/>
-                                        <p className={'related-product-tag'}>{product.productName}</p>
                                     </a>
                                 </div>
                             )

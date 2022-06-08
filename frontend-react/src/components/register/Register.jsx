@@ -84,7 +84,7 @@ function Register() {
                 </div>
 
                 <div className="form-footer">
-                    <img className={"brand-logo"} src={"images/cross.png"} alt="Red Cross Logo"/>
+                    <img className={"brand-logo"} src={"/images/cross.png"} alt="Red Cross Logo"/>
                     <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
                 </div>
             </div>

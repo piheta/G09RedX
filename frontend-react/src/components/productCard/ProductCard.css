@@ -6,7 +6,7 @@
     width: 35rem;
     height: 50rem;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--card-background-color);
     border-radius: var(--border-radius);
     box-shadow: 2rem 2rem 3rem var(--shadow-color);
 }
@@ -16,7 +16,6 @@
 }
 
 .product-card-description {
-    font-size: 2rem;
     margin-top: 1rem;
 }
 
@@ -24,13 +23,8 @@
     padding: 1.5rem 3rem;
 }
 
-.title h2 {
-    font-size: 3rem;
-}
-
 .product-card-item a {
-    text-decoration: none;
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius);
     background-color: var(--primary-color);
     font-weight: bold;
     color: white;
@@ -47,7 +41,7 @@
 }
 
 .product-card-item a:hover {
-    background-color: #e86555;
+    background-color: var(--hover-color);
     transform: scale(1.025);
     cursor: pointer;
 }

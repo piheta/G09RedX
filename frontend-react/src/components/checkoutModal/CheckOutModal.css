@@ -1,7 +1,8 @@
 .checkout-modal-content {
     width: 90rem;
+    border-radius: var(--border-radius);    
     height: 70rem;
-    background-color: #ffffff;
+    background-color: var(--card-background-color);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -34,8 +35,8 @@ th, td {
 }
 
 thead tr:nth-child(odd) {
-    background-color: #ec361e;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: #ffffff;
 }
 
 .checkout-modal-exit {
@@ -55,7 +56,7 @@ thead tr:nth-child(odd) {
     left: 0;
     top: 0;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,17 +64,10 @@ thead tr:nth-child(odd) {
 
 
 @media (max-width: 800px) {
-    .checkout-modal-header{
-        font-size: 2.5rem;
-    }
 
 
     .checkout-modal-content {
         padding: 2rem;
-    }
-
-    .checkout-modal-paragraph {
-        font-size: 2rem;
     }
 
     table, tbody, thead, tr, th, td {
@@ -88,7 +82,6 @@ thead tr:nth-child(odd) {
         border: none;
         padding-left: 50%;
         position: relative;
-        border-bottom: 1px solid #eee;
     }
 
     td:before {
@@ -101,8 +94,8 @@ thead tr:nth-child(odd) {
     }
 
     td:nth-child(odd) {
-        background-color: #ec361e;
-        color: #fff;
+        background-color: var(--primary-color);
+        color: #ffffff;
     }
 
     .modal-table-title{

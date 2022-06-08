@@ -9,6 +9,6 @@
 @media (max-width: 1520px){
     #product-card-section {
         justify-content: center;
-        gap: 5rem;
+        gap: var(--gap-flex);
     }
 }

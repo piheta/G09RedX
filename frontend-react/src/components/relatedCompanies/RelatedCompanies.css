@@ -16,7 +16,7 @@
 
     justify-content: left;
     margin-top: 3rem;
-    gap: 4rem;
+    gap: var(--gap-flex);
 }
 
 
@@ -29,7 +29,7 @@
 
 
 /*
- * The content inside of the cards
+ * The content inside of the wrap
 */
 .company-card-item {
     height: auto;
@@ -37,7 +37,7 @@
     text-align: center;
     justify-content: left;
     align-items: center;
-    gap: 4rem;
+    gap: var(--gap-flex);
 
 }
 
