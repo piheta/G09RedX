@@ -26,6 +26,7 @@ function ProductSection() {
     return (
         <section id={"product-card-section"}>
             {
+
                 products.map((product) => {
                     return (
                         <ProductCard

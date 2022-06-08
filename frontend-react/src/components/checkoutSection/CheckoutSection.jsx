@@ -202,7 +202,7 @@ function CheckoutSection({products, productId}) {
                     {
                         relatedProducts.length > 0 ? relatedProducts.map((product) => {
                             return (
-                                <div className={'related-product'}>
+                                <div key={product.productId} className={'related-product'}>
                                     <h4>{product.productName}</h4>
                                     <a key={product.productId} href={'/checkout/' + product.productId}
                                        className={'related-product-image'}>
