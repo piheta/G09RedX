@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import Review from "../review/Review";
 import "./ReviewSection.css"
-import {Button} from "@mui/material";
 import {useSelector} from "react-redux";
 import {addReview, deleteReview, editReview, getAllProductReviewById} from "../../services/ReviewService";
 import ReviewModal from "../reviewModal/ReviewModal";
 import {useNavigate} from "react-router";
 
-
+/**
+ * The component that represents the whole review section on the
+ * checkout page. Uses the review component and API call to create
+ * review cards of all the review for the entered productId.
+ * @param productId the product ID the review section belongs to.
+ * @returns {JSX.Element}
+ */
 function ReviewSection({productId}) {
 
     const [reviews, setReviews] = useState([]);
@@ -17,6 +22,10 @@ function ReviewSection({productId}) {
     const isLogged = useSelector(state => state.isLogged.isLogged);
     const navigate = useNavigate();
 
+    /**
+     * Sends a request to get all the reviews for a given product page,
+     * everytime the productId  changes (when swapping product page).
+     */
     useEffect(() => {
         getAllProductReviewById(productId).then((reviewData) => {
             setReviews(reviewData);
@@ -24,6 +33,12 @@ function ReviewSection({productId}) {
     }, [productId])
 
 
+    /**
+     * Gets the info for a new  review entered by a customer, sends
+     * an API call to the backend and updates the ReviewSection/AddReviewModal according
+     * to the response.
+     * @param event
+     */
     function submitNewReview(event) {
         event.preventDefault();
         const inputList = [...event.target]
@@ -39,6 +54,13 @@ function ReviewSection({productId}) {
         })
     }
 
+    /**
+     * Gets the new info for an existing review and sends an API call to the
+     * backend. Removes the 'old' review and replaces it with the new description
+     * and rating, in the ReviewSection.
+     * @param event
+     * @param reviewId the review you want to edit.
+     */
     function handleEditReview(event, reviewId) {
         event.preventDefault();
         const inputList = [...event.target]
@@ -55,11 +77,22 @@ function ReviewSection({productId}) {
         });
     }
 
+    /**
+     * Deletes and removes the review with the entered reviewId
+     * from the ReviewSection and DB.
+     * @param reviewId
+     */
     function handleDeleteReview(reviewId) {
         setReviews((prevReviews) => [...prevReviews.filter((review) => review.reviewId !== reviewId)]);
         deleteReview(reviewId);
     }
 
+    /**
+     * Helper method to get the number of hearts
+     * entered on a review.
+     * @param hearts
+     * @returns {number} of hearts entered
+     */
     function checkHeartRate(hearts) {
         for (let i = 0; i < hearts.length; i++) {
             if (hearts[i].checked === true) {
@@ -68,6 +101,11 @@ function ReviewSection({productId}) {
         }
     }
 
+    /**
+     * Lets the user press outside of the Add/Edit ReviewModal
+     * to close it.
+     * @param event
+     */
     const handleClickOutside = (event) => {
         if (event.target.className === 'modal') {
             setDisplayModal(false);

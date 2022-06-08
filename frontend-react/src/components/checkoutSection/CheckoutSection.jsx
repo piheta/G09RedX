@@ -6,7 +6,13 @@ import {useNavigate} from "react-router";
 import CheckOutModal from "../checkoutModal/CheckOutModal";
 import {useSelector} from "react-redux";
 
-
+/**
+ * Creates the checkout section of the product page, with a product picture
+ * and choices.
+ * @param products all the products in the db.
+ * @param productId the id of the product to be displayed on product page.
+ * @returns {JSX.Element}
+ */
 function CheckoutSection({products, productId}) {
 
     const [price, setPrice] = useState('');
@@ -15,6 +21,10 @@ function CheckoutSection({products, productId}) {
     const [displayModal, setDisplayModal] = useState(false);
     const isLogged = useSelector(state => state.isLogged.isLogged);
     const navigate = useNavigate();
+
+    /**
+     * The choices a user picks for a product.
+     */
     const [choices, setChoices] = useState({
         timeOfDay: 'Morning',
         language: 'Norwegian',
@@ -23,6 +33,9 @@ function CheckoutSection({products, productId}) {
     })
 
 
+    /**
+     * Lets the user close modals by pressing outside of it.
+     */
     const handleClickOutside = (event) => {
         if (event.target.className === 'checkout-modal' || event.target.className === 'checkout-modal-exit') {
             setDisplayModal(false);
@@ -36,6 +49,9 @@ function CheckoutSection({products, productId}) {
         };
     }, []);
 
+    /**
+     * Returns tomorrows date as a string.
+     */
     function getTomorrowsDate() {
         const today = new Date();
         const tomorrow = new Date(today);
@@ -44,6 +60,10 @@ function CheckoutSection({products, productId}) {
         return tomorrow.toISOString().split('T')[0];
     }
 
+    /**
+     * Switches the choices.groupSize variable based on which radio button
+     * is pressed.
+     */
     function handleGroupChange(newGroupSize) {
         if (parseInt(newGroupSize) === 1) {
             setPrice(currentProduct.basePrice);
@@ -54,19 +74,34 @@ function CheckoutSection({products, productId}) {
         }
     }
 
+    /**
+     * Switches the choices.timeOfDay variable based on which radio
+     * button is pressed.
+     */
     function handleTimeOfDayChange(newTime) {
         setChoices({...choices, timeOfDay : newTime})
     }
 
+    /**
+     * Switches the choices.language variable based on which radio
+     * button is pressed.
+     */
     function handleLanguageChange(newLanguage) {
         setChoices({...choices, language : newLanguage})
     }
 
+    /**
+     * Switches the choices.date variable based on which radio
+     * button is pressed.
+     */
     function handleDateChange(newDate) {
         choices.date = newDate;
     }
 
-
+    /**
+     * Sets the currentProduct and related products to be displayed each time products
+     * or the productId changes (change of product page etc.).
+     */
     useEffect(() => {
         if (products.length > 0) {
             setCurrentProduct(products.find(product => parseInt(product.productId) === parseInt(productId)));
@@ -74,6 +109,10 @@ function CheckoutSection({products, productId}) {
         }
     }, [products, productId]);
 
+    /**
+     * Sets the price to be originally displayed on the product card.
+     * Changes every time currentProduct & productId changes.
+     */
     useEffect(() => {
         if (currentProduct && currentProduct.basePrice) {
             setPrice(currentProduct.basePrice);
@@ -151,6 +190,9 @@ function CheckoutSection({products, productId}) {
                 <h1 id={'related-products-header'} className={'related-products-header'}>Related products</h1>
                 <hr />
                 {
+                    /*
+                    * Displays the modal with info over the product you checked out.
+                    */
                     displayModal ?
                         <CheckOutModal timeOfDay={choices.timeOfDay} language={choices.language}
                                        groupSize={choices.groupSize} date={choices.date} price={price}/>
@@ -162,9 +204,9 @@ function CheckoutSection({products, productId}) {
                             return (
                                 <div className={'related-product'}>
                                     <h4>{product.productName}</h4>
-                                    <a key={product.productId} onClick={() => navigate('/checkout/' + product.productId)}
+                                    <a key={product.productId} href={'/checkout/' + product.productId}
                                        className={'related-product-image'}>
-                                        <img alt={''} className={'related-product-images'}
+                                        <img alt={'Related product, ' + product.productName} className={'related-product-images'}
                                              src={'/images/squoosed-product' + product.productId + '.jpg'}/>
                                         <p className={'related-product-tag'}>{product.productName}</p>
                                     </a>

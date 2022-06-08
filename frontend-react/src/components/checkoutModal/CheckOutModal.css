@@ -81,9 +81,7 @@ thead tr:nth-child(odd) {
     }
 
     thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
+        display: none;
     }
 
     td {

@@ -1,7 +1,9 @@
 import React from 'react';
 import './Testimonials.css';
 
-
+/**
+ * A component for the Testimonial section of the homepage.
+ */
 function Testimonials() {
     return (
         <section id="testimonial-section">
