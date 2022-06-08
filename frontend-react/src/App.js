@@ -16,6 +16,10 @@ function App() {
 
     const dispatch = useDispatch();
 
+
+    /**
+     * Gets cookie and sets user info on refresh.
+     */
     useEffect(() => {
         const jwt = getCookie('jwt');
         if (jwt && jwt.length > 0) {
