@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../../styles/LoginForms.css';
 import {useNavigate} from 'react-router';
 import axios from "axios";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setLoginStatus} from "../../store/action/IsLoggedAction";
 import {TextField} from "@mui/material";
 import {GetUserInfo} from "../../services/UserService";

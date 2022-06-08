@@ -24,13 +24,13 @@ function Nav({productId}) {
 
     const dispatch = useDispatch();
 
+    //Toggles Animation for menu and icon based on classname.
     const navToggle = () => {
         //Menu
         if (active === "menubar-links") {
             setActive("menubar-links nav-active");
-        } else {
-            setActive("menubar-links");
-        }
+        } else setActive("menubar-links");
+
 
         // Icon Toggler
         if (icon === "nav-toggler") {
