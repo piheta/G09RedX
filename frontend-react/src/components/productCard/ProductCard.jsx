@@ -1,9 +1,7 @@
 import React from 'react';
-import {useNavigate} from 'react-router';
 import "./ProductCard.css";
 
 function ProductCard({product, imageAlt}) {
-    const navigate = useNavigate();
     return (
         <div className="product-card-item">
             <img id={"productImage"} src={ "/images/squoosed-product" + product.productId + ".jpg" } alt={ imageAlt }/>
