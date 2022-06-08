@@ -1,6 +1,11 @@
 import React from 'react';
 import './Footer.css';
 
+/**
+ * Creates the footer components for the website.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function Footer() {
     return (
 
@@ -71,7 +76,7 @@ function Footer() {
                 </div>
 
                 <div className="footer-images">
-                    <img src={"/images/cross.png"} alt=""/>
+                    <img src={"/images/cross.png"} alt="Red Cross Logo"/>
                     <p className={"copy-footer"}>Copyright © 2022 NTNU, IDATA2301 Web Technologies - group 9</p>
                 </div>
             </div>

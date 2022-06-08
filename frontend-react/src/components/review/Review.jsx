@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import "./Review.css"
 import Rating from '@mui/material/Rating';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -7,9 +7,17 @@ import {useSelector} from "react-redux";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import {Edit} from "@mui/icons-material";
 
+/**
+ * A single ReviewCard component.
+ * @param review the review object it represents
+ * @param onDelete pass in the delete function when pressing the trashcan
+ * @param setReviewToEdit pass in the setter to let the ReviewModal know if it is edit or add mode.
+ * @param setDisplayModal sets the display modal to true.
+ * @returns {JSX.Element}
+ */
 function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
 
-
+    // Get the state of the user field in userReducer
     const user = useSelector(state => state.userReducer.user);
     const current = new Date();
 

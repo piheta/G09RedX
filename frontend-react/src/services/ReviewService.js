@@ -23,9 +23,9 @@ export async function addReview(review, productId, setWarningText) {
         }
     }).catch((error) => {
         if (error.response.status === 409) {
-            setWarningText("You already have a review for this product.");
+            setWarningText(error.response.data);
         } else {
-            setWarningText("Enter at least a few words.");
+            setWarningText(error.response.data);
         }
     })
 };

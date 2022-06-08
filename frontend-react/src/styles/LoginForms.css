@@ -81,11 +81,27 @@
     padding: 1.5rem;
     text-align: center;
     background-color: var(--primary-color);
-    color: white;
     border-radius: var(--border-radius);
 }
 
-.warningText {
+.sign-up-success {
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #02ad02;
+    border-radius: var(--border-radius);
+}
+
+.sign-up-success:hover {
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #159a15;
+    border-radius: var(--border-radius);
+    transform: scale(1.02);
+}
+
+.feedbackText {
     font-size: 1.6rem;
     color: white;
 }
@@ -103,4 +119,9 @@
     background-color: var(--hover-color);
     transform: scale(1.025);
     cursor: pointer;
+}
+
+.helping-text {
+    font-size: 1.3rem;
+    color: white;
 }
