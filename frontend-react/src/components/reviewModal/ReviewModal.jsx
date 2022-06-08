@@ -49,6 +49,9 @@ function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningTe
                     />
                     <textarea defaultValue={isEditing() ? reviewToEdit.description : ''} className={"modal-text"}/>
                     {
+                        /**
+                         * Displays warning message.
+                         */
                         warningText !== '' ? <p className={'error-message'}>{warningText}</p> : null
                     }
                     <button className={"modal-button"}>{isEditing() ? 'Edit' : 'Add'} Review</button>

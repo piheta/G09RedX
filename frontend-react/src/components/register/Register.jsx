@@ -74,6 +74,9 @@ function Register() {
                     <TextField onChange={(elem) => setConfirmPassword(elem.target.value)} label="Confirm password"
                                type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
+                        /**
+                         * Displays feedback text.
+                         */
                         (feedbackText !== '') ?
                             <a href={success ? '/login' : ''} className={success ? 'sign-up-success' : 'sign-up-warning'}>
                                 <p className='feedbackText'>{feedbackText}</p>

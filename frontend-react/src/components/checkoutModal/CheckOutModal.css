@@ -1,6 +1,9 @@
+/* Help from stack on how to scale table on lower screens */
+/*<SOURCE> https://stackoverflow.com/questions/52387423/make-table-responsive-on-mobile-devices-using-html-css */
+
 .checkout-modal-content {
     width: 90rem;
-    border-radius: var(--border-radius);    
+    border-radius: var(--border-radius);
     height: 70rem;
     background-color: var(--card-background-color);
     display: flex;
