@@ -4,20 +4,30 @@ import {useNavigate} from 'react-router';
 import axios from "axios";
 import {useDispatch, useSelector} from "react-redux";
 import {setLoginStatus} from "../../store/action/IsLoggedAction";
-import {Button, TextField} from "@mui/material";
+import {TextField} from "@mui/material";
 import {GetUserInfo} from "../../services/UserService";
 import {deleteCookie, setCookie} from "../../services/CookieService";
 
+/**
+ * Creates the login page.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function Login() {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const isLogged = useSelector(state => state.isLogged);
     const [warning, setWarning] = useState(false);
     const [warningText, setWarningText] = useState("");
 
 
-
+    /**
+     * Sends a request to login with the credentials entered in the
+     * text fields when the login button is pressed.
+     *
+     * Deletes existing cookies and sets the jwt cookie to the new JWT
+     * if the login is successful.
+     */
     function sendLoginRequest(event) {
         event.preventDefault();
         let loginInfo = {
@@ -59,15 +69,15 @@ function Login() {
                     <TextField label="Username" type={"text"} margin={"dense"} variant={"filled"} color={"error"}/>
                     <TextField label="Password" type={"password"} margin={"dense"} variant={"filled"} color={"error"}/>
                     {
-                        (warning === true) ? <div className={"sign-up-warning"}><p className='warningText'>{warningText}</p></div> : null
+                        (warning === true) ? <div className={"sign-up-feedback"}><p className='feedbackText'>{warningText}</p></div> : null
                     }
                     <button className='login-signup-button'>Login</button>
                 </div>
 
                 <div className={"form-footer"}>
-                    <a className={"register-anchor"} onClick={() => navigate("/register")}>Not registered? Sign up</a>
+                    <a href={'/register'} className={"register-anchor"}>Not registered? Sign up</a>
                     <img className={"brand-logo"} src={"/images/cross.png"} alt="logo"/>
-                    <a className={"main-anchor"} onClick={() => navigate("/")}>Back to main page</a>
+                    <a href={'/'} className={"main-anchor"}>Back to main page</a>
                 </div>
             </form>
 

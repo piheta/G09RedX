@@ -1,15 +1,27 @@
 import Rating from "@mui/material/Rating";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import {Button} from "@mui/material";
 import React from "react";
 import {useSelector} from "react-redux";
 import "./ReviewModal.css";
 
+/**
+ * A component that changes between Add/Edit based on
+ * the action of the user.
+ * @param reviewToEdit null of the user is adding a new review
+ * @param handleEditReview handles API call to edit Review
+ * @param submitNewReview handles API call to add Review
+ * @param warningText getter for the warningText on the Add modal
+ * @returns {JSX.Element}
+ */
 function ReviewModal({reviewToEdit, handleEditReview, submitNewReview, warningText}) {
 
     const user = useSelector(state => state.userReducer.user);
 
+    /**
+     * Helper function to switch between Edit and Add modal.
+     * @returns {boolean} true if editing, false if Adding review.
+     */
     function isEditing() {
         return Object.keys(reviewToEdit).length !== 0;
     }

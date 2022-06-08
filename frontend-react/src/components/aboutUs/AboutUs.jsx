@@ -6,7 +6,7 @@ import '../../styles/global.css';
  * Source for the slider.
  * https://codepen.io/dudleystorey/pen/kBrWvm
  * 
- * Filler text taken from:
+ * filler text taken from:
  * https://en.wikipedia.org/wiki/International_Red_Cross_and_Red_Crescent_Movement
  */
 function AboutUs() {
@@ -16,7 +16,8 @@ function AboutUs() {
                 <h1>About us</h1>
                 <p>We provide courses both during work time and evening courses. <br/> Since 2020, we don't provide
                     weekend
-                    courses anymore.</p>
+                    courses anymore.
+                </p>
                 <img src='/images/home3.jpg' alt='redcross team' />
                 <p>
                     Our team consists of medical professionals with more than 30 years of experience. <br/>We are
@@ -28,7 +29,7 @@ function AboutUs() {
                     
                 </p>
             </div>
-            <div id="slider-box"> /
+            <div id="slider-box">
                 <div id="slider">
                     <figure>
                         <img src='/images/home1.jpg' alt='redcross flag' />

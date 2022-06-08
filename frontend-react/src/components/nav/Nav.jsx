@@ -6,6 +6,10 @@ import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../services/UserService";
 import { MdLogout } from 'react-icons/md';
 
+/**
+ * Component for our navbar  which we reuse
+ * on every page.
+ */
 function Nav({productId}) {
 
     const navigate = useNavigate();
@@ -34,7 +38,6 @@ function Nav({productId}) {
         } else setIcon("nav-toggler");
     };
 
-
     return (
         <section id="header">
             <div className={location.pathname === '/checkout/' + productId ? 'menubar-tiny' : 'menubar'}>
@@ -49,6 +52,10 @@ function Nav({productId}) {
                     </div>
 
                     <ul className={active}>
+                        {/*
+                            Changes the navlinks based on where you are on
+                            our site.
+                        */}
                         {
                             location.pathname === '/checkout/' + productId ?
                                 <>
