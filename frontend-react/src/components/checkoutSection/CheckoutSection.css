@@ -1,7 +1,7 @@
 .product-section {
     display: flex;
     justify-content: center;
-    margin: 10rem;
+    margin: 10rem 0;
     gap: 2rem 1rem;
     flex-wrap: wrap;
 }
