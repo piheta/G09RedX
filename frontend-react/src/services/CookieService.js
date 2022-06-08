@@ -1,4 +1,7 @@
 /*
+ * We have used code from this repository here:
+ * https://github.com/strazdinsg/web-examples/blob/main/public_html/examples/react/15-react-jwt-auth/src/tools/cookies.js
+ *
  * Gets a document cookie by the cookie name
  * entered in the parameter.
  */

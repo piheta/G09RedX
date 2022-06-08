@@ -1,5 +1,9 @@
 import axios from "axios";
 import {getCookie} from "./CookieService";
+/**
+ * A class to hold all the requests sent to the
+ * /review endpoints.
+ */
 
 const API_BASE_URL = process.env.REACT_APP_URL;
 

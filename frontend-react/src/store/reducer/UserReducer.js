@@ -1,3 +1,10 @@
+/**
+ * Part of code taken from GitHub:
+ * https://github.com/AleksNords/INTQTOOL-Frontend/blob/master/src/store/reducer/userReducer.js
+ *
+ * A reducer to hold the state of which user is currently logged in.
+ */
+
 const initialState = {
     user: {}
 };
