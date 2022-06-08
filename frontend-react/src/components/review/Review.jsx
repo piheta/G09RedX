@@ -21,6 +21,10 @@ function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
     const user = useSelector(state => state.userReducer.user);
     const current = new Date();
 
+    /**
+     * Gets the current date and returns as String.
+     * @returns {string}
+     */
     function getCurrentDate(){
         return `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
     }
@@ -32,12 +36,18 @@ function Review({review, onDelete, setReviewToEdit, setDisplayModal}) {
                     <h2>{review.customer.userName}</h2>
                     <div className={"review-icon-wrapper"}>
                         {
+                            /**
+                             * Displays Edit button only if user has made the review.
+                             */
                             user.userName && user.userName === review.customer.userName ?
                                 <Edit onClick={() => (setReviewToEdit(review), setDisplayModal(true))} className={'review-icon'} sx={{fontSize: 25}}/>
                                 :
                                 null
                         }
                         {
+                            /**
+                             * Displays deletebutton on all reviews, if role is Admin.
+                             */
                             user.roles && user.roles.includes("ROLE_ADMIN") ?
                                 <DeleteForeverIcon onClick={() => onDelete(review.reviewId)} className={"review-icon"} sx={{fontSize: 25}}/>
                                 :null

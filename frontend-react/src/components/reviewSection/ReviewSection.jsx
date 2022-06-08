@@ -114,6 +114,9 @@ function ReviewSection({productId}) {
         }
     };
 
+    /**
+     * Handles mouse clicks on screen.
+     */
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside)
         return () => {
@@ -125,26 +128,41 @@ function ReviewSection({productId}) {
     return (
         <section id={"review-section"}>
             <div className={"review-section-header"}>
-              
+
                 <h1 className={"review-section-label"}>Customer reviews</h1>
-                {displayModal === false ?
+                {
+                    /**
+                     * Displays modal if button is clicked and user logged in.
+                     */
+                    displayModal === false ?
                     <button className={"review-section-button"} onClick={() => isLogged ? setDisplayModal(true) : navigate("/login")}>Add
                         review</button>
                     : null
                 }
             </div>
-            {displayModal === true ? <ReviewModal reviewToEdit={reviewToEdit} handleEditReview={handleEditReview}
-                                                  submitNewReview={submitNewReview}
-                                                  warningText={warningText}/>
-
+            {
+                /**
+                 * If Modal is displaying it either shows edit/add reviewModal.
+                 */
+                displayModal === true ?
+                <ReviewModal reviewToEdit={reviewToEdit}
+                             handleEditReview={handleEditReview}
+                             submitNewReview={submitNewReview}
+                             warningText={warningText}/>
                 : null
             }
             <hr/>
             <div className={"review-section-review-list"}>
                 {
-                    reviews.map((review) => <Review review={review} key={review.reviewId} onDelete={handleDeleteReview}
-                                                    setReviewToEdit={setReviewToEdit}
-                                                    setDisplayModal={setDisplayModal}/>)
+                    /**
+                     * Iterates over all reviews.
+                     */
+                    reviews.map((review) =>
+                        <Review review={review}
+                                key={review.reviewId}
+                                onDelete={handleDeleteReview}
+                                setReviewToEdit={setReviewToEdit}
+                                setDisplayModal={setDisplayModal}/>)
                 }
             </div>
         </section>
